@@ -36499,6 +36499,8 @@ var sqwidErrorDebug = (dataToLog) => {
 var SQWID_BACKEND_URL = "http://localhost:80";
 var FIREFOX_DOWNLOAD_REEF_EXTENSION = "https://addons.mozilla.org/en-US/firefox/addon/reef-js-extension/";
 var CHROME_DOWNLOAD_REEF_EXTENSION = "https://chrome.google.com/webstore/detail/reefjs-extension/mjgkpalnahacmhkikiommfiomhjipgjn";
+var SQWID_MARKETPLACE_ADDRESS = "0xB13Be9656B243600C86922708C20606f5EA89218";
+var SQWID_ERC1155_ADDRESS = "0x0601202b75C96A61CDb9A99D4e2285E43c6e60e4";
 
 // src/connect/extensions.ts
 function getBrowserExtensionUrl() {
@@ -75108,9 +75110,2361 @@ var connectToSqwid = async (account) => {
     console.log("error===", error);
   }
 };
+
+// src/sqwid/read/index.ts
+var read_exports = {};
+__export(read_exports, {
+  STATS_ORDER: () => STATS_ORDER,
+  fetchCollectionInfo: () => fetchCollectionInfo,
+  fetchCollectionsByStats: () => fetchCollectionsByStats,
+  fetchOwnerCollections: () => fetchOwnerCollections
+});
+
+// src/sqwid/read/fetchCollectionInfo.ts
+import axios2 from "axios";
+var fetchCollectionInfo = async (id5) => {
+  try {
+    const res = await axios2(
+      `${SQWID_BACKEND_URL}/get/marketplace/collection/${id5}`
+    );
+    const { data } = res;
+    if (data.error) {
+      return [];
+    }
+    return data;
+  } catch (error) {
+    return {
+      error: true
+    };
+  }
+};
+
+// src/sqwid/read/fetchCollectionsByStats.ts
+import axios3 from "axios";
+var STATS_ORDER = {
+  ITEMS: "items",
+  VOLUME: "volume",
+  ITEMS_SOLD: "itemsSold",
+  AVERAGE: "average"
+};
+var fetchCollectionsByStats = async (order) => {
+  try {
+    const res = await axios3(
+      `${SQWID_BACKEND_URL}/get/collections/all/by/stats.${order}`
+    );
+    return res.data;
+  } catch (e) {
+    console.error("Error fetching collections:", e);
+    return { collections: [] };
+  }
+};
+
+// src/sqwid/read/fetchOwnerCollections.ts
+import axios4 from "axios";
+var fetchOwnerCollections = async (evmAddress) => {
+  try {
+    const res = await axios4.get(`${SQWID_BACKEND_URL}/get/collections/owner/${evmAddress}`);
+    const collections = res.data.collections;
+    localStorage.setItem("collections", JSON.stringify(collections));
+    return collections;
+  } catch (err) {
+    if (err.toString().includes("404")) {
+      return [];
+    } else {
+      console.error("Error fetching collections:", err);
+      return err.toString();
+    }
+  }
+};
+
+// src/sqwid/write/index.ts
+var write_exports = {};
+__export(write_exports, {
+  createCollectible: () => createCollectible
+});
+
+// src/sqwid/write/createCollectible.ts
+import axios5 from "axios";
+
+// src/abi/SqwidERC1155.ts
+var ABI = [
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "account",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "operator",
+        type: "address"
+      },
+      {
+        indexed: false,
+        internalType: "bool",
+        name: "approved",
+        type: "bool"
+      }
+    ],
+    name: "ApprovalForAll",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "previousOwner",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "newOwner",
+        type: "address"
+      }
+    ],
+    name: "OwnershipTransferred",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "operator",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "from",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "to",
+        type: "address"
+      },
+      {
+        indexed: false,
+        internalType: "uint256[]",
+        name: "ids",
+        type: "uint256[]"
+      },
+      {
+        indexed: false,
+        internalType: "uint256[]",
+        name: "values",
+        type: "uint256[]"
+      }
+    ],
+    name: "TransferBatch",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "operator",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "from",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "to",
+        type: "address"
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "id",
+        type: "uint256"
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "value",
+        type: "uint256"
+      }
+    ],
+    name: "TransferSingle",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: "string",
+        name: "value",
+        type: "string"
+      },
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "id",
+        type: "uint256"
+      }
+    ],
+    name: "URI",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256"
+      },
+      {
+        indexed: false,
+        internalType: "bool",
+        name: "isErc721",
+        type: "bool"
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "extTokenId",
+        type: "uint256"
+      },
+      {
+        indexed: false,
+        internalType: "address",
+        name: "extNftContract",
+        type: "address"
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      },
+      {
+        indexed: false,
+        internalType: "bool",
+        name: "wrapped",
+        type: "bool"
+      }
+    ],
+    name: "WrapToken",
+    type: "event"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "id",
+        type: "uint256"
+      }
+    ],
+    name: "balanceOf",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address[]",
+        name: "accounts",
+        type: "address[]"
+      },
+      {
+        internalType: "uint256[]",
+        name: "ids",
+        type: "uint256[]"
+      }
+    ],
+    name: "balanceOfBatch",
+    outputs: [
+      {
+        internalType: "uint256[]",
+        name: "",
+        type: "uint256[]"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "id",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      }
+    ],
+    name: "burn",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address"
+      },
+      {
+        internalType: "uint256[]",
+        name: "ids",
+        type: "uint256[]"
+      },
+      {
+        internalType: "uint256[]",
+        name: "amounts",
+        type: "uint256[]"
+      }
+    ],
+    name: "burnBatch",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "id",
+        type: "uint256"
+      }
+    ],
+    name: "getOwners",
+    outputs: [
+      {
+        internalType: "address[]",
+        name: "",
+        type: "address[]"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_id",
+        type: "uint256"
+      }
+    ],
+    name: "getTokenSupply",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "owner",
+        type: "address"
+      }
+    ],
+    name: "getTokensByOwner",
+    outputs: [
+      {
+        internalType: "uint256[]",
+        name: "",
+        type: "uint256[]"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256"
+      }
+    ],
+    name: "getWrappedToken",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "uint256",
+            name: "tokenId",
+            type: "uint256"
+          },
+          {
+            internalType: "bool",
+            name: "isErc721",
+            type: "bool"
+          },
+          {
+            internalType: "uint256",
+            name: "extTokenId",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "extNftContract",
+            type: "address"
+          }
+        ],
+        internalType: "struct SqwidERC1155Wrapper.WrappedToken",
+        name: "",
+        type: "tuple"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address"
+      },
+      {
+        internalType: "address",
+        name: "operator",
+        type: "address"
+      }
+    ],
+    name: "isApprovedForAll",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256"
+      }
+    ],
+    name: "mimeType",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "to",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      },
+      {
+        internalType: "string",
+        name: "tokenURI",
+        type: "string"
+      },
+      {
+        internalType: "string",
+        name: "mimeType_",
+        type: "string"
+      },
+      {
+        internalType: "address",
+        name: "royaltyRecipient",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "royaltyValue",
+        type: "uint256"
+      }
+    ],
+    name: "mint",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "to",
+        type: "address"
+      },
+      {
+        internalType: "uint256[]",
+        name: "amounts",
+        type: "uint256[]"
+      },
+      {
+        internalType: "string[]",
+        name: "tokenURIs",
+        type: "string[]"
+      },
+      {
+        internalType: "string[]",
+        name: "mimeTypes",
+        type: "string[]"
+      },
+      {
+        internalType: "address[]",
+        name: "royaltyRecipients",
+        type: "address[]"
+      },
+      {
+        internalType: "uint256[]",
+        name: "royaltyValues",
+        type: "uint256[]"
+      }
+    ],
+    name: "mintBatch",
+    outputs: [
+      {
+        internalType: "uint256[]",
+        name: "",
+        type: "uint256[]"
+      }
+    ],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "uint256[]",
+        name: "",
+        type: "uint256[]"
+      },
+      {
+        internalType: "uint256[]",
+        name: "",
+        type: "uint256[]"
+      },
+      {
+        internalType: "bytes",
+        name: "",
+        type: "bytes"
+      }
+    ],
+    name: "onERC1155BatchReceived",
+    outputs: [
+      {
+        internalType: "bytes4",
+        name: "",
+        type: "bytes4"
+      }
+    ],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      },
+      {
+        internalType: "bytes",
+        name: "",
+        type: "bytes"
+      }
+    ],
+    name: "onERC1155Received",
+    outputs: [
+      {
+        internalType: "bytes4",
+        name: "",
+        type: "bytes4"
+      }
+    ],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      },
+      {
+        internalType: "bytes",
+        name: "",
+        type: "bytes"
+      }
+    ],
+    name: "onERC721Received",
+    outputs: [
+      {
+        internalType: "bytes4",
+        name: "",
+        type: "bytes4"
+      }
+    ],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "owner",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "renounceOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "saleValue",
+        type: "uint256"
+      }
+    ],
+    name: "royaltyInfo",
+    outputs: [
+      {
+        internalType: "address",
+        name: "receiver",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "royaltyAmount",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "from",
+        type: "address"
+      },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address"
+      },
+      {
+        internalType: "uint256[]",
+        name: "ids",
+        type: "uint256[]"
+      },
+      {
+        internalType: "uint256[]",
+        name: "amounts",
+        type: "uint256[]"
+      },
+      {
+        internalType: "bytes",
+        name: "data",
+        type: "bytes"
+      }
+    ],
+    name: "safeBatchTransferFrom",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "from",
+        type: "address"
+      },
+      {
+        internalType: "address",
+        name: "to",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "id",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      },
+      {
+        internalType: "bytes",
+        name: "data",
+        type: "bytes"
+      }
+    ],
+    name: "safeTransferFrom",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "operator",
+        type: "address"
+      },
+      {
+        internalType: "bool",
+        name: "approved",
+        type: "bool"
+      }
+    ],
+    name: "setApprovalForAll",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "mimeType_",
+        type: "string"
+      },
+      {
+        internalType: "bool",
+        name: "valid",
+        type: "bool"
+      }
+    ],
+    name: "setValidMimeType",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes4",
+        name: "interfaceId",
+        type: "bytes4"
+      }
+    ],
+    name: "supportsInterface",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "newOwner",
+        type: "address"
+      }
+    ],
+    name: "transferOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256"
+      }
+    ],
+    name: "unwrapERC1155",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256"
+      }
+    ],
+    name: "unwrapERC721",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256"
+      }
+    ],
+    name: "uri",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string"
+      }
+    ],
+    name: "validMimeTypes",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "extNftContract",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "extTokenId",
+        type: "uint256"
+      },
+      {
+        internalType: "string",
+        name: "mimeType_",
+        type: "string"
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      }
+    ],
+    name: "wrapERC1155",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "extNftContract",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "extTokenId",
+        type: "uint256"
+      },
+      {
+        internalType: "string",
+        name: "mimeType_",
+        type: "string"
+      }
+    ],
+    name: "wrapERC721",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "nonpayable",
+    type: "function"
+  }
+];
+var SqwidERC1155_default = ABI;
+
+// src/abi/SqwidMarketplace.ts
+var ABI2 = [
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "marketFee_",
+        type: "uint256"
+      },
+      {
+        internalType: "contract ISqwidERC1155",
+        name: "sqwidERC1155_",
+        type: "address"
+      }
+    ],
+    stateMutability: "nonpayable",
+    type: "constructor"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "addr",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "value",
+        type: "uint256"
+      }
+    ],
+    name: "BalanceUpdated",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "bidder",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "value",
+        type: "uint256"
+      }
+    ],
+    name: "BidCreated",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "itemId",
+        type: "uint256"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "nftContract",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256"
+      },
+      {
+        indexed: false,
+        internalType: "address",
+        name: "creator",
+        type: "address"
+      }
+    ],
+    name: "ItemCreated",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "funder",
+        type: "address"
+      }
+    ],
+    name: "LoanFunded",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "itemId",
+        type: "uint256"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "nftContract",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256"
+      },
+      {
+        indexed: false,
+        internalType: "address",
+        name: "seller",
+        type: "address"
+      },
+      {
+        indexed: false,
+        internalType: "address",
+        name: "buyer",
+        type: "address"
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "price",
+        type: "uint256"
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      }
+    ],
+    name: "MarketItemSold",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "previousOwner",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "newOwner",
+        type: "address"
+      }
+    ],
+    name: "OwnershipTransferred",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "PositionDelete",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      },
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "itemId",
+        type: "uint256"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "owner",
+        type: "address"
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "price",
+        type: "uint256"
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "marketFee",
+        type: "uint256"
+      },
+      {
+        indexed: false,
+        internalType: "enum SqwidMarketplace.PositionState",
+        name: "state",
+        type: "uint8"
+      }
+    ],
+    name: "PositionUpdate",
+    type: "event"
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "addr",
+        type: "address"
+      },
+      {
+        indexed: true,
+        internalType: "uint256",
+        name: "value",
+        type: "uint256"
+      }
+    ],
+    name: "RaffleEntered",
+    type: "event"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "itemId",
+        type: "uint256"
+      }
+    ],
+    name: "addAvailableTokens",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      }
+    ],
+    name: "addressBalance",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "createBid",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256"
+      }
+    ],
+    name: "createItem",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "itemId",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "numMinutes",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "minBid",
+        type: "uint256"
+      }
+    ],
+    name: "createItemAuction",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "itemId",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "loanAmount",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "feeAmount",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "tokenAmount",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "numMinutes",
+        type: "uint256"
+      }
+    ],
+    name: "createItemLoan",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "itemId",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "numMinutes",
+        type: "uint256"
+      }
+    ],
+    name: "createItemRaffle",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      }
+    ],
+    name: "createSale",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "currentItemId",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "currentPositionId",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "endAuction",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "endRaffle",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "enterRaffle",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "fetchAuctionData",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "uint256",
+            name: "deadline",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "minBid",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "highestBidder",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "highestBid",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "totalAddresses",
+            type: "uint256"
+          }
+        ],
+        internalType: "struct SqwidMarketplace.AuctionDataResponse",
+        name: "",
+        type: "tuple"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "bidIndex",
+        type: "uint256"
+      }
+    ],
+    name: "fetchBid",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "itemId",
+        type: "uint256"
+      }
+    ],
+    name: "fetchItem",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "uint256",
+            name: "itemId",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "nftContract",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "tokenId",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "creator",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "positionCount",
+            type: "uint256"
+          },
+          {
+            components: [
+              {
+                internalType: "address",
+                name: "seller",
+                type: "address"
+              },
+              {
+                internalType: "address",
+                name: "buyer",
+                type: "address"
+              },
+              {
+                internalType: "uint256",
+                name: "price",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "amount",
+                type: "uint256"
+              }
+            ],
+            internalType: "struct SqwidMarketplace.ItemSale[]",
+            name: "sales",
+            type: "tuple[]"
+          }
+        ],
+        internalType: "struct SqwidMarketplace.Item",
+        name: "",
+        type: "tuple"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "fetchLoanData",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "uint256",
+            name: "loanAmount",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "feeAmount",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "numMinutes",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "deadline",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "lender",
+            type: "address"
+          }
+        ],
+        internalType: "struct SqwidMarketplace.LoanData",
+        name: "",
+        type: "tuple"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "fetchPosition",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "uint256",
+            name: "positionId",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "itemId",
+            type: "uint256"
+          },
+          {
+            internalType: "address payable",
+            name: "owner",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "price",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "marketFee",
+            type: "uint256"
+          },
+          {
+            internalType: "enum SqwidMarketplace.PositionState",
+            name: "state",
+            type: "uint8"
+          }
+        ],
+        internalType: "struct SqwidMarketplace.Position",
+        name: "",
+        type: "tuple"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "fetchRaffleData",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "uint256",
+            name: "deadline",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "totalValue",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "totalAddresses",
+            type: "uint256"
+          }
+        ],
+        internalType: "struct SqwidMarketplace.RaffleDataResponse",
+        name: "",
+        type: "tuple"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "entryIndex",
+        type: "uint256"
+      }
+    ],
+    name: "fetchRaffleEntry",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "enum SqwidMarketplace.PositionState",
+        name: "state",
+        type: "uint8"
+      }
+    ],
+    name: "fetchStateCount",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "fundLoan",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "liquidateLoan",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "enum SqwidMarketplace.PositionState",
+        name: "",
+        type: "uint8"
+      }
+    ],
+    name: "marketFees",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      },
+      {
+        internalType: "string",
+        name: "tokenURI",
+        type: "string"
+      },
+      {
+        internalType: "string",
+        name: "mimeType",
+        type: "string"
+      },
+      {
+        internalType: "address",
+        name: "royaltyRecipient",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "royaltyValue",
+        type: "uint256"
+      }
+    ],
+    name: "mint",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256[]",
+        name: "amounts",
+        type: "uint256[]"
+      },
+      {
+        internalType: "string[]",
+        name: "tokenURIs",
+        type: "string[]"
+      },
+      {
+        internalType: "string[]",
+        name: "mimeTypes",
+        type: "string[]"
+      },
+      {
+        internalType: "address[]",
+        name: "royaltyRecipients",
+        type: "address[]"
+      },
+      {
+        internalType: "uint256[]",
+        name: "royaltyValues",
+        type: "uint256[]"
+      }
+    ],
+    name: "mintBatch",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "uint256[]",
+        name: "",
+        type: "uint256[]"
+      },
+      {
+        internalType: "uint256[]",
+        name: "",
+        type: "uint256[]"
+      },
+      {
+        internalType: "bytes",
+        name: "",
+        type: "bytes"
+      }
+    ],
+    name: "onERC1155BatchReceived",
+    outputs: [
+      {
+        internalType: "bytes4",
+        name: "",
+        type: "bytes4"
+      }
+    ],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      },
+      {
+        internalType: "bytes",
+        name: "",
+        type: "bytes"
+      }
+    ],
+    name: "onERC1155Received",
+    outputs: [
+      {
+        internalType: "bytes4",
+        name: "",
+        type: "bytes4"
+      }
+    ],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "owner",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "itemId",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      },
+      {
+        internalType: "uint256",
+        name: "price",
+        type: "uint256"
+      }
+    ],
+    name: "putItemOnSale",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "renounceOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "repayLoan",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint16",
+        name: "marketFee_",
+        type: "uint16"
+      },
+      {
+        internalType: "enum SqwidMarketplace.PositionState",
+        name: "typeFee",
+        type: "uint8"
+      }
+    ],
+    name: "setMarketFee",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "contract ISqwidMigrator",
+        name: "sqwidMigrator_",
+        type: "address"
+      }
+    ],
+    name: "setMigratorAddress",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "contract ISqwidERC1155",
+        name: "sqwidERC1155_",
+        type: "address"
+      }
+    ],
+    name: "setNftContractAddress",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "sqwidERC1155",
+    outputs: [
+      {
+        internalType: "contract ISqwidERC1155",
+        name: "",
+        type: "address"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "sqwidMigrator",
+    outputs: [
+      {
+        internalType: "contract ISqwidMigrator",
+        name: "",
+        type: "address"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes4",
+        name: "interfaceId",
+        type: "bytes4"
+      }
+    ],
+    name: "supportsInterface",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "newOwner",
+        type: "address"
+      }
+    ],
+    name: "transferOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "unlistLoanProposal",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "positionId",
+        type: "uint256"
+      }
+    ],
+    name: "unlistPositionOnSale",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "withdraw",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  }
+];
+var SqwidMarketplace_default = ABI2;
+
+// src/sqwid/write/createCollectible.ts
+var getEVMAddress = async (address, provider) => {
+  address = await provider.api.query.evmAccounts.evmAddresses(address);
+  address = (0, ethers_exports.utils.getAddress)(address.toString());
+  return address;
+};
+var approveMarketplace = async (signer) => {
+  console.log("inisde approveMarketplace component");
+  let contract = new ethers_exports.Contract(
+    SQWID_ERC1155_ADDRESS,
+    SqwidERC1155_default,
+    signer
+  );
+  const tx = await contract.setApprovalForAll(
+    SQWID_MARKETPLACE_ADDRESS,
+    true
+  );
+  return await tx.wait();
+};
+var isMarketplaceApproved = async (provider, signer) => {
+  console.log("Inside isMarketplaceApproved component");
+  try {
+    console.log("Provider:", provider);
+    console.log("Signer:", signer);
+    const address = await signer.getAddress();
+    console.log("Address from signer:", address);
+    const marketplaceAddress = SQWID_MARKETPLACE_ADDRESS;
+    if (!ethers_exports.utils.isAddress(address) || !ethers_exports.utils.isAddress(marketplaceAddress)) {
+      throw new Error(`Invalid addresses: Signer: ${address}, Marketplace: ${marketplaceAddress}`);
+    }
+    const contract = new ethers_exports.Contract(SQWID_ERC1155_ADDRESS, SqwidERC1155_default, provider);
+    console.log("Contract instance created:", contract);
+    console.log("Checking contract approval with:", address, marketplaceAddress);
+    const isApproved = await contract.isApprovedForAll(address, marketplaceAddress);
+    console.log("Is Approved:", isApproved);
+    return isApproved;
+  } catch (error) {
+    console.error("Contract call failed:", error);
+    if (error.data && error.data.message) {
+      console.error("Detailed revert reason:", error.data.message);
+    } else {
+      console.error("No detailed revert reason provided.");
+    }
+    throw new Error("Contract interaction failed. Check the contract logs for details.");
+  }
+};
+var createCollectible = async (files, provider, signer) => {
+  const { file, coverFile, name: name2, description, properties, collection } = files;
+  const copies = Number(files.copies) || 1;
+  const royalty = (Number(files.royalty) || 0) * 100;
+  const data = new FormData();
+  data.append("fileData", file);
+  data.append("coverData", coverFile);
+  data.append("name", name2);
+  data.append("description", description);
+  data.append("collection", collection);
+  let attribs = [];
+  if (properties && properties.length > 0) {
+    for (let p of properties) {
+      p.key.length && attribs.push({ trait_type: p.key, value: p.value });
+    }
+  }
+  data.append("properties", JSON.stringify(attribs));
+  for (let pair of data.entries()) {
+    console.log(pair[0] + ": ==== " + pair[1]);
+  }
+  const address = signer._substrateAddress;
+  if (!address) {
+    throw new Error("You need to login first");
+  }
+  let jwt = address ? JSON.parse(localStorage.getItem("tokens")).find(
+    (token) => token.address === address
+  ) : null;
+  const approved = await isMarketplaceApproved(provider, signer);
+  if (!approved) {
+    await approveMarketplace(signer);
+  }
+  if (jwt) {
+    try {
+      const metadata = await axios5.post(
+        `${SQWID_BACKEND_URL}/create/collectible/upload`,
+        data,
+        {
+          headers: {
+            Authorization: `Bearer ${jwt.token}`
+          }
+        }
+      );
+      const meta = metadata.data?.metadata;
+      let to = files.royaltyRecipient && files.royaltyRecipient !== "" ? files.royaltyRecipient : await signer.getAddress();
+      if (to.startsWith("5")) to = await getEVMAddress(to, provider);
+      let contract = new ethers_exports.Contract(
+        SQWID_MARKETPLACE_ADDRESS,
+        SqwidMarketplace_default,
+        signer
+      );
+      try {
+        const nft = await contract.mint(
+          copies,
+          meta,
+          file.type.split("/")[0],
+          to,
+          royalty
+        );
+        const receipt = await nft.wait();
+        const itemId = receipt.events[1].args["itemId"].toNumber();
+        const positionId = receipt.events[1].args["positionId"].toNumber();
+        await axios5.post(
+          `${SQWID_BACKEND_URL}/create/collectible/verify`,
+          {
+            id: itemId,
+            collection
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${jwt.token}`,
+              "Content-Type": "application/json"
+            }
+          }
+        );
+        return positionId;
+      } catch (err) {
+        return { error: err };
+      }
+    } catch (err) {
+      return { error: err };
+    }
+  } else return null;
+};
 export {
   connectToReef,
-  connectToSqwid
+  connectToSqwid,
+  read_exports as sqwidRead,
+  write_exports as sqwidWrite
 };
 /*! Bundled license information:
 
