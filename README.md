@@ -12,23 +12,49 @@ Make sure the consuming project has `@reef-chain/util-lib` installed.
 
 ## Functions
 
-1. Connect wallet - Allows user to connect to reef extension ✅
-2. Get signature from Sqwid-backend ✅
-3. Mint NFTs from smart contract ✅
-4. Store minted NFTs to sqwid backend ✅
-5. Purchase NFTs from contract 
-6. Purchase response to be saved on sqwid backend
-7. List NFTs from a collection ✅
-8. Purchase NFT
-9. Put NFT on sale
-10. Create a new collection
+The library exports 4 main functions.
 
-```bash
-// todo: add a callback to send additional fees to some wallet 
-// 1. ai video charge
-// 2. additional charge when nft is minted
+1. `connectToReef`
 
-// todo: sales history of users
+Allows you to connect to Reef Chain using browser extension, returns observables for `selectedReefSigner` (connected reef account), `signers` (all accounts in connected extension) , `provider` (provider instance to connect to reef chain), `loading` (status of connecting to extension), `reefState` (function which comes with various methods for state management)
 
-// todo: burn feature should be there too
+Importing connectToReef
+
+```ts
+// import like this
+import { connectToReef } from 'sqwid-sdk';
 ```
+
+You can initialise it like this, and use the `state` to store the value of `signers`,`selectedReefSigner`,`provider`,`loading`,`reefState`,`error` etc.
+
+```ts
+// put this in any function
+const reef$ = connectToReef('sqwid-sdk-sample');
+
+reef$.subscribe((state) => {
+    if (state.loading) return;
+
+    if (state.error) {
+    console.error('REEF ERROR:', (state.error as any).message);
+    } else {
+    console.log('Reef State:', state);
+    }
+```
+
+2. `connectToSqwid` [IMPORTANT]
+
+Allows you to connect to Sqwid Backend, this should be called everytime you switch the account or want to connect to Sqwid first, as it sets the headers in your browser, which are used to make all the sqwid calls. So this is neccessary
+
+Importing `connectToSqwid`
+
+```ts
+import {connectToSqwid} from 'sqwid-sdk';
+```
+
+To connect to sqwid, the first requirement is connectToReef has been initialized already. As you need to pass the selectedSigner to connect to sqwid backend.
+
+```ts
+await connectToSqwid(selectedReefSigner); //here selectedReefSigner is reefExtensionConnectResponse.selectedReefSigner 
+```
+
+This function will sets the required cookies in Header to make calls to Sqwid.
