@@ -13,7 +13,7 @@ const getEVMAddress = async (address:any,provider:Provider) => {
 };
 
 
-const approveMarketplace = async (signer:Signer) => {
+export const approveMarketplace = async (signer:Signer) => {
 	console.log("inisde approveMarketplace component");
 
 	let contract = new ethers.Contract(
@@ -29,7 +29,7 @@ const approveMarketplace = async (signer:Signer) => {
 	return await tx.wait();
 };
 
-const isMarketplaceApproved = async (provider:Provider, signer:Signer) => {
+export const isMarketplaceApproved = async (provider:Provider, signer:Signer) => {
 	console.log("Inside isMarketplaceApproved component");
   
 	try {

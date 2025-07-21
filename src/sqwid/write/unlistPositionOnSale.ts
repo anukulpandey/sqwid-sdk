@@ -1,66 +1,12 @@
 import type { Provider, Signer } from "@reef-chain/evm-provider";
 import { ethers } from "ethers";
-import contractABI from "./../../abi/SqwidERC1155";
+
 import marketplaceContractABI from "./../../abi/SqwidMarketplace";
-import { SQWID_ERC1155_ADDRESS, SQWID_MARKETPLACE_ADDRESS } from "./../../utils/constants";
+import {SQWID_MARKETPLACE_ADDRESS } from "./../../utils/constants";
+import { approveMarketplace, isMarketplaceApproved } from "./createCollectible";
 
 
-const approveMarketplace = async (signer:Signer) => {
-	console.log("inisde approveMarketplace component");
-
-	let contract = new ethers.Contract(
-		SQWID_ERC1155_ADDRESS,
-		contractABI,
-		signer
-	);   
-
-	const tx = await contract.setApprovalForAll(
-		SQWID_MARKETPLACE_ADDRESS,
-		true
-	);
-	return await tx.wait();
-};
-
-
-const isMarketplaceApproved = async (provider:Provider, signer:Signer) => {
-	console.log("Inside isMarketplaceApproved component");
-  
-	try {
-	  console.log("Provider:", provider);
-	  console.log("Signer:", signer);
-  
-	  const address = await signer.getAddress();
-	  console.log("Address from signer:", address);
-  
-	  const marketplaceAddress = SQWID_MARKETPLACE_ADDRESS;
-	  if (!ethers.utils.isAddress(address) || !ethers.utils.isAddress(marketplaceAddress)) {
-		throw new Error(`Invalid addresses: Signer: ${address}, Marketplace: ${marketplaceAddress}`);
-	  }
-  
-	  const contract = new ethers.Contract(SQWID_ERC1155_ADDRESS, contractABI, provider);
-	  console.log("Contract instance created:", contract);
-  
-	  console.log("Checking contract approval with:", address, marketplaceAddress);
-  
-	  const isApproved = await contract.isApprovedForAll(address, marketplaceAddress);
-	  console.log("Is Approved:", isApproved);
-  
-	  return isApproved;
-	} catch (error) {
-	  console.error("Contract call failed:", error);
-	  
-	  // Capture the error data if available
-	  if ((error as any).data && (error as any).data.message) {
-		console.error("Detailed revert reason:", (error as any).data.message);
-	  } else {
-		console.error("No detailed revert reason provided.");
-	  }
-  
-	  throw new Error("Contract interaction failed. Check the contract logs for details.");
-	}
-  };  
-
-const checkAndApproveMarketplace = async (provider:Provider,signer:Signer) => {
+export const checkAndApproveMarketplace = async (provider:Provider,signer:Signer) => {
 	const approved = await isMarketplaceApproved(provider,signer);
 	if (!approved) {
 		await approveMarketplace(signer);
