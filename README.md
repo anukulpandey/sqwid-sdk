@@ -39,6 +39,7 @@ reef$.subscribe((state) => {
     } else {
     console.log('Reef State:', state);
     }
+}
 ```
 
 2. `connectToSqwid` [IMPORTANT]
