@@ -12,11 +12,11 @@ var __export = (target, all) => {
   for (var name2 in all)
     __defProp(target, name2, { get: all[name2], enumerable: true });
 };
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key5 of __getOwnPropNames(from))
+var __copyProps = (to, from2, except, desc) => {
+  if (from2 && typeof from2 === "object" || typeof from2 === "function") {
+    for (let key5 of __getOwnPropNames(from2))
       if (!__hasOwnProp.call(to, key5) && key5 !== except)
-        __defProp(to, key5, { get: () => from[key5], enumerable: !(desc = __getOwnPropDesc(from, key5)) || desc.enumerable });
+        __defProp(to, key5, { get: () => from2[key5], enumerable: !(desc = __getOwnPropDesc(from2, key5)) || desc.enumerable });
   }
   return to;
 };
@@ -131,9 +131,9 @@ var require_Subscription = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -255,9 +255,9 @@ var require_Subscription = __commonJS({
         }
       };
       Subscription2.EMPTY = function() {
-        var empty = new Subscription2();
-        empty.closed = true;
-        return empty;
+        var empty2 = new Subscription2();
+        empty2.closed = true;
+        return empty2;
       }();
       return Subscription2;
     }();
@@ -314,9 +314,9 @@ var require_timeoutProvider = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -1074,9 +1074,9 @@ var require_animationFrameProvider = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -1674,9 +1674,9 @@ var require_intervalProvider = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -1883,9 +1883,9 @@ var require_immediateProvider = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -2561,10 +2561,10 @@ var require_empty = __commonJS({
     exports2.EMPTY = new Observable_1.Observable(function(subscriber) {
       return subscriber.complete();
     });
-    function empty(scheduler) {
+    function empty2(scheduler) {
       return scheduler ? emptyScheduled(scheduler) : exports2.EMPTY;
     }
-    exports2.empty = empty;
+    exports2.empty = empty2;
     function emptyScheduled(scheduler) {
       return new Observable_1.Observable(function(subscriber) {
         return scheduler.schedule(function() {
@@ -3447,10 +3447,10 @@ var require_from = __commonJS({
     exports2.from = void 0;
     var scheduled_1 = require_scheduled();
     var innerFrom_1 = require_innerFrom();
-    function from(input, scheduler) {
+    function from2(input, scheduler) {
       return scheduler ? scheduled_1.scheduled(input, scheduler) : innerFrom_1.innerFrom(input);
     }
-    exports2.from = from;
+    exports2.from = from2;
   }
 });
 
@@ -3838,9 +3838,9 @@ var require_mapOneOrManyArgs = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -3880,9 +3880,9 @@ var require_bindCallbackInternals = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -4079,10 +4079,10 @@ var require_combineLatest = __commonJS({
       }
       return function(subscriber) {
         maybeSchedule(scheduler, function() {
-          var length = observables.length;
-          var values = new Array(length);
-          var active = length;
-          var remainingFirstValues = length;
+          var length2 = observables.length;
+          var values = new Array(length2);
+          var active = length2;
+          var remainingFirstValues = length2;
           var _loop_1 = function(i2) {
             maybeSchedule(scheduler, function() {
               var source = from_1.from(observables[i2], scheduler);
@@ -4103,7 +4103,7 @@ var require_combineLatest = __commonJS({
               }));
             }, subscriber);
           };
-          for (var i = 0; i < length; i++) {
+          for (var i = 0; i < length2; i++) {
             _loop_1(i);
           }
         }, subscriber);
@@ -4357,14 +4357,14 @@ var require_forkJoin = __commonJS({
       var resultSelector = args_1.popResultSelector(args);
       var _a = argsArgArrayOrObject_1.argsArgArrayOrObject(args), sources = _a.args, keys = _a.keys;
       var result = new Observable_1.Observable(function(subscriber) {
-        var length = sources.length;
-        if (!length) {
+        var length2 = sources.length;
+        if (!length2) {
           subscriber.complete();
           return;
         }
-        var values = new Array(length);
-        var remainingCompletions = length;
-        var remainingEmissions = length;
+        var values = new Array(length2);
+        var remainingCompletions = length2;
+        var remainingEmissions = length2;
         var _loop_1 = function(sourceIndex2) {
           var hasValue = false;
           innerFrom_1.innerFrom(sources[sourceIndex2]).subscribe(OperatorSubscriber_1.createOperatorSubscriber(subscriber, function(value) {
@@ -4384,7 +4384,7 @@ var require_forkJoin = __commonJS({
             }
           }));
         };
-        for (var sourceIndex = 0; sourceIndex < length; sourceIndex++) {
+        for (var sourceIndex = 0; sourceIndex < length2; sourceIndex++) {
           _loop_1(sourceIndex);
         }
       });
@@ -5014,9 +5014,9 @@ var require_zip = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -5644,9 +5644,9 @@ var require_combineLatest2 = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -5692,9 +5692,9 @@ var require_combineLatestWith = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -5766,9 +5766,9 @@ var require_concat2 = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -5812,9 +5812,9 @@ var require_concatWith = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -6305,9 +6305,9 @@ var require_endWith = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -6852,9 +6852,9 @@ var require_merge2 = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -6899,9 +6899,9 @@ var require_mergeWith = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -6984,9 +6984,9 @@ var require_onErrorResumeNextWith = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -7044,13 +7044,13 @@ var require_pluck = __commonJS({
       for (var _i = 0; _i < arguments.length; _i++) {
         properties[_i] = arguments[_i];
       }
-      var length = properties.length;
-      if (length === 0) {
+      var length2 = properties.length;
+      if (length2 === 0) {
         throw new Error("list of properties cannot be empty.");
       }
       return map_1.map(function(x) {
         var currentProp = x;
-        for (var i = 0; i < length; i++) {
+        for (var i = 0; i < length2; i++) {
           var p = currentProp === null || currentProp === void 0 ? void 0 : currentProp[properties[i]];
           if (typeof p !== "undefined") {
             currentProp = p;
@@ -7168,9 +7168,9 @@ var require_raceWith = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -7566,9 +7566,9 @@ var require_share = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -8568,9 +8568,9 @@ var require_withLatestFrom = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -8654,9 +8654,9 @@ var require_zip2 = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -8697,9 +8697,9 @@ var require_zipWith = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -9465,9 +9465,9 @@ var require_race2 = __commonJS({
       }
       return ar;
     };
-    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from) {
-      for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
-        to[j] = from[i];
+    var __spreadArray = exports2 && exports2.__spreadArray || function(to, from2) {
+      for (var i = 0, il = from2.length, j = to.length; i < il; i++, j++)
+        to[j] = from2[i];
       return to;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -9965,7 +9965,7 @@ var require_bn = __commonJS({
         ctor.prototype = new TempCtor();
         ctor.prototype.constructor = ctor;
       }
-      function BN12(number, base5, endian) {
+      function BN12(number, base6, endian) {
         if (BN12.isBN(number)) {
           return number;
         }
@@ -9974,11 +9974,11 @@ var require_bn = __commonJS({
         this.length = 0;
         this.red = null;
         if (number !== null) {
-          if (base5 === "le" || base5 === "be") {
-            endian = base5;
-            base5 = 10;
+          if (base6 === "le" || base6 === "be") {
+            endian = base6;
+            base6 = 10;
           }
-          this._init(number || 0, base5 || 10, endian || "be");
+          this._init(number || 0, base6 || 10, endian || "be");
         }
       }
       if (typeof module3 === "object") {
@@ -10011,17 +10011,17 @@ var require_bn = __commonJS({
         if (left.cmp(right) < 0) return left;
         return right;
       };
-      BN12.prototype._init = function init5(number, base5, endian) {
+      BN12.prototype._init = function init5(number, base6, endian) {
         if (typeof number === "number") {
-          return this._initNumber(number, base5, endian);
+          return this._initNumber(number, base6, endian);
         }
         if (typeof number === "object") {
-          return this._initArray(number, base5, endian);
+          return this._initArray(number, base6, endian);
         }
-        if (base5 === "hex") {
-          base5 = 16;
+        if (base6 === "hex") {
+          base6 = 16;
         }
-        assert5(base5 === (base5 | 0) && base5 >= 2 && base5 <= 36);
+        assert5(base6 === (base6 | 0) && base6 >= 2 && base6 <= 36);
         number = number.toString().replace(/\s+/g, "");
         var start = 0;
         if (number[0] === "-") {
@@ -10029,17 +10029,17 @@ var require_bn = __commonJS({
           this.negative = 1;
         }
         if (start < number.length) {
-          if (base5 === 16) {
+          if (base6 === 16) {
             this._parseHex(number, start, endian);
           } else {
-            this._parseBase(number, base5, start);
+            this._parseBase(number, base6, start);
             if (endian === "le") {
-              this._initArray(this.toArray(), base5, endian);
+              this._initArray(this.toArray(), base6, endian);
             }
           }
         }
       };
-      BN12.prototype._initNumber = function _initNumber(number, base5, endian) {
+      BN12.prototype._initNumber = function _initNumber(number, base6, endian) {
         if (number < 0) {
           this.negative = 1;
           number = -number;
@@ -10063,9 +10063,9 @@ var require_bn = __commonJS({
           this.length = 3;
         }
         if (endian !== "le") return;
-        this._initArray(this.toArray(), base5, endian);
+        this._initArray(this.toArray(), base6, endian);
       };
-      BN12.prototype._initArray = function _initArray(number, base5, endian) {
+      BN12.prototype._initArray = function _initArray(number, base6, endian) {
         assert5(typeof number.length === "number");
         if (number.length <= 0) {
           this.words = [0];
@@ -10179,20 +10179,20 @@ var require_bn = __commonJS({
         }
         return r2;
       }
-      BN12.prototype._parseBase = function _parseBase(number, base5, start) {
+      BN12.prototype._parseBase = function _parseBase(number, base6, start) {
         this.words = [0];
         this.length = 1;
-        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base5) {
+        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base6) {
           limbLen++;
         }
         limbLen--;
-        limbPow = limbPow / base5 | 0;
+        limbPow = limbPow / base6 | 0;
         var total = number.length - start;
         var mod = total % limbLen;
         var end = Math.min(total, total - mod) + start;
         var word = 0;
         for (var i = start; i < end; i += limbLen) {
-          word = parseBase(number, i, i + limbLen, base5);
+          word = parseBase(number, i, i + limbLen, base6);
           this.imuln(limbPow);
           if (this.words[0] + word < 67108864) {
             this.words[0] += word;
@@ -10202,9 +10202,9 @@ var require_bn = __commonJS({
         }
         if (mod !== 0) {
           var pow = 1;
-          word = parseBase(number, i, number.length, base5);
+          word = parseBase(number, i, number.length, base6);
           for (i = 0; i < mod; i++) {
-            pow *= base5;
+            pow *= base6;
           }
           this.imuln(pow);
           if (this.words[0] + word < 67108864) {
@@ -10224,11 +10224,11 @@ var require_bn = __commonJS({
         dest.negative = this.negative;
         dest.red = this.red;
       };
-      function move(dest, src) {
-        dest.words = src.words;
-        dest.length = src.length;
-        dest.negative = src.negative;
-        dest.red = src.red;
+      function move(dest, src2) {
+        dest.words = src2.words;
+        dest.length = src2.length;
+        dest.negative = src2.negative;
+        dest.red = src2.red;
       }
       BN12.prototype._move = function _move(dest) {
         move(dest, this);
@@ -10374,11 +10374,11 @@ var require_bn = __commonJS({
         52521875,
         60466176
       ];
-      BN12.prototype.toString = function toString(base5, padding3) {
-        base5 = base5 || 10;
+      BN12.prototype.toString = function toString(base6, padding3) {
+        base6 = base6 || 10;
         padding3 = padding3 | 0 || 1;
         var out;
-        if (base5 === 16 || base5 === "hex") {
+        if (base6 === 16 || base6 === "hex") {
           out = "";
           var off = 0;
           var carry = 0;
@@ -10408,14 +10408,14 @@ var require_bn = __commonJS({
           }
           return out;
         }
-        if (base5 === (base5 | 0) && base5 >= 2 && base5 <= 36) {
-          var groupSize = groupSizes[base5];
-          var groupBase = groupBases[base5];
+        if (base6 === (base6 | 0) && base6 >= 2 && base6 <= 36) {
+          var groupSize = groupSizes[base6];
+          var groupBase = groupBases[base6];
           out = "";
           var c = this.clone();
           c.negative = 0;
           while (!c.isZero()) {
-            var r2 = c.modrn(groupBase).toString(base5);
+            var r2 = c.modrn(groupBase).toString(base6);
             c = c.idivn(groupBase);
             if (!c.isZero()) {
               out = zeros3[groupSize - r2.length] + r2 + out;
@@ -10451,12 +10451,12 @@ var require_bn = __commonJS({
         return this.toString(16, 2);
       };
       if (Buffer2) {
-        BN12.prototype.toBuffer = function toBuffer(endian, length) {
-          return this.toArrayLike(Buffer2, endian, length);
+        BN12.prototype.toBuffer = function toBuffer(endian, length2) {
+          return this.toArrayLike(Buffer2, endian, length2);
         };
       }
-      BN12.prototype.toArray = function toArray(endian, length) {
-        return this.toArrayLike(Array, endian, length);
+      BN12.prototype.toArray = function toArray(endian, length2) {
+        return this.toArrayLike(Array, endian, length2);
       };
       var allocate = function allocate2(ArrayType, size) {
         if (ArrayType.allocUnsafe) {
@@ -10464,10 +10464,10 @@ var require_bn = __commonJS({
         }
         return new ArrayType(size);
       };
-      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length) {
+      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length2) {
         this._strip();
         var byteLength = this.byteLength();
-        var reqLength = length || Math.max(1, byteLength);
+        var reqLength = length2 || Math.max(1, byteLength);
         assert5(byteLength <= reqLength, "byte array longer than desired length");
         assert5(reqLength > 0, "Requested array length <= 0");
         var res = allocate(ArrayType, reqLength);
@@ -10651,7 +10651,7 @@ var require_bn = __commonJS({
         assert5((this.negative | num.negative) === 0);
         return this.iuor(num);
       };
-      BN12.prototype.or = function or(num) {
+      BN12.prototype.or = function or2(num) {
         if (this.length > num.length) return this.clone().ior(num);
         return num.clone().ior(this);
       };
@@ -11502,16 +11502,16 @@ var require_bn = __commonJS({
         this.x = x;
         this.y = y;
       }
-      FFTM.prototype.makeRBT = function makeRBT(N3) {
-        var t = new Array(N3);
-        var l = BN12.prototype._countBits(N3) - 1;
-        for (var i = 0; i < N3; i++) {
-          t[i] = this.revBin(i, l, N3);
+      FFTM.prototype.makeRBT = function makeRBT(N10) {
+        var t = new Array(N10);
+        var l = BN12.prototype._countBits(N10) - 1;
+        for (var i = 0; i < N10; i++) {
+          t[i] = this.revBin(i, l, N10);
         }
         return t;
       };
-      FFTM.prototype.revBin = function revBin(x, l, N3) {
-        if (x === 0 || x === N3 - 1) return x;
+      FFTM.prototype.revBin = function revBin(x, l, N10) {
+        if (x === 0 || x === N10 - 1) return x;
         var rb = 0;
         for (var i = 0; i < l; i++) {
           rb |= (x & 1) << l - i - 1;
@@ -11519,19 +11519,19 @@ var require_bn = __commonJS({
         }
         return rb;
       };
-      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N3) {
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N10) {
+        for (var i = 0; i < N10; i++) {
           rtws[i] = rws[rbt[i]];
           itws[i] = iws[rbt[i]];
         }
       };
-      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N3, rbt) {
-        this.permute(rbt, rws, iws, rtws, itws, N3);
-        for (var s = 1; s < N3; s <<= 1) {
+      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N10, rbt) {
+        this.permute(rbt, rws, iws, rtws, itws, N10);
+        for (var s = 1; s < N10; s <<= 1) {
           var l = s << 1;
           var rtwdf = Math.cos(2 * Math.PI / l);
           var itwdf = Math.sin(2 * Math.PI / l);
-          for (var p = 0; p < N3; p += l) {
+          for (var p = 0; p < N10; p += l) {
             var rtwdf_ = rtwdf;
             var itwdf_ = itwdf;
             for (var j = 0; j < s; j++) {
@@ -11556,29 +11556,29 @@ var require_bn = __commonJS({
         }
       };
       FFTM.prototype.guessLen13b = function guessLen13b(n, m) {
-        var N3 = Math.max(m, n) | 1;
-        var odd = N3 & 1;
+        var N10 = Math.max(m, n) | 1;
+        var odd = N10 & 1;
         var i = 0;
-        for (N3 = N3 / 2 | 0; N3; N3 = N3 >>> 1) {
+        for (N10 = N10 / 2 | 0; N10; N10 = N10 >>> 1) {
           i++;
         }
         return 1 << i + 1 + odd;
       };
-      FFTM.prototype.conjugate = function conjugate(rws, iws, N3) {
-        if (N3 <= 1) return;
-        for (var i = 0; i < N3 / 2; i++) {
+      FFTM.prototype.conjugate = function conjugate(rws, iws, N10) {
+        if (N10 <= 1) return;
+        for (var i = 0; i < N10 / 2; i++) {
           var t = rws[i];
-          rws[i] = rws[N3 - i - 1];
-          rws[N3 - i - 1] = t;
+          rws[i] = rws[N10 - i - 1];
+          rws[N10 - i - 1] = t;
           t = iws[i];
-          iws[i] = -iws[N3 - i - 1];
-          iws[N3 - i - 1] = -t;
+          iws[i] = -iws[N10 - i - 1];
+          iws[N10 - i - 1] = -t;
         }
       };
-      FFTM.prototype.normalize13b = function normalize13b(ws, N3) {
+      FFTM.prototype.normalize13b = function normalize13b(ws, N10) {
         var carry = 0;
-        for (var i = 0; i < N3 / 2; i++) {
-          var w = Math.round(ws[2 * i + 1] / N3) * 8192 + Math.round(ws[2 * i] / N3) + carry;
+        for (var i = 0; i < N10 / 2; i++) {
+          var w = Math.round(ws[2 * i + 1] / N10) * 8192 + Math.round(ws[2 * i] / N10) + carry;
           ws[i] = w & 67108863;
           if (w < 67108864) {
             carry = 0;
@@ -11588,7 +11588,7 @@ var require_bn = __commonJS({
         }
         return ws;
       };
-      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N3) {
+      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N10) {
         var carry = 0;
         for (var i = 0; i < len; i++) {
           carry = carry + (ws[i] | 0);
@@ -11597,44 +11597,44 @@ var require_bn = __commonJS({
           rws[2 * i + 1] = carry & 8191;
           carry = carry >>> 13;
         }
-        for (i = 2 * len; i < N3; ++i) {
+        for (i = 2 * len; i < N10; ++i) {
           rws[i] = 0;
         }
         assert5(carry === 0);
         assert5((carry & ~8191) === 0);
       };
-      FFTM.prototype.stub = function stub(N3) {
-        var ph = new Array(N3);
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.stub = function stub(N10) {
+        var ph = new Array(N10);
+        for (var i = 0; i < N10; i++) {
           ph[i] = 0;
         }
         return ph;
       };
       FFTM.prototype.mulp = function mulp(x, y, out) {
-        var N3 = 2 * this.guessLen13b(x.length, y.length);
-        var rbt = this.makeRBT(N3);
-        var _ = this.stub(N3);
-        var rws = new Array(N3);
-        var rwst = new Array(N3);
-        var iwst = new Array(N3);
-        var nrws = new Array(N3);
-        var nrwst = new Array(N3);
-        var niwst = new Array(N3);
+        var N10 = 2 * this.guessLen13b(x.length, y.length);
+        var rbt = this.makeRBT(N10);
+        var _ = this.stub(N10);
+        var rws = new Array(N10);
+        var rwst = new Array(N10);
+        var iwst = new Array(N10);
+        var nrws = new Array(N10);
+        var nrwst = new Array(N10);
+        var niwst = new Array(N10);
         var rmws = out.words;
-        rmws.length = N3;
-        this.convert13b(x.words, x.length, rws, N3);
-        this.convert13b(y.words, y.length, nrws, N3);
-        this.transform(rws, _, rwst, iwst, N3, rbt);
-        this.transform(nrws, _, nrwst, niwst, N3, rbt);
-        for (var i = 0; i < N3; i++) {
+        rmws.length = N10;
+        this.convert13b(x.words, x.length, rws, N10);
+        this.convert13b(y.words, y.length, nrws, N10);
+        this.transform(rws, _, rwst, iwst, N10, rbt);
+        this.transform(nrws, _, nrwst, niwst, N10, rbt);
+        for (var i = 0; i < N10; i++) {
           var rx = rwst[i] * nrwst[i] - iwst[i] * niwst[i];
           iwst[i] = rwst[i] * niwst[i] + iwst[i] * nrwst[i];
           rwst[i] = rx;
         }
-        this.conjugate(rwst, iwst, N3);
-        this.transform(rwst, iwst, rmws, _, N3, rbt);
-        this.conjugate(rmws, _, N3);
-        this.normalize13b(rmws, N3);
+        this.conjugate(rwst, iwst, N10);
+        this.transform(rwst, iwst, rmws, _, N10, rbt);
+        this.conjugate(rmws, _, N10);
+        this.normalize13b(rmws, N10);
         out.negative = x.negative ^ y.negative;
         out.length = x.length + y.length;
         return out._strip();
@@ -13065,8 +13065,8 @@ var require_sha3 = __commonJS({
           }
           notString = true;
         }
-        var blocks = this.blocks, byteCount = this.byteCount, length = message.length, blockCount = this.blockCount, index = 0, s = this.s, i2, code;
-        while (index < length) {
+        var blocks = this.blocks, byteCount = this.byteCount, length2 = message.length, blockCount = this.blockCount, index = 0, s = this.s, i2, code;
+        while (index < length2) {
           if (this.reset) {
             this.reset = false;
             blocks[0] = this.block;
@@ -13075,11 +13075,11 @@ var require_sha3 = __commonJS({
             }
           }
           if (notString) {
-            for (i2 = this.start; index < length && i2 < byteCount; ++index) {
+            for (i2 = this.start; index < length2 && i2 < byteCount; ++index) {
               blocks[i2 >> 2] |= message[index] << SHIFT[i2++ & 3];
             }
           } else {
-            for (i2 = this.start; index < length && i2 < byteCount; ++index) {
+            for (i2 = this.start; index < length2 && i2 < byteCount; ++index) {
               code = message.charCodeAt(index);
               if (code < 128) {
                 blocks[i2 >> 2] |= code << SHIFT[i2++ & 3];
@@ -13151,9 +13151,9 @@ var require_sha3 = __commonJS({
           }
           notString = true;
         }
-        var bytes = 0, length = str.length;
+        var bytes = 0, length2 = str.length;
         if (notString) {
-          bytes = length;
+          bytes = length2;
         } else {
           for (var i2 = 0; i2 < str.length; ++i2) {
             var code = str.charCodeAt(i2);
@@ -13503,7 +13503,7 @@ var require_bn2 = __commonJS({
         ctor.prototype = new TempCtor();
         ctor.prototype.constructor = ctor;
       }
-      function BN12(number, base5, endian) {
+      function BN12(number, base6, endian) {
         if (BN12.isBN(number)) {
           return number;
         }
@@ -13512,11 +13512,11 @@ var require_bn2 = __commonJS({
         this.length = 0;
         this.red = null;
         if (number !== null) {
-          if (base5 === "le" || base5 === "be") {
-            endian = base5;
-            base5 = 10;
+          if (base6 === "le" || base6 === "be") {
+            endian = base6;
+            base6 = 10;
           }
-          this._init(number || 0, base5 || 10, endian || "be");
+          this._init(number || 0, base6 || 10, endian || "be");
         }
       }
       if (typeof module3 === "object") {
@@ -13549,17 +13549,17 @@ var require_bn2 = __commonJS({
         if (left.cmp(right) < 0) return left;
         return right;
       };
-      BN12.prototype._init = function init5(number, base5, endian) {
+      BN12.prototype._init = function init5(number, base6, endian) {
         if (typeof number === "number") {
-          return this._initNumber(number, base5, endian);
+          return this._initNumber(number, base6, endian);
         }
         if (typeof number === "object") {
-          return this._initArray(number, base5, endian);
+          return this._initArray(number, base6, endian);
         }
-        if (base5 === "hex") {
-          base5 = 16;
+        if (base6 === "hex") {
+          base6 = 16;
         }
-        assert5(base5 === (base5 | 0) && base5 >= 2 && base5 <= 36);
+        assert5(base6 === (base6 | 0) && base6 >= 2 && base6 <= 36);
         number = number.toString().replace(/\s+/g, "");
         var start = 0;
         if (number[0] === "-") {
@@ -13567,17 +13567,17 @@ var require_bn2 = __commonJS({
           this.negative = 1;
         }
         if (start < number.length) {
-          if (base5 === 16) {
+          if (base6 === 16) {
             this._parseHex(number, start, endian);
           } else {
-            this._parseBase(number, base5, start);
+            this._parseBase(number, base6, start);
             if (endian === "le") {
-              this._initArray(this.toArray(), base5, endian);
+              this._initArray(this.toArray(), base6, endian);
             }
           }
         }
       };
-      BN12.prototype._initNumber = function _initNumber(number, base5, endian) {
+      BN12.prototype._initNumber = function _initNumber(number, base6, endian) {
         if (number < 0) {
           this.negative = 1;
           number = -number;
@@ -13601,9 +13601,9 @@ var require_bn2 = __commonJS({
           this.length = 3;
         }
         if (endian !== "le") return;
-        this._initArray(this.toArray(), base5, endian);
+        this._initArray(this.toArray(), base6, endian);
       };
-      BN12.prototype._initArray = function _initArray(number, base5, endian) {
+      BN12.prototype._initArray = function _initArray(number, base6, endian) {
         assert5(typeof number.length === "number");
         if (number.length <= 0) {
           this.words = [0];
@@ -13717,20 +13717,20 @@ var require_bn2 = __commonJS({
         }
         return r2;
       }
-      BN12.prototype._parseBase = function _parseBase(number, base5, start) {
+      BN12.prototype._parseBase = function _parseBase(number, base6, start) {
         this.words = [0];
         this.length = 1;
-        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base5) {
+        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base6) {
           limbLen++;
         }
         limbLen--;
-        limbPow = limbPow / base5 | 0;
+        limbPow = limbPow / base6 | 0;
         var total = number.length - start;
         var mod = total % limbLen;
         var end = Math.min(total, total - mod) + start;
         var word = 0;
         for (var i = start; i < end; i += limbLen) {
-          word = parseBase(number, i, i + limbLen, base5);
+          word = parseBase(number, i, i + limbLen, base6);
           this.imuln(limbPow);
           if (this.words[0] + word < 67108864) {
             this.words[0] += word;
@@ -13740,9 +13740,9 @@ var require_bn2 = __commonJS({
         }
         if (mod !== 0) {
           var pow = 1;
-          word = parseBase(number, i, number.length, base5);
+          word = parseBase(number, i, number.length, base6);
           for (i = 0; i < mod; i++) {
-            pow *= base5;
+            pow *= base6;
           }
           this.imuln(pow);
           if (this.words[0] + word < 67108864) {
@@ -13762,11 +13762,11 @@ var require_bn2 = __commonJS({
         dest.negative = this.negative;
         dest.red = this.red;
       };
-      function move(dest, src) {
-        dest.words = src.words;
-        dest.length = src.length;
-        dest.negative = src.negative;
-        dest.red = src.red;
+      function move(dest, src2) {
+        dest.words = src2.words;
+        dest.length = src2.length;
+        dest.negative = src2.negative;
+        dest.red = src2.red;
       }
       BN12.prototype._move = function _move(dest) {
         move(dest, this);
@@ -13912,11 +13912,11 @@ var require_bn2 = __commonJS({
         52521875,
         60466176
       ];
-      BN12.prototype.toString = function toString(base5, padding3) {
-        base5 = base5 || 10;
+      BN12.prototype.toString = function toString(base6, padding3) {
+        base6 = base6 || 10;
         padding3 = padding3 | 0 || 1;
         var out;
-        if (base5 === 16 || base5 === "hex") {
+        if (base6 === 16 || base6 === "hex") {
           out = "";
           var off = 0;
           var carry = 0;
@@ -13946,14 +13946,14 @@ var require_bn2 = __commonJS({
           }
           return out;
         }
-        if (base5 === (base5 | 0) && base5 >= 2 && base5 <= 36) {
-          var groupSize = groupSizes[base5];
-          var groupBase = groupBases[base5];
+        if (base6 === (base6 | 0) && base6 >= 2 && base6 <= 36) {
+          var groupSize = groupSizes[base6];
+          var groupBase = groupBases[base6];
           out = "";
           var c = this.clone();
           c.negative = 0;
           while (!c.isZero()) {
-            var r2 = c.modrn(groupBase).toString(base5);
+            var r2 = c.modrn(groupBase).toString(base6);
             c = c.idivn(groupBase);
             if (!c.isZero()) {
               out = zeros3[groupSize - r2.length] + r2 + out;
@@ -13989,12 +13989,12 @@ var require_bn2 = __commonJS({
         return this.toString(16, 2);
       };
       if (Buffer2) {
-        BN12.prototype.toBuffer = function toBuffer(endian, length) {
-          return this.toArrayLike(Buffer2, endian, length);
+        BN12.prototype.toBuffer = function toBuffer(endian, length2) {
+          return this.toArrayLike(Buffer2, endian, length2);
         };
       }
-      BN12.prototype.toArray = function toArray(endian, length) {
-        return this.toArrayLike(Array, endian, length);
+      BN12.prototype.toArray = function toArray(endian, length2) {
+        return this.toArrayLike(Array, endian, length2);
       };
       var allocate = function allocate2(ArrayType, size) {
         if (ArrayType.allocUnsafe) {
@@ -14002,10 +14002,10 @@ var require_bn2 = __commonJS({
         }
         return new ArrayType(size);
       };
-      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length) {
+      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length2) {
         this._strip();
         var byteLength = this.byteLength();
-        var reqLength = length || Math.max(1, byteLength);
+        var reqLength = length2 || Math.max(1, byteLength);
         assert5(byteLength <= reqLength, "byte array longer than desired length");
         assert5(reqLength > 0, "Requested array length <= 0");
         var res = allocate(ArrayType, reqLength);
@@ -14189,7 +14189,7 @@ var require_bn2 = __commonJS({
         assert5((this.negative | num.negative) === 0);
         return this.iuor(num);
       };
-      BN12.prototype.or = function or(num) {
+      BN12.prototype.or = function or2(num) {
         if (this.length > num.length) return this.clone().ior(num);
         return num.clone().ior(this);
       };
@@ -15040,16 +15040,16 @@ var require_bn2 = __commonJS({
         this.x = x;
         this.y = y;
       }
-      FFTM.prototype.makeRBT = function makeRBT(N3) {
-        var t = new Array(N3);
-        var l = BN12.prototype._countBits(N3) - 1;
-        for (var i = 0; i < N3; i++) {
-          t[i] = this.revBin(i, l, N3);
+      FFTM.prototype.makeRBT = function makeRBT(N10) {
+        var t = new Array(N10);
+        var l = BN12.prototype._countBits(N10) - 1;
+        for (var i = 0; i < N10; i++) {
+          t[i] = this.revBin(i, l, N10);
         }
         return t;
       };
-      FFTM.prototype.revBin = function revBin(x, l, N3) {
-        if (x === 0 || x === N3 - 1) return x;
+      FFTM.prototype.revBin = function revBin(x, l, N10) {
+        if (x === 0 || x === N10 - 1) return x;
         var rb = 0;
         for (var i = 0; i < l; i++) {
           rb |= (x & 1) << l - i - 1;
@@ -15057,19 +15057,19 @@ var require_bn2 = __commonJS({
         }
         return rb;
       };
-      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N3) {
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N10) {
+        for (var i = 0; i < N10; i++) {
           rtws[i] = rws[rbt[i]];
           itws[i] = iws[rbt[i]];
         }
       };
-      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N3, rbt) {
-        this.permute(rbt, rws, iws, rtws, itws, N3);
-        for (var s = 1; s < N3; s <<= 1) {
+      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N10, rbt) {
+        this.permute(rbt, rws, iws, rtws, itws, N10);
+        for (var s = 1; s < N10; s <<= 1) {
           var l = s << 1;
           var rtwdf = Math.cos(2 * Math.PI / l);
           var itwdf = Math.sin(2 * Math.PI / l);
-          for (var p = 0; p < N3; p += l) {
+          for (var p = 0; p < N10; p += l) {
             var rtwdf_ = rtwdf;
             var itwdf_ = itwdf;
             for (var j = 0; j < s; j++) {
@@ -15094,29 +15094,29 @@ var require_bn2 = __commonJS({
         }
       };
       FFTM.prototype.guessLen13b = function guessLen13b(n, m) {
-        var N3 = Math.max(m, n) | 1;
-        var odd = N3 & 1;
+        var N10 = Math.max(m, n) | 1;
+        var odd = N10 & 1;
         var i = 0;
-        for (N3 = N3 / 2 | 0; N3; N3 = N3 >>> 1) {
+        for (N10 = N10 / 2 | 0; N10; N10 = N10 >>> 1) {
           i++;
         }
         return 1 << i + 1 + odd;
       };
-      FFTM.prototype.conjugate = function conjugate(rws, iws, N3) {
-        if (N3 <= 1) return;
-        for (var i = 0; i < N3 / 2; i++) {
+      FFTM.prototype.conjugate = function conjugate(rws, iws, N10) {
+        if (N10 <= 1) return;
+        for (var i = 0; i < N10 / 2; i++) {
           var t = rws[i];
-          rws[i] = rws[N3 - i - 1];
-          rws[N3 - i - 1] = t;
+          rws[i] = rws[N10 - i - 1];
+          rws[N10 - i - 1] = t;
           t = iws[i];
-          iws[i] = -iws[N3 - i - 1];
-          iws[N3 - i - 1] = -t;
+          iws[i] = -iws[N10 - i - 1];
+          iws[N10 - i - 1] = -t;
         }
       };
-      FFTM.prototype.normalize13b = function normalize13b(ws, N3) {
+      FFTM.prototype.normalize13b = function normalize13b(ws, N10) {
         var carry = 0;
-        for (var i = 0; i < N3 / 2; i++) {
-          var w = Math.round(ws[2 * i + 1] / N3) * 8192 + Math.round(ws[2 * i] / N3) + carry;
+        for (var i = 0; i < N10 / 2; i++) {
+          var w = Math.round(ws[2 * i + 1] / N10) * 8192 + Math.round(ws[2 * i] / N10) + carry;
           ws[i] = w & 67108863;
           if (w < 67108864) {
             carry = 0;
@@ -15126,7 +15126,7 @@ var require_bn2 = __commonJS({
         }
         return ws;
       };
-      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N3) {
+      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N10) {
         var carry = 0;
         for (var i = 0; i < len; i++) {
           carry = carry + (ws[i] | 0);
@@ -15135,44 +15135,44 @@ var require_bn2 = __commonJS({
           rws[2 * i + 1] = carry & 8191;
           carry = carry >>> 13;
         }
-        for (i = 2 * len; i < N3; ++i) {
+        for (i = 2 * len; i < N10; ++i) {
           rws[i] = 0;
         }
         assert5(carry === 0);
         assert5((carry & ~8191) === 0);
       };
-      FFTM.prototype.stub = function stub(N3) {
-        var ph = new Array(N3);
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.stub = function stub(N10) {
+        var ph = new Array(N10);
+        for (var i = 0; i < N10; i++) {
           ph[i] = 0;
         }
         return ph;
       };
       FFTM.prototype.mulp = function mulp(x, y, out) {
-        var N3 = 2 * this.guessLen13b(x.length, y.length);
-        var rbt = this.makeRBT(N3);
-        var _ = this.stub(N3);
-        var rws = new Array(N3);
-        var rwst = new Array(N3);
-        var iwst = new Array(N3);
-        var nrws = new Array(N3);
-        var nrwst = new Array(N3);
-        var niwst = new Array(N3);
+        var N10 = 2 * this.guessLen13b(x.length, y.length);
+        var rbt = this.makeRBT(N10);
+        var _ = this.stub(N10);
+        var rws = new Array(N10);
+        var rwst = new Array(N10);
+        var iwst = new Array(N10);
+        var nrws = new Array(N10);
+        var nrwst = new Array(N10);
+        var niwst = new Array(N10);
         var rmws = out.words;
-        rmws.length = N3;
-        this.convert13b(x.words, x.length, rws, N3);
-        this.convert13b(y.words, y.length, nrws, N3);
-        this.transform(rws, _, rwst, iwst, N3, rbt);
-        this.transform(nrws, _, nrwst, niwst, N3, rbt);
-        for (var i = 0; i < N3; i++) {
+        rmws.length = N10;
+        this.convert13b(x.words, x.length, rws, N10);
+        this.convert13b(y.words, y.length, nrws, N10);
+        this.transform(rws, _, rwst, iwst, N10, rbt);
+        this.transform(nrws, _, nrwst, niwst, N10, rbt);
+        for (var i = 0; i < N10; i++) {
           var rx = rwst[i] * nrwst[i] - iwst[i] * niwst[i];
           iwst[i] = rwst[i] * niwst[i] + iwst[i] * nrwst[i];
           rwst[i] = rx;
         }
-        this.conjugate(rwst, iwst, N3);
-        this.transform(rwst, iwst, rmws, _, N3, rbt);
-        this.conjugate(rmws, _, N3);
-        this.normalize13b(rmws, N3);
+        this.conjugate(rwst, iwst, N10);
+        this.transform(rwst, iwst, rmws, _, N10, rbt);
+        this.conjugate(rmws, _, N10);
+        this.normalize13b(rmws, N10);
         out.negative = x.negative ^ y.negative;
         out.length = x.length + y.length;
         return out._strip();
@@ -18081,7 +18081,7 @@ var require_bn3 = __commonJS({
         ctor.prototype = new TempCtor();
         ctor.prototype.constructor = ctor;
       }
-      function BN12(number, base5, endian) {
+      function BN12(number, base6, endian) {
         if (BN12.isBN(number)) {
           return number;
         }
@@ -18090,11 +18090,11 @@ var require_bn3 = __commonJS({
         this.length = 0;
         this.red = null;
         if (number !== null) {
-          if (base5 === "le" || base5 === "be") {
-            endian = base5;
-            base5 = 10;
+          if (base6 === "le" || base6 === "be") {
+            endian = base6;
+            base6 = 10;
           }
-          this._init(number || 0, base5 || 10, endian || "be");
+          this._init(number || 0, base6 || 10, endian || "be");
         }
       }
       if (typeof module3 === "object") {
@@ -18127,17 +18127,17 @@ var require_bn3 = __commonJS({
         if (left.cmp(right) < 0) return left;
         return right;
       };
-      BN12.prototype._init = function init5(number, base5, endian) {
+      BN12.prototype._init = function init5(number, base6, endian) {
         if (typeof number === "number") {
-          return this._initNumber(number, base5, endian);
+          return this._initNumber(number, base6, endian);
         }
         if (typeof number === "object") {
-          return this._initArray(number, base5, endian);
+          return this._initArray(number, base6, endian);
         }
-        if (base5 === "hex") {
-          base5 = 16;
+        if (base6 === "hex") {
+          base6 = 16;
         }
-        assert5(base5 === (base5 | 0) && base5 >= 2 && base5 <= 36);
+        assert5(base6 === (base6 | 0) && base6 >= 2 && base6 <= 36);
         number = number.toString().replace(/\s+/g, "");
         var start = 0;
         if (number[0] === "-") {
@@ -18145,17 +18145,17 @@ var require_bn3 = __commonJS({
           this.negative = 1;
         }
         if (start < number.length) {
-          if (base5 === 16) {
+          if (base6 === 16) {
             this._parseHex(number, start, endian);
           } else {
-            this._parseBase(number, base5, start);
+            this._parseBase(number, base6, start);
             if (endian === "le") {
-              this._initArray(this.toArray(), base5, endian);
+              this._initArray(this.toArray(), base6, endian);
             }
           }
         }
       };
-      BN12.prototype._initNumber = function _initNumber(number, base5, endian) {
+      BN12.prototype._initNumber = function _initNumber(number, base6, endian) {
         if (number < 0) {
           this.negative = 1;
           number = -number;
@@ -18179,9 +18179,9 @@ var require_bn3 = __commonJS({
           this.length = 3;
         }
         if (endian !== "le") return;
-        this._initArray(this.toArray(), base5, endian);
+        this._initArray(this.toArray(), base6, endian);
       };
-      BN12.prototype._initArray = function _initArray(number, base5, endian) {
+      BN12.prototype._initArray = function _initArray(number, base6, endian) {
         assert5(typeof number.length === "number");
         if (number.length <= 0) {
           this.words = [0];
@@ -18290,20 +18290,20 @@ var require_bn3 = __commonJS({
         }
         return r2;
       }
-      BN12.prototype._parseBase = function _parseBase(number, base5, start) {
+      BN12.prototype._parseBase = function _parseBase(number, base6, start) {
         this.words = [0];
         this.length = 1;
-        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base5) {
+        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base6) {
           limbLen++;
         }
         limbLen--;
-        limbPow = limbPow / base5 | 0;
+        limbPow = limbPow / base6 | 0;
         var total = number.length - start;
         var mod = total % limbLen;
         var end = Math.min(total, total - mod) + start;
         var word = 0;
         for (var i = start; i < end; i += limbLen) {
-          word = parseBase(number, i, i + limbLen, base5);
+          word = parseBase(number, i, i + limbLen, base6);
           this.imuln(limbPow);
           if (this.words[0] + word < 67108864) {
             this.words[0] += word;
@@ -18313,9 +18313,9 @@ var require_bn3 = __commonJS({
         }
         if (mod !== 0) {
           var pow = 1;
-          word = parseBase(number, i, number.length, base5);
+          word = parseBase(number, i, number.length, base6);
           for (i = 0; i < mod; i++) {
-            pow *= base5;
+            pow *= base6;
           }
           this.imuln(pow);
           if (this.words[0] + word < 67108864) {
@@ -18467,11 +18467,11 @@ var require_bn3 = __commonJS({
         52521875,
         60466176
       ];
-      BN12.prototype.toString = function toString(base5, padding3) {
-        base5 = base5 || 10;
+      BN12.prototype.toString = function toString(base6, padding3) {
+        base6 = base6 || 10;
         padding3 = padding3 | 0 || 1;
         var out;
-        if (base5 === 16 || base5 === "hex") {
+        if (base6 === 16 || base6 === "hex") {
           out = "";
           var off = 0;
           var carry = 0;
@@ -18501,14 +18501,14 @@ var require_bn3 = __commonJS({
           }
           return out;
         }
-        if (base5 === (base5 | 0) && base5 >= 2 && base5 <= 36) {
-          var groupSize = groupSizes[base5];
-          var groupBase = groupBases[base5];
+        if (base6 === (base6 | 0) && base6 >= 2 && base6 <= 36) {
+          var groupSize = groupSizes[base6];
+          var groupBase = groupBases[base6];
           out = "";
           var c = this.clone();
           c.negative = 0;
           while (!c.isZero()) {
-            var r2 = c.modn(groupBase).toString(base5);
+            var r2 = c.modn(groupBase).toString(base6);
             c = c.idivn(groupBase);
             if (!c.isZero()) {
               out = zeros3[groupSize - r2.length] + r2 + out;
@@ -18543,16 +18543,16 @@ var require_bn3 = __commonJS({
       BN12.prototype.toJSON = function toJSON5() {
         return this.toString(16);
       };
-      BN12.prototype.toBuffer = function toBuffer(endian, length) {
+      BN12.prototype.toBuffer = function toBuffer(endian, length2) {
         assert5(typeof Buffer2 !== "undefined");
-        return this.toArrayLike(Buffer2, endian, length);
+        return this.toArrayLike(Buffer2, endian, length2);
       };
-      BN12.prototype.toArray = function toArray(endian, length) {
-        return this.toArrayLike(Array, endian, length);
+      BN12.prototype.toArray = function toArray(endian, length2) {
+        return this.toArrayLike(Array, endian, length2);
       };
-      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length) {
+      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length2) {
         var byteLength = this.byteLength();
-        var reqLength = length || Math.max(1, byteLength);
+        var reqLength = length2 || Math.max(1, byteLength);
         assert5(byteLength <= reqLength, "byte array longer than desired length");
         assert5(reqLength > 0, "Requested array length <= 0");
         this.strip();
@@ -18697,7 +18697,7 @@ var require_bn3 = __commonJS({
         assert5((this.negative | num.negative) === 0);
         return this.iuor(num);
       };
-      BN12.prototype.or = function or(num) {
+      BN12.prototype.or = function or2(num) {
         if (this.length > num.length) return this.clone().ior(num);
         return num.clone().ior(this);
       };
@@ -19549,16 +19549,16 @@ var require_bn3 = __commonJS({
         this.x = x;
         this.y = y;
       }
-      FFTM.prototype.makeRBT = function makeRBT(N3) {
-        var t = new Array(N3);
-        var l = BN12.prototype._countBits(N3) - 1;
-        for (var i = 0; i < N3; i++) {
-          t[i] = this.revBin(i, l, N3);
+      FFTM.prototype.makeRBT = function makeRBT(N10) {
+        var t = new Array(N10);
+        var l = BN12.prototype._countBits(N10) - 1;
+        for (var i = 0; i < N10; i++) {
+          t[i] = this.revBin(i, l, N10);
         }
         return t;
       };
-      FFTM.prototype.revBin = function revBin(x, l, N3) {
-        if (x === 0 || x === N3 - 1) return x;
+      FFTM.prototype.revBin = function revBin(x, l, N10) {
+        if (x === 0 || x === N10 - 1) return x;
         var rb = 0;
         for (var i = 0; i < l; i++) {
           rb |= (x & 1) << l - i - 1;
@@ -19566,19 +19566,19 @@ var require_bn3 = __commonJS({
         }
         return rb;
       };
-      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N3) {
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N10) {
+        for (var i = 0; i < N10; i++) {
           rtws[i] = rws[rbt[i]];
           itws[i] = iws[rbt[i]];
         }
       };
-      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N3, rbt) {
-        this.permute(rbt, rws, iws, rtws, itws, N3);
-        for (var s = 1; s < N3; s <<= 1) {
+      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N10, rbt) {
+        this.permute(rbt, rws, iws, rtws, itws, N10);
+        for (var s = 1; s < N10; s <<= 1) {
           var l = s << 1;
           var rtwdf = Math.cos(2 * Math.PI / l);
           var itwdf = Math.sin(2 * Math.PI / l);
-          for (var p = 0; p < N3; p += l) {
+          for (var p = 0; p < N10; p += l) {
             var rtwdf_ = rtwdf;
             var itwdf_ = itwdf;
             for (var j = 0; j < s; j++) {
@@ -19603,29 +19603,29 @@ var require_bn3 = __commonJS({
         }
       };
       FFTM.prototype.guessLen13b = function guessLen13b(n, m) {
-        var N3 = Math.max(m, n) | 1;
-        var odd = N3 & 1;
+        var N10 = Math.max(m, n) | 1;
+        var odd = N10 & 1;
         var i = 0;
-        for (N3 = N3 / 2 | 0; N3; N3 = N3 >>> 1) {
+        for (N10 = N10 / 2 | 0; N10; N10 = N10 >>> 1) {
           i++;
         }
         return 1 << i + 1 + odd;
       };
-      FFTM.prototype.conjugate = function conjugate(rws, iws, N3) {
-        if (N3 <= 1) return;
-        for (var i = 0; i < N3 / 2; i++) {
+      FFTM.prototype.conjugate = function conjugate(rws, iws, N10) {
+        if (N10 <= 1) return;
+        for (var i = 0; i < N10 / 2; i++) {
           var t = rws[i];
-          rws[i] = rws[N3 - i - 1];
-          rws[N3 - i - 1] = t;
+          rws[i] = rws[N10 - i - 1];
+          rws[N10 - i - 1] = t;
           t = iws[i];
-          iws[i] = -iws[N3 - i - 1];
-          iws[N3 - i - 1] = -t;
+          iws[i] = -iws[N10 - i - 1];
+          iws[N10 - i - 1] = -t;
         }
       };
-      FFTM.prototype.normalize13b = function normalize13b(ws, N3) {
+      FFTM.prototype.normalize13b = function normalize13b(ws, N10) {
         var carry = 0;
-        for (var i = 0; i < N3 / 2; i++) {
-          var w = Math.round(ws[2 * i + 1] / N3) * 8192 + Math.round(ws[2 * i] / N3) + carry;
+        for (var i = 0; i < N10 / 2; i++) {
+          var w = Math.round(ws[2 * i + 1] / N10) * 8192 + Math.round(ws[2 * i] / N10) + carry;
           ws[i] = w & 67108863;
           if (w < 67108864) {
             carry = 0;
@@ -19635,7 +19635,7 @@ var require_bn3 = __commonJS({
         }
         return ws;
       };
-      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N3) {
+      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N10) {
         var carry = 0;
         for (var i = 0; i < len; i++) {
           carry = carry + (ws[i] | 0);
@@ -19644,44 +19644,44 @@ var require_bn3 = __commonJS({
           rws[2 * i + 1] = carry & 8191;
           carry = carry >>> 13;
         }
-        for (i = 2 * len; i < N3; ++i) {
+        for (i = 2 * len; i < N10; ++i) {
           rws[i] = 0;
         }
         assert5(carry === 0);
         assert5((carry & ~8191) === 0);
       };
-      FFTM.prototype.stub = function stub(N3) {
-        var ph = new Array(N3);
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.stub = function stub(N10) {
+        var ph = new Array(N10);
+        for (var i = 0; i < N10; i++) {
           ph[i] = 0;
         }
         return ph;
       };
       FFTM.prototype.mulp = function mulp(x, y, out) {
-        var N3 = 2 * this.guessLen13b(x.length, y.length);
-        var rbt = this.makeRBT(N3);
-        var _ = this.stub(N3);
-        var rws = new Array(N3);
-        var rwst = new Array(N3);
-        var iwst = new Array(N3);
-        var nrws = new Array(N3);
-        var nrwst = new Array(N3);
-        var niwst = new Array(N3);
+        var N10 = 2 * this.guessLen13b(x.length, y.length);
+        var rbt = this.makeRBT(N10);
+        var _ = this.stub(N10);
+        var rws = new Array(N10);
+        var rwst = new Array(N10);
+        var iwst = new Array(N10);
+        var nrws = new Array(N10);
+        var nrwst = new Array(N10);
+        var niwst = new Array(N10);
         var rmws = out.words;
-        rmws.length = N3;
-        this.convert13b(x.words, x.length, rws, N3);
-        this.convert13b(y.words, y.length, nrws, N3);
-        this.transform(rws, _, rwst, iwst, N3, rbt);
-        this.transform(nrws, _, nrwst, niwst, N3, rbt);
-        for (var i = 0; i < N3; i++) {
+        rmws.length = N10;
+        this.convert13b(x.words, x.length, rws, N10);
+        this.convert13b(y.words, y.length, nrws, N10);
+        this.transform(rws, _, rwst, iwst, N10, rbt);
+        this.transform(nrws, _, nrwst, niwst, N10, rbt);
+        for (var i = 0; i < N10; i++) {
           var rx = rwst[i] * nrwst[i] - iwst[i] * niwst[i];
           iwst[i] = rwst[i] * niwst[i] + iwst[i] * nrwst[i];
           rwst[i] = rx;
         }
-        this.conjugate(rwst, iwst, N3);
-        this.transform(rwst, iwst, rmws, _, N3, rbt);
-        this.conjugate(rmws, _, N3);
-        this.normalize13b(rmws, N3);
+        this.conjugate(rwst, iwst, N10);
+        this.transform(rwst, iwst, rmws, _, N10, rbt);
+        this.conjugate(rmws, _, N10);
+        this.normalize13b(rmws, N10);
         out.negative = x.negative ^ y.negative;
         out.length = x.length + y.length;
         return out.strip();
@@ -20913,8 +20913,8 @@ var require_aes_js = __commonJS({
         }
         throw new Error("unsupported array-like object");
       }
-      function createArray(length) {
-        return new Uint8Array(length);
+      function createArray(length2) {
+        return new Uint8Array(length2);
       }
       function copyArray(sourceArray, targetArray, targetStart, sourceStart, sourceEnd) {
         if (sourceStart != null || sourceEnd != null) {
@@ -21374,14 +21374,14 @@ var require_aes_js = __commonJS({
         if (padder > 16) {
           throw new Error("PKCS#7 padding byte out of range");
         }
-        var length = data.length - padder;
+        var length2 = data.length - padder;
         for (var i = 0; i < padder; i++) {
-          if (data[length + i] !== padder) {
+          if (data[length2 + i] !== padder) {
             throw new Error("PKCS#7 invalid padding byte");
           }
         }
-        var result = createArray(length);
-        copyArray(data, result, 0, 0, length);
+        var result = createArray(length2);
+        copyArray(data, result, 0, 0, length2);
         return result;
       }
       var aesjs = {
@@ -21691,9 +21691,9 @@ var require_scrypt = __commonJS({
           D[i] ^= S[Si + i];
         }
       }
-      function arraycopy(src, srcPos, dest, destPos, length) {
-        while (length--) {
-          dest[destPos++] = src[srcPos++];
+      function arraycopy(src2, srcPos, dest, destPos, length2) {
+        while (length2--) {
+          dest[destPos++] = src2[srcPos++];
         }
       }
       function checkBufferish(o) {
@@ -21714,15 +21714,15 @@ var require_scrypt = __commonJS({
         }
         return value;
       }
-      function _scrypt(password, salt, N3, r2, p, dkLen, callback) {
-        N3 = ensureInteger(N3, "N");
+      function _scrypt(password, salt, N10, r2, p, dkLen, callback) {
+        N10 = ensureInteger(N10, "N");
         r2 = ensureInteger(r2, "r");
         p = ensureInteger(p, "p");
         dkLen = ensureInteger(dkLen, "dkLen");
-        if (N3 === 0 || (N3 & N3 - 1) !== 0) {
+        if (N10 === 0 || (N10 & N10 - 1) !== 0) {
           throw new Error("N must be power of 2");
         }
-        if (N3 > MAX_VALUE / 128 / r2) {
+        if (N10 > MAX_VALUE / 128 / r2) {
           throw new Error("N too large");
         }
         if (r2 > MAX_VALUE / 128 / p) {
@@ -21743,11 +21743,11 @@ var require_scrypt = __commonJS({
           B[i] = (b[j + 3] & 255) << 24 | (b[j + 2] & 255) << 16 | (b[j + 1] & 255) << 8 | (b[j + 0] & 255) << 0;
         }
         const XY = new Uint32Array(64 * r2);
-        const V = new Uint32Array(32 * r2 * N3);
+        const V = new Uint32Array(32 * r2 * N10);
         const Yi = 32 * r2;
         const x = new Uint32Array(16);
         const _X = new Uint32Array(16);
-        const totalOps = p * N3 * 2;
+        const totalOps = p * N10 * 2;
         let currentOp = 0;
         let lastPercent10 = null;
         let stop = false;
@@ -21769,7 +21769,7 @@ var require_scrypt = __commonJS({
               i1 = 0;
             // Fall through
             case 1:
-              steps = N3 - i1;
+              steps = N10 - i1;
               if (steps > limit) {
                 steps = limit;
               }
@@ -21789,20 +21789,20 @@ var require_scrypt = __commonJS({
                   lastPercent10 = percent10;
                 }
               }
-              if (i1 < N3) {
+              if (i1 < N10) {
                 break;
               }
               i1 = 0;
               state = 2;
             // Fall through
             case 2:
-              steps = N3 - i1;
+              steps = N10 - i1;
               if (steps > limit) {
                 steps = limit;
               }
               for (let i = 0; i < steps; i++) {
                 const offset = (2 * r2 - 1) * 16;
-                const j = XY[offset] & N3 - 1;
+                const j = XY[offset] & N10 - 1;
                 blockxor(V, j * Yi, XY, Yi);
                 blockmix_salsa8(XY, Yi, r2, x, _X);
               }
@@ -21818,7 +21818,7 @@ var require_scrypt = __commonJS({
                   lastPercent10 = percent10;
                 }
               }
-              if (i1 < N3) {
+              if (i1 < N10) {
                 break;
               }
               arraycopy(XY, 0, B, Bi, Yi);
@@ -21855,13 +21855,13 @@ var require_scrypt = __commonJS({
         incrementalSMix();
       }
       const lib = {
-        scrypt: function(password, salt, N3, r2, p, dkLen, progressCallback) {
+        scrypt: function(password, salt, N10, r2, p, dkLen, progressCallback) {
           return new Promise(function(resolve, reject) {
             let lastProgress = 0;
             if (progressCallback) {
               progressCallback(0);
             }
-            _scrypt(password, salt, N3, r2, p, dkLen, function(error, progress, key5) {
+            _scrypt(password, salt, N10, r2, p, dkLen, function(error, progress, key5) {
               if (error) {
                 reject(error);
               } else if (key5) {
@@ -21876,8 +21876,8 @@ var require_scrypt = __commonJS({
             });
           });
         },
-        syncScrypt: function(password, salt, N3, r2, p, dkLen) {
-          return new Uint8Array(_scrypt(password, salt, N3, r2, p, dkLen));
+        syncScrypt: function(password, salt, N10, r2, p, dkLen) {
+          return new Uint8Array(_scrypt(password, salt, N10, r2, p, dkLen));
         }
       };
       if (typeof exports2 !== "undefined") {
@@ -21911,7 +21911,7 @@ var require_bn4 = __commonJS({
         ctor.prototype = new TempCtor();
         ctor.prototype.constructor = ctor;
       }
-      function BN12(number, base5, endian) {
+      function BN12(number, base6, endian) {
         if (BN12.isBN(number)) {
           return number;
         }
@@ -21920,11 +21920,11 @@ var require_bn4 = __commonJS({
         this.length = 0;
         this.red = null;
         if (number !== null) {
-          if (base5 === "le" || base5 === "be") {
-            endian = base5;
-            base5 = 10;
+          if (base6 === "le" || base6 === "be") {
+            endian = base6;
+            base6 = 10;
           }
-          this._init(number || 0, base5 || 10, endian || "be");
+          this._init(number || 0, base6 || 10, endian || "be");
         }
       }
       if (typeof module3 === "object") {
@@ -21957,17 +21957,17 @@ var require_bn4 = __commonJS({
         if (left.cmp(right) < 0) return left;
         return right;
       };
-      BN12.prototype._init = function init5(number, base5, endian) {
+      BN12.prototype._init = function init5(number, base6, endian) {
         if (typeof number === "number") {
-          return this._initNumber(number, base5, endian);
+          return this._initNumber(number, base6, endian);
         }
         if (typeof number === "object") {
-          return this._initArray(number, base5, endian);
+          return this._initArray(number, base6, endian);
         }
-        if (base5 === "hex") {
-          base5 = 16;
+        if (base6 === "hex") {
+          base6 = 16;
         }
-        assert5(base5 === (base5 | 0) && base5 >= 2 && base5 <= 36);
+        assert5(base6 === (base6 | 0) && base6 >= 2 && base6 <= 36);
         number = number.toString().replace(/\s+/g, "");
         var start = 0;
         if (number[0] === "-") {
@@ -21975,17 +21975,17 @@ var require_bn4 = __commonJS({
           this.negative = 1;
         }
         if (start < number.length) {
-          if (base5 === 16) {
+          if (base6 === 16) {
             this._parseHex(number, start, endian);
           } else {
-            this._parseBase(number, base5, start);
+            this._parseBase(number, base6, start);
             if (endian === "le") {
-              this._initArray(this.toArray(), base5, endian);
+              this._initArray(this.toArray(), base6, endian);
             }
           }
         }
       };
-      BN12.prototype._initNumber = function _initNumber(number, base5, endian) {
+      BN12.prototype._initNumber = function _initNumber(number, base6, endian) {
         if (number < 0) {
           this.negative = 1;
           number = -number;
@@ -22009,9 +22009,9 @@ var require_bn4 = __commonJS({
           this.length = 3;
         }
         if (endian !== "le") return;
-        this._initArray(this.toArray(), base5, endian);
+        this._initArray(this.toArray(), base6, endian);
       };
-      BN12.prototype._initArray = function _initArray(number, base5, endian) {
+      BN12.prototype._initArray = function _initArray(number, base6, endian) {
         assert5(typeof number.length === "number");
         if (number.length <= 0) {
           this.words = [0];
@@ -22125,20 +22125,20 @@ var require_bn4 = __commonJS({
         }
         return r2;
       }
-      BN12.prototype._parseBase = function _parseBase(number, base5, start) {
+      BN12.prototype._parseBase = function _parseBase(number, base6, start) {
         this.words = [0];
         this.length = 1;
-        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base5) {
+        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base6) {
           limbLen++;
         }
         limbLen--;
-        limbPow = limbPow / base5 | 0;
+        limbPow = limbPow / base6 | 0;
         var total = number.length - start;
         var mod = total % limbLen;
         var end = Math.min(total, total - mod) + start;
         var word = 0;
         for (var i = start; i < end; i += limbLen) {
-          word = parseBase(number, i, i + limbLen, base5);
+          word = parseBase(number, i, i + limbLen, base6);
           this.imuln(limbPow);
           if (this.words[0] + word < 67108864) {
             this.words[0] += word;
@@ -22148,9 +22148,9 @@ var require_bn4 = __commonJS({
         }
         if (mod !== 0) {
           var pow = 1;
-          word = parseBase(number, i, number.length, base5);
+          word = parseBase(number, i, number.length, base6);
           for (i = 0; i < mod; i++) {
-            pow *= base5;
+            pow *= base6;
           }
           this.imuln(pow);
           if (this.words[0] + word < 67108864) {
@@ -22170,11 +22170,11 @@ var require_bn4 = __commonJS({
         dest.negative = this.negative;
         dest.red = this.red;
       };
-      function move(dest, src) {
-        dest.words = src.words;
-        dest.length = src.length;
-        dest.negative = src.negative;
-        dest.red = src.red;
+      function move(dest, src2) {
+        dest.words = src2.words;
+        dest.length = src2.length;
+        dest.negative = src2.negative;
+        dest.red = src2.red;
       }
       BN12.prototype._move = function _move(dest) {
         move(dest, this);
@@ -22320,11 +22320,11 @@ var require_bn4 = __commonJS({
         52521875,
         60466176
       ];
-      BN12.prototype.toString = function toString(base5, padding3) {
-        base5 = base5 || 10;
+      BN12.prototype.toString = function toString(base6, padding3) {
+        base6 = base6 || 10;
         padding3 = padding3 | 0 || 1;
         var out;
-        if (base5 === 16 || base5 === "hex") {
+        if (base6 === 16 || base6 === "hex") {
           out = "";
           var off = 0;
           var carry = 0;
@@ -22354,14 +22354,14 @@ var require_bn4 = __commonJS({
           }
           return out;
         }
-        if (base5 === (base5 | 0) && base5 >= 2 && base5 <= 36) {
-          var groupSize = groupSizes[base5];
-          var groupBase = groupBases[base5];
+        if (base6 === (base6 | 0) && base6 >= 2 && base6 <= 36) {
+          var groupSize = groupSizes[base6];
+          var groupBase = groupBases[base6];
           out = "";
           var c = this.clone();
           c.negative = 0;
           while (!c.isZero()) {
-            var r2 = c.modrn(groupBase).toString(base5);
+            var r2 = c.modrn(groupBase).toString(base6);
             c = c.idivn(groupBase);
             if (!c.isZero()) {
               out = zeros3[groupSize - r2.length] + r2 + out;
@@ -22397,12 +22397,12 @@ var require_bn4 = __commonJS({
         return this.toString(16, 2);
       };
       if (Buffer2) {
-        BN12.prototype.toBuffer = function toBuffer(endian, length) {
-          return this.toArrayLike(Buffer2, endian, length);
+        BN12.prototype.toBuffer = function toBuffer(endian, length2) {
+          return this.toArrayLike(Buffer2, endian, length2);
         };
       }
-      BN12.prototype.toArray = function toArray(endian, length) {
-        return this.toArrayLike(Array, endian, length);
+      BN12.prototype.toArray = function toArray(endian, length2) {
+        return this.toArrayLike(Array, endian, length2);
       };
       var allocate = function allocate2(ArrayType, size) {
         if (ArrayType.allocUnsafe) {
@@ -22410,10 +22410,10 @@ var require_bn4 = __commonJS({
         }
         return new ArrayType(size);
       };
-      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length) {
+      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length2) {
         this._strip();
         var byteLength = this.byteLength();
-        var reqLength = length || Math.max(1, byteLength);
+        var reqLength = length2 || Math.max(1, byteLength);
         assert5(byteLength <= reqLength, "byte array longer than desired length");
         assert5(reqLength > 0, "Requested array length <= 0");
         var res = allocate(ArrayType, reqLength);
@@ -22597,7 +22597,7 @@ var require_bn4 = __commonJS({
         assert5((this.negative | num.negative) === 0);
         return this.iuor(num);
       };
-      BN12.prototype.or = function or(num) {
+      BN12.prototype.or = function or2(num) {
         if (this.length > num.length) return this.clone().ior(num);
         return num.clone().ior(this);
       };
@@ -23448,16 +23448,16 @@ var require_bn4 = __commonJS({
         this.x = x;
         this.y = y;
       }
-      FFTM.prototype.makeRBT = function makeRBT(N3) {
-        var t = new Array(N3);
-        var l = BN12.prototype._countBits(N3) - 1;
-        for (var i = 0; i < N3; i++) {
-          t[i] = this.revBin(i, l, N3);
+      FFTM.prototype.makeRBT = function makeRBT(N10) {
+        var t = new Array(N10);
+        var l = BN12.prototype._countBits(N10) - 1;
+        for (var i = 0; i < N10; i++) {
+          t[i] = this.revBin(i, l, N10);
         }
         return t;
       };
-      FFTM.prototype.revBin = function revBin(x, l, N3) {
-        if (x === 0 || x === N3 - 1) return x;
+      FFTM.prototype.revBin = function revBin(x, l, N10) {
+        if (x === 0 || x === N10 - 1) return x;
         var rb = 0;
         for (var i = 0; i < l; i++) {
           rb |= (x & 1) << l - i - 1;
@@ -23465,19 +23465,19 @@ var require_bn4 = __commonJS({
         }
         return rb;
       };
-      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N3) {
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N10) {
+        for (var i = 0; i < N10; i++) {
           rtws[i] = rws[rbt[i]];
           itws[i] = iws[rbt[i]];
         }
       };
-      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N3, rbt) {
-        this.permute(rbt, rws, iws, rtws, itws, N3);
-        for (var s = 1; s < N3; s <<= 1) {
+      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N10, rbt) {
+        this.permute(rbt, rws, iws, rtws, itws, N10);
+        for (var s = 1; s < N10; s <<= 1) {
           var l = s << 1;
           var rtwdf = Math.cos(2 * Math.PI / l);
           var itwdf = Math.sin(2 * Math.PI / l);
-          for (var p = 0; p < N3; p += l) {
+          for (var p = 0; p < N10; p += l) {
             var rtwdf_ = rtwdf;
             var itwdf_ = itwdf;
             for (var j = 0; j < s; j++) {
@@ -23502,29 +23502,29 @@ var require_bn4 = __commonJS({
         }
       };
       FFTM.prototype.guessLen13b = function guessLen13b(n, m) {
-        var N3 = Math.max(m, n) | 1;
-        var odd = N3 & 1;
+        var N10 = Math.max(m, n) | 1;
+        var odd = N10 & 1;
         var i = 0;
-        for (N3 = N3 / 2 | 0; N3; N3 = N3 >>> 1) {
+        for (N10 = N10 / 2 | 0; N10; N10 = N10 >>> 1) {
           i++;
         }
         return 1 << i + 1 + odd;
       };
-      FFTM.prototype.conjugate = function conjugate(rws, iws, N3) {
-        if (N3 <= 1) return;
-        for (var i = 0; i < N3 / 2; i++) {
+      FFTM.prototype.conjugate = function conjugate(rws, iws, N10) {
+        if (N10 <= 1) return;
+        for (var i = 0; i < N10 / 2; i++) {
           var t = rws[i];
-          rws[i] = rws[N3 - i - 1];
-          rws[N3 - i - 1] = t;
+          rws[i] = rws[N10 - i - 1];
+          rws[N10 - i - 1] = t;
           t = iws[i];
-          iws[i] = -iws[N3 - i - 1];
-          iws[N3 - i - 1] = -t;
+          iws[i] = -iws[N10 - i - 1];
+          iws[N10 - i - 1] = -t;
         }
       };
-      FFTM.prototype.normalize13b = function normalize13b(ws, N3) {
+      FFTM.prototype.normalize13b = function normalize13b(ws, N10) {
         var carry = 0;
-        for (var i = 0; i < N3 / 2; i++) {
-          var w = Math.round(ws[2 * i + 1] / N3) * 8192 + Math.round(ws[2 * i] / N3) + carry;
+        for (var i = 0; i < N10 / 2; i++) {
+          var w = Math.round(ws[2 * i + 1] / N10) * 8192 + Math.round(ws[2 * i] / N10) + carry;
           ws[i] = w & 67108863;
           if (w < 67108864) {
             carry = 0;
@@ -23534,7 +23534,7 @@ var require_bn4 = __commonJS({
         }
         return ws;
       };
-      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N3) {
+      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N10) {
         var carry = 0;
         for (var i = 0; i < len; i++) {
           carry = carry + (ws[i] | 0);
@@ -23543,44 +23543,44 @@ var require_bn4 = __commonJS({
           rws[2 * i + 1] = carry & 8191;
           carry = carry >>> 13;
         }
-        for (i = 2 * len; i < N3; ++i) {
+        for (i = 2 * len; i < N10; ++i) {
           rws[i] = 0;
         }
         assert5(carry === 0);
         assert5((carry & ~8191) === 0);
       };
-      FFTM.prototype.stub = function stub(N3) {
-        var ph = new Array(N3);
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.stub = function stub(N10) {
+        var ph = new Array(N10);
+        for (var i = 0; i < N10; i++) {
           ph[i] = 0;
         }
         return ph;
       };
       FFTM.prototype.mulp = function mulp(x, y, out) {
-        var N3 = 2 * this.guessLen13b(x.length, y.length);
-        var rbt = this.makeRBT(N3);
-        var _ = this.stub(N3);
-        var rws = new Array(N3);
-        var rwst = new Array(N3);
-        var iwst = new Array(N3);
-        var nrws = new Array(N3);
-        var nrwst = new Array(N3);
-        var niwst = new Array(N3);
+        var N10 = 2 * this.guessLen13b(x.length, y.length);
+        var rbt = this.makeRBT(N10);
+        var _ = this.stub(N10);
+        var rws = new Array(N10);
+        var rwst = new Array(N10);
+        var iwst = new Array(N10);
+        var nrws = new Array(N10);
+        var nrwst = new Array(N10);
+        var niwst = new Array(N10);
         var rmws = out.words;
-        rmws.length = N3;
-        this.convert13b(x.words, x.length, rws, N3);
-        this.convert13b(y.words, y.length, nrws, N3);
-        this.transform(rws, _, rwst, iwst, N3, rbt);
-        this.transform(nrws, _, nrwst, niwst, N3, rbt);
-        for (var i = 0; i < N3; i++) {
+        rmws.length = N10;
+        this.convert13b(x.words, x.length, rws, N10);
+        this.convert13b(y.words, y.length, nrws, N10);
+        this.transform(rws, _, rwst, iwst, N10, rbt);
+        this.transform(nrws, _, nrwst, niwst, N10, rbt);
+        for (var i = 0; i < N10; i++) {
           var rx = rwst[i] * nrwst[i] - iwst[i] * niwst[i];
           iwst[i] = rwst[i] * niwst[i] + iwst[i] * nrwst[i];
           rwst[i] = rx;
         }
-        this.conjugate(rwst, iwst, N3);
-        this.transform(rwst, iwst, rmws, _, N3, rbt);
-        this.conjugate(rmws, _, N3);
-        this.normalize13b(rmws, N3);
+        this.conjugate(rwst, iwst, N10);
+        this.transform(rwst, iwst, rmws, _, N10, rbt);
+        this.conjugate(rmws, _, N10);
+        this.normalize13b(rmws, N10);
         out.negative = x.negative ^ y.negative;
         out.length = x.length + y.length;
         return out._strip();
@@ -24813,7 +24813,7 @@ var require_bech32 = __commonJS({
       }
       return chk;
     }
-    function encode12(prefix, words4, LIMIT) {
+    function encode14(prefix, words4, LIMIT) {
       LIMIT = LIMIT || 90;
       if (prefix.length + 7 + words4.length > LIMIT) throw new TypeError("Exceeds length limit");
       prefix = prefix.toLowerCase();
@@ -24868,7 +24868,7 @@ var require_bech32 = __commonJS({
       var res = __decode.apply(null, arguments);
       if (typeof res === "object") return res;
     }
-    function decode7(str) {
+    function decode11(str) {
       var res = __decode.apply(null, arguments);
       if (typeof res === "object") return res;
       throw new Error(res);
@@ -24916,8 +24916,8 @@ var require_bech32 = __commonJS({
     }
     module2.exports = {
       decodeUnsafe,
-      decode: decode7,
-      encode: encode12,
+      decode: decode11,
+      encode: encode14,
       toWordsUnsafe,
       toWords,
       fromWordsUnsafe,
@@ -24943,7 +24943,7 @@ var require_bn5 = __commonJS({
         ctor.prototype = new TempCtor();
         ctor.prototype.constructor = ctor;
       }
-      function BN12(number, base5, endian) {
+      function BN12(number, base6, endian) {
         if (BN12.isBN(number)) {
           return number;
         }
@@ -24952,11 +24952,11 @@ var require_bn5 = __commonJS({
         this.length = 0;
         this.red = null;
         if (number !== null) {
-          if (base5 === "le" || base5 === "be") {
-            endian = base5;
-            base5 = 10;
+          if (base6 === "le" || base6 === "be") {
+            endian = base6;
+            base6 = 10;
           }
-          this._init(number || 0, base5 || 10, endian || "be");
+          this._init(number || 0, base6 || 10, endian || "be");
         }
       }
       if (typeof module3 === "object") {
@@ -24989,17 +24989,17 @@ var require_bn5 = __commonJS({
         if (left.cmp(right) < 0) return left;
         return right;
       };
-      BN12.prototype._init = function init5(number, base5, endian) {
+      BN12.prototype._init = function init5(number, base6, endian) {
         if (typeof number === "number") {
-          return this._initNumber(number, base5, endian);
+          return this._initNumber(number, base6, endian);
         }
         if (typeof number === "object") {
-          return this._initArray(number, base5, endian);
+          return this._initArray(number, base6, endian);
         }
-        if (base5 === "hex") {
-          base5 = 16;
+        if (base6 === "hex") {
+          base6 = 16;
         }
-        assert5(base5 === (base5 | 0) && base5 >= 2 && base5 <= 36);
+        assert5(base6 === (base6 | 0) && base6 >= 2 && base6 <= 36);
         number = number.toString().replace(/\s+/g, "");
         var start = 0;
         if (number[0] === "-") {
@@ -25007,17 +25007,17 @@ var require_bn5 = __commonJS({
           this.negative = 1;
         }
         if (start < number.length) {
-          if (base5 === 16) {
+          if (base6 === 16) {
             this._parseHex(number, start, endian);
           } else {
-            this._parseBase(number, base5, start);
+            this._parseBase(number, base6, start);
             if (endian === "le") {
-              this._initArray(this.toArray(), base5, endian);
+              this._initArray(this.toArray(), base6, endian);
             }
           }
         }
       };
-      BN12.prototype._initNumber = function _initNumber(number, base5, endian) {
+      BN12.prototype._initNumber = function _initNumber(number, base6, endian) {
         if (number < 0) {
           this.negative = 1;
           number = -number;
@@ -25041,9 +25041,9 @@ var require_bn5 = __commonJS({
           this.length = 3;
         }
         if (endian !== "le") return;
-        this._initArray(this.toArray(), base5, endian);
+        this._initArray(this.toArray(), base6, endian);
       };
-      BN12.prototype._initArray = function _initArray(number, base5, endian) {
+      BN12.prototype._initArray = function _initArray(number, base6, endian) {
         assert5(typeof number.length === "number");
         if (number.length <= 0) {
           this.words = [0];
@@ -25157,20 +25157,20 @@ var require_bn5 = __commonJS({
         }
         return r2;
       }
-      BN12.prototype._parseBase = function _parseBase(number, base5, start) {
+      BN12.prototype._parseBase = function _parseBase(number, base6, start) {
         this.words = [0];
         this.length = 1;
-        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base5) {
+        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base6) {
           limbLen++;
         }
         limbLen--;
-        limbPow = limbPow / base5 | 0;
+        limbPow = limbPow / base6 | 0;
         var total = number.length - start;
         var mod = total % limbLen;
         var end = Math.min(total, total - mod) + start;
         var word = 0;
         for (var i = start; i < end; i += limbLen) {
-          word = parseBase(number, i, i + limbLen, base5);
+          word = parseBase(number, i, i + limbLen, base6);
           this.imuln(limbPow);
           if (this.words[0] + word < 67108864) {
             this.words[0] += word;
@@ -25180,9 +25180,9 @@ var require_bn5 = __commonJS({
         }
         if (mod !== 0) {
           var pow = 1;
-          word = parseBase(number, i, number.length, base5);
+          word = parseBase(number, i, number.length, base6);
           for (i = 0; i < mod; i++) {
-            pow *= base5;
+            pow *= base6;
           }
           this.imuln(pow);
           if (this.words[0] + word < 67108864) {
@@ -25202,11 +25202,11 @@ var require_bn5 = __commonJS({
         dest.negative = this.negative;
         dest.red = this.red;
       };
-      function move(dest, src) {
-        dest.words = src.words;
-        dest.length = src.length;
-        dest.negative = src.negative;
-        dest.red = src.red;
+      function move(dest, src2) {
+        dest.words = src2.words;
+        dest.length = src2.length;
+        dest.negative = src2.negative;
+        dest.red = src2.red;
       }
       BN12.prototype._move = function _move(dest) {
         move(dest, this);
@@ -25352,11 +25352,11 @@ var require_bn5 = __commonJS({
         52521875,
         60466176
       ];
-      BN12.prototype.toString = function toString(base5, padding3) {
-        base5 = base5 || 10;
+      BN12.prototype.toString = function toString(base6, padding3) {
+        base6 = base6 || 10;
         padding3 = padding3 | 0 || 1;
         var out;
-        if (base5 === 16 || base5 === "hex") {
+        if (base6 === 16 || base6 === "hex") {
           out = "";
           var off = 0;
           var carry = 0;
@@ -25386,14 +25386,14 @@ var require_bn5 = __commonJS({
           }
           return out;
         }
-        if (base5 === (base5 | 0) && base5 >= 2 && base5 <= 36) {
-          var groupSize = groupSizes[base5];
-          var groupBase = groupBases[base5];
+        if (base6 === (base6 | 0) && base6 >= 2 && base6 <= 36) {
+          var groupSize = groupSizes[base6];
+          var groupBase = groupBases[base6];
           out = "";
           var c = this.clone();
           c.negative = 0;
           while (!c.isZero()) {
-            var r2 = c.modrn(groupBase).toString(base5);
+            var r2 = c.modrn(groupBase).toString(base6);
             c = c.idivn(groupBase);
             if (!c.isZero()) {
               out = zeros3[groupSize - r2.length] + r2 + out;
@@ -25429,12 +25429,12 @@ var require_bn5 = __commonJS({
         return this.toString(16, 2);
       };
       if (Buffer2) {
-        BN12.prototype.toBuffer = function toBuffer(endian, length) {
-          return this.toArrayLike(Buffer2, endian, length);
+        BN12.prototype.toBuffer = function toBuffer(endian, length2) {
+          return this.toArrayLike(Buffer2, endian, length2);
         };
       }
-      BN12.prototype.toArray = function toArray(endian, length) {
-        return this.toArrayLike(Array, endian, length);
+      BN12.prototype.toArray = function toArray(endian, length2) {
+        return this.toArrayLike(Array, endian, length2);
       };
       var allocate = function allocate2(ArrayType, size) {
         if (ArrayType.allocUnsafe) {
@@ -25442,10 +25442,10 @@ var require_bn5 = __commonJS({
         }
         return new ArrayType(size);
       };
-      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length) {
+      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length2) {
         this._strip();
         var byteLength = this.byteLength();
-        var reqLength = length || Math.max(1, byteLength);
+        var reqLength = length2 || Math.max(1, byteLength);
         assert5(byteLength <= reqLength, "byte array longer than desired length");
         assert5(reqLength > 0, "Requested array length <= 0");
         var res = allocate(ArrayType, reqLength);
@@ -25629,7 +25629,7 @@ var require_bn5 = __commonJS({
         assert5((this.negative | num.negative) === 0);
         return this.iuor(num);
       };
-      BN12.prototype.or = function or(num) {
+      BN12.prototype.or = function or2(num) {
         if (this.length > num.length) return this.clone().ior(num);
         return num.clone().ior(this);
       };
@@ -26480,16 +26480,16 @@ var require_bn5 = __commonJS({
         this.x = x;
         this.y = y;
       }
-      FFTM.prototype.makeRBT = function makeRBT(N3) {
-        var t = new Array(N3);
-        var l = BN12.prototype._countBits(N3) - 1;
-        for (var i = 0; i < N3; i++) {
-          t[i] = this.revBin(i, l, N3);
+      FFTM.prototype.makeRBT = function makeRBT(N10) {
+        var t = new Array(N10);
+        var l = BN12.prototype._countBits(N10) - 1;
+        for (var i = 0; i < N10; i++) {
+          t[i] = this.revBin(i, l, N10);
         }
         return t;
       };
-      FFTM.prototype.revBin = function revBin(x, l, N3) {
-        if (x === 0 || x === N3 - 1) return x;
+      FFTM.prototype.revBin = function revBin(x, l, N10) {
+        if (x === 0 || x === N10 - 1) return x;
         var rb = 0;
         for (var i = 0; i < l; i++) {
           rb |= (x & 1) << l - i - 1;
@@ -26497,19 +26497,19 @@ var require_bn5 = __commonJS({
         }
         return rb;
       };
-      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N3) {
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N10) {
+        for (var i = 0; i < N10; i++) {
           rtws[i] = rws[rbt[i]];
           itws[i] = iws[rbt[i]];
         }
       };
-      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N3, rbt) {
-        this.permute(rbt, rws, iws, rtws, itws, N3);
-        for (var s = 1; s < N3; s <<= 1) {
+      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N10, rbt) {
+        this.permute(rbt, rws, iws, rtws, itws, N10);
+        for (var s = 1; s < N10; s <<= 1) {
           var l = s << 1;
           var rtwdf = Math.cos(2 * Math.PI / l);
           var itwdf = Math.sin(2 * Math.PI / l);
-          for (var p = 0; p < N3; p += l) {
+          for (var p = 0; p < N10; p += l) {
             var rtwdf_ = rtwdf;
             var itwdf_ = itwdf;
             for (var j = 0; j < s; j++) {
@@ -26534,29 +26534,29 @@ var require_bn5 = __commonJS({
         }
       };
       FFTM.prototype.guessLen13b = function guessLen13b(n, m) {
-        var N3 = Math.max(m, n) | 1;
-        var odd = N3 & 1;
+        var N10 = Math.max(m, n) | 1;
+        var odd = N10 & 1;
         var i = 0;
-        for (N3 = N3 / 2 | 0; N3; N3 = N3 >>> 1) {
+        for (N10 = N10 / 2 | 0; N10; N10 = N10 >>> 1) {
           i++;
         }
         return 1 << i + 1 + odd;
       };
-      FFTM.prototype.conjugate = function conjugate(rws, iws, N3) {
-        if (N3 <= 1) return;
-        for (var i = 0; i < N3 / 2; i++) {
+      FFTM.prototype.conjugate = function conjugate(rws, iws, N10) {
+        if (N10 <= 1) return;
+        for (var i = 0; i < N10 / 2; i++) {
           var t = rws[i];
-          rws[i] = rws[N3 - i - 1];
-          rws[N3 - i - 1] = t;
+          rws[i] = rws[N10 - i - 1];
+          rws[N10 - i - 1] = t;
           t = iws[i];
-          iws[i] = -iws[N3 - i - 1];
-          iws[N3 - i - 1] = -t;
+          iws[i] = -iws[N10 - i - 1];
+          iws[N10 - i - 1] = -t;
         }
       };
-      FFTM.prototype.normalize13b = function normalize13b(ws, N3) {
+      FFTM.prototype.normalize13b = function normalize13b(ws, N10) {
         var carry = 0;
-        for (var i = 0; i < N3 / 2; i++) {
-          var w = Math.round(ws[2 * i + 1] / N3) * 8192 + Math.round(ws[2 * i] / N3) + carry;
+        for (var i = 0; i < N10 / 2; i++) {
+          var w = Math.round(ws[2 * i + 1] / N10) * 8192 + Math.round(ws[2 * i] / N10) + carry;
           ws[i] = w & 67108863;
           if (w < 67108864) {
             carry = 0;
@@ -26566,7 +26566,7 @@ var require_bn5 = __commonJS({
         }
         return ws;
       };
-      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N3) {
+      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N10) {
         var carry = 0;
         for (var i = 0; i < len; i++) {
           carry = carry + (ws[i] | 0);
@@ -26575,44 +26575,44 @@ var require_bn5 = __commonJS({
           rws[2 * i + 1] = carry & 8191;
           carry = carry >>> 13;
         }
-        for (i = 2 * len; i < N3; ++i) {
+        for (i = 2 * len; i < N10; ++i) {
           rws[i] = 0;
         }
         assert5(carry === 0);
         assert5((carry & ~8191) === 0);
       };
-      FFTM.prototype.stub = function stub(N3) {
-        var ph = new Array(N3);
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.stub = function stub(N10) {
+        var ph = new Array(N10);
+        for (var i = 0; i < N10; i++) {
           ph[i] = 0;
         }
         return ph;
       };
       FFTM.prototype.mulp = function mulp(x, y, out) {
-        var N3 = 2 * this.guessLen13b(x.length, y.length);
-        var rbt = this.makeRBT(N3);
-        var _ = this.stub(N3);
-        var rws = new Array(N3);
-        var rwst = new Array(N3);
-        var iwst = new Array(N3);
-        var nrws = new Array(N3);
-        var nrwst = new Array(N3);
-        var niwst = new Array(N3);
+        var N10 = 2 * this.guessLen13b(x.length, y.length);
+        var rbt = this.makeRBT(N10);
+        var _ = this.stub(N10);
+        var rws = new Array(N10);
+        var rwst = new Array(N10);
+        var iwst = new Array(N10);
+        var nrws = new Array(N10);
+        var nrwst = new Array(N10);
+        var niwst = new Array(N10);
         var rmws = out.words;
-        rmws.length = N3;
-        this.convert13b(x.words, x.length, rws, N3);
-        this.convert13b(y.words, y.length, nrws, N3);
-        this.transform(rws, _, rwst, iwst, N3, rbt);
-        this.transform(nrws, _, nrwst, niwst, N3, rbt);
-        for (var i = 0; i < N3; i++) {
+        rmws.length = N10;
+        this.convert13b(x.words, x.length, rws, N10);
+        this.convert13b(y.words, y.length, nrws, N10);
+        this.transform(rws, _, rwst, iwst, N10, rbt);
+        this.transform(nrws, _, nrwst, niwst, N10, rbt);
+        for (var i = 0; i < N10; i++) {
           var rx = rwst[i] * nrwst[i] - iwst[i] * niwst[i];
           iwst[i] = rwst[i] * niwst[i] + iwst[i] * nrwst[i];
           rwst[i] = rx;
         }
-        this.conjugate(rwst, iwst, N3);
-        this.transform(rwst, iwst, rmws, _, N3, rbt);
-        this.conjugate(rmws, _, N3);
-        this.normalize13b(rmws, N3);
+        this.conjugate(rwst, iwst, N10);
+        this.transform(rwst, iwst, rmws, _, N10, rbt);
+        this.conjugate(rmws, _, N10);
+        this.normalize13b(rmws, N10);
         out.negative = x.negative ^ y.negative;
         out.length = x.length + y.length;
         return out._strip();
@@ -27831,7 +27831,7 @@ var require_bn6 = __commonJS({
         ctor.prototype = new TempCtor();
         ctor.prototype.constructor = ctor;
       }
-      function BN12(number, base5, endian) {
+      function BN12(number, base6, endian) {
         if (BN12.isBN(number)) {
           return number;
         }
@@ -27840,11 +27840,11 @@ var require_bn6 = __commonJS({
         this.length = 0;
         this.red = null;
         if (number !== null) {
-          if (base5 === "le" || base5 === "be") {
-            endian = base5;
-            base5 = 10;
+          if (base6 === "le" || base6 === "be") {
+            endian = base6;
+            base6 = 10;
           }
-          this._init(number || 0, base5 || 10, endian || "be");
+          this._init(number || 0, base6 || 10, endian || "be");
         }
       }
       if (typeof module3 === "object") {
@@ -27877,17 +27877,17 @@ var require_bn6 = __commonJS({
         if (left.cmp(right) < 0) return left;
         return right;
       };
-      BN12.prototype._init = function init5(number, base5, endian) {
+      BN12.prototype._init = function init5(number, base6, endian) {
         if (typeof number === "number") {
-          return this._initNumber(number, base5, endian);
+          return this._initNumber(number, base6, endian);
         }
         if (typeof number === "object") {
-          return this._initArray(number, base5, endian);
+          return this._initArray(number, base6, endian);
         }
-        if (base5 === "hex") {
-          base5 = 16;
+        if (base6 === "hex") {
+          base6 = 16;
         }
-        assert5(base5 === (base5 | 0) && base5 >= 2 && base5 <= 36);
+        assert5(base6 === (base6 | 0) && base6 >= 2 && base6 <= 36);
         number = number.toString().replace(/\s+/g, "");
         var start = 0;
         if (number[0] === "-") {
@@ -27895,17 +27895,17 @@ var require_bn6 = __commonJS({
           this.negative = 1;
         }
         if (start < number.length) {
-          if (base5 === 16) {
+          if (base6 === 16) {
             this._parseHex(number, start, endian);
           } else {
-            this._parseBase(number, base5, start);
+            this._parseBase(number, base6, start);
             if (endian === "le") {
-              this._initArray(this.toArray(), base5, endian);
+              this._initArray(this.toArray(), base6, endian);
             }
           }
         }
       };
-      BN12.prototype._initNumber = function _initNumber(number, base5, endian) {
+      BN12.prototype._initNumber = function _initNumber(number, base6, endian) {
         if (number < 0) {
           this.negative = 1;
           number = -number;
@@ -27929,9 +27929,9 @@ var require_bn6 = __commonJS({
           this.length = 3;
         }
         if (endian !== "le") return;
-        this._initArray(this.toArray(), base5, endian);
+        this._initArray(this.toArray(), base6, endian);
       };
-      BN12.prototype._initArray = function _initArray(number, base5, endian) {
+      BN12.prototype._initArray = function _initArray(number, base6, endian) {
         assert5(typeof number.length === "number");
         if (number.length <= 0) {
           this.words = [0];
@@ -28045,20 +28045,20 @@ var require_bn6 = __commonJS({
         }
         return r2;
       }
-      BN12.prototype._parseBase = function _parseBase(number, base5, start) {
+      BN12.prototype._parseBase = function _parseBase(number, base6, start) {
         this.words = [0];
         this.length = 1;
-        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base5) {
+        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base6) {
           limbLen++;
         }
         limbLen--;
-        limbPow = limbPow / base5 | 0;
+        limbPow = limbPow / base6 | 0;
         var total = number.length - start;
         var mod = total % limbLen;
         var end = Math.min(total, total - mod) + start;
         var word = 0;
         for (var i = start; i < end; i += limbLen) {
-          word = parseBase(number, i, i + limbLen, base5);
+          word = parseBase(number, i, i + limbLen, base6);
           this.imuln(limbPow);
           if (this.words[0] + word < 67108864) {
             this.words[0] += word;
@@ -28068,9 +28068,9 @@ var require_bn6 = __commonJS({
         }
         if (mod !== 0) {
           var pow = 1;
-          word = parseBase(number, i, number.length, base5);
+          word = parseBase(number, i, number.length, base6);
           for (i = 0; i < mod; i++) {
-            pow *= base5;
+            pow *= base6;
           }
           this.imuln(pow);
           if (this.words[0] + word < 67108864) {
@@ -28090,11 +28090,11 @@ var require_bn6 = __commonJS({
         dest.negative = this.negative;
         dest.red = this.red;
       };
-      function move(dest, src) {
-        dest.words = src.words;
-        dest.length = src.length;
-        dest.negative = src.negative;
-        dest.red = src.red;
+      function move(dest, src2) {
+        dest.words = src2.words;
+        dest.length = src2.length;
+        dest.negative = src2.negative;
+        dest.red = src2.red;
       }
       BN12.prototype._move = function _move(dest) {
         move(dest, this);
@@ -28240,11 +28240,11 @@ var require_bn6 = __commonJS({
         52521875,
         60466176
       ];
-      BN12.prototype.toString = function toString(base5, padding3) {
-        base5 = base5 || 10;
+      BN12.prototype.toString = function toString(base6, padding3) {
+        base6 = base6 || 10;
         padding3 = padding3 | 0 || 1;
         var out;
-        if (base5 === 16 || base5 === "hex") {
+        if (base6 === 16 || base6 === "hex") {
           out = "";
           var off = 0;
           var carry = 0;
@@ -28274,14 +28274,14 @@ var require_bn6 = __commonJS({
           }
           return out;
         }
-        if (base5 === (base5 | 0) && base5 >= 2 && base5 <= 36) {
-          var groupSize = groupSizes[base5];
-          var groupBase = groupBases[base5];
+        if (base6 === (base6 | 0) && base6 >= 2 && base6 <= 36) {
+          var groupSize = groupSizes[base6];
+          var groupBase = groupBases[base6];
           out = "";
           var c = this.clone();
           c.negative = 0;
           while (!c.isZero()) {
-            var r2 = c.modrn(groupBase).toString(base5);
+            var r2 = c.modrn(groupBase).toString(base6);
             c = c.idivn(groupBase);
             if (!c.isZero()) {
               out = zeros3[groupSize - r2.length] + r2 + out;
@@ -28317,12 +28317,12 @@ var require_bn6 = __commonJS({
         return this.toString(16, 2);
       };
       if (Buffer2) {
-        BN12.prototype.toBuffer = function toBuffer(endian, length) {
-          return this.toArrayLike(Buffer2, endian, length);
+        BN12.prototype.toBuffer = function toBuffer(endian, length2) {
+          return this.toArrayLike(Buffer2, endian, length2);
         };
       }
-      BN12.prototype.toArray = function toArray(endian, length) {
-        return this.toArrayLike(Array, endian, length);
+      BN12.prototype.toArray = function toArray(endian, length2) {
+        return this.toArrayLike(Array, endian, length2);
       };
       var allocate = function allocate2(ArrayType, size) {
         if (ArrayType.allocUnsafe) {
@@ -28330,10 +28330,10 @@ var require_bn6 = __commonJS({
         }
         return new ArrayType(size);
       };
-      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length) {
+      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length2) {
         this._strip();
         var byteLength = this.byteLength();
-        var reqLength = length || Math.max(1, byteLength);
+        var reqLength = length2 || Math.max(1, byteLength);
         assert5(byteLength <= reqLength, "byte array longer than desired length");
         assert5(reqLength > 0, "Requested array length <= 0");
         var res = allocate(ArrayType, reqLength);
@@ -28517,7 +28517,7 @@ var require_bn6 = __commonJS({
         assert5((this.negative | num.negative) === 0);
         return this.iuor(num);
       };
-      BN12.prototype.or = function or(num) {
+      BN12.prototype.or = function or2(num) {
         if (this.length > num.length) return this.clone().ior(num);
         return num.clone().ior(this);
       };
@@ -29368,16 +29368,16 @@ var require_bn6 = __commonJS({
         this.x = x;
         this.y = y;
       }
-      FFTM.prototype.makeRBT = function makeRBT(N3) {
-        var t = new Array(N3);
-        var l = BN12.prototype._countBits(N3) - 1;
-        for (var i = 0; i < N3; i++) {
-          t[i] = this.revBin(i, l, N3);
+      FFTM.prototype.makeRBT = function makeRBT(N10) {
+        var t = new Array(N10);
+        var l = BN12.prototype._countBits(N10) - 1;
+        for (var i = 0; i < N10; i++) {
+          t[i] = this.revBin(i, l, N10);
         }
         return t;
       };
-      FFTM.prototype.revBin = function revBin(x, l, N3) {
-        if (x === 0 || x === N3 - 1) return x;
+      FFTM.prototype.revBin = function revBin(x, l, N10) {
+        if (x === 0 || x === N10 - 1) return x;
         var rb = 0;
         for (var i = 0; i < l; i++) {
           rb |= (x & 1) << l - i - 1;
@@ -29385,19 +29385,19 @@ var require_bn6 = __commonJS({
         }
         return rb;
       };
-      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N3) {
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N10) {
+        for (var i = 0; i < N10; i++) {
           rtws[i] = rws[rbt[i]];
           itws[i] = iws[rbt[i]];
         }
       };
-      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N3, rbt) {
-        this.permute(rbt, rws, iws, rtws, itws, N3);
-        for (var s = 1; s < N3; s <<= 1) {
+      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N10, rbt) {
+        this.permute(rbt, rws, iws, rtws, itws, N10);
+        for (var s = 1; s < N10; s <<= 1) {
           var l = s << 1;
           var rtwdf = Math.cos(2 * Math.PI / l);
           var itwdf = Math.sin(2 * Math.PI / l);
-          for (var p = 0; p < N3; p += l) {
+          for (var p = 0; p < N10; p += l) {
             var rtwdf_ = rtwdf;
             var itwdf_ = itwdf;
             for (var j = 0; j < s; j++) {
@@ -29422,29 +29422,29 @@ var require_bn6 = __commonJS({
         }
       };
       FFTM.prototype.guessLen13b = function guessLen13b(n, m) {
-        var N3 = Math.max(m, n) | 1;
-        var odd = N3 & 1;
+        var N10 = Math.max(m, n) | 1;
+        var odd = N10 & 1;
         var i = 0;
-        for (N3 = N3 / 2 | 0; N3; N3 = N3 >>> 1) {
+        for (N10 = N10 / 2 | 0; N10; N10 = N10 >>> 1) {
           i++;
         }
         return 1 << i + 1 + odd;
       };
-      FFTM.prototype.conjugate = function conjugate(rws, iws, N3) {
-        if (N3 <= 1) return;
-        for (var i = 0; i < N3 / 2; i++) {
+      FFTM.prototype.conjugate = function conjugate(rws, iws, N10) {
+        if (N10 <= 1) return;
+        for (var i = 0; i < N10 / 2; i++) {
           var t = rws[i];
-          rws[i] = rws[N3 - i - 1];
-          rws[N3 - i - 1] = t;
+          rws[i] = rws[N10 - i - 1];
+          rws[N10 - i - 1] = t;
           t = iws[i];
-          iws[i] = -iws[N3 - i - 1];
-          iws[N3 - i - 1] = -t;
+          iws[i] = -iws[N10 - i - 1];
+          iws[N10 - i - 1] = -t;
         }
       };
-      FFTM.prototype.normalize13b = function normalize13b(ws, N3) {
+      FFTM.prototype.normalize13b = function normalize13b(ws, N10) {
         var carry = 0;
-        for (var i = 0; i < N3 / 2; i++) {
-          var w = Math.round(ws[2 * i + 1] / N3) * 8192 + Math.round(ws[2 * i] / N3) + carry;
+        for (var i = 0; i < N10 / 2; i++) {
+          var w = Math.round(ws[2 * i + 1] / N10) * 8192 + Math.round(ws[2 * i] / N10) + carry;
           ws[i] = w & 67108863;
           if (w < 67108864) {
             carry = 0;
@@ -29454,7 +29454,7 @@ var require_bn6 = __commonJS({
         }
         return ws;
       };
-      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N3) {
+      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N10) {
         var carry = 0;
         for (var i = 0; i < len; i++) {
           carry = carry + (ws[i] | 0);
@@ -29463,44 +29463,44 @@ var require_bn6 = __commonJS({
           rws[2 * i + 1] = carry & 8191;
           carry = carry >>> 13;
         }
-        for (i = 2 * len; i < N3; ++i) {
+        for (i = 2 * len; i < N10; ++i) {
           rws[i] = 0;
         }
         assert5(carry === 0);
         assert5((carry & ~8191) === 0);
       };
-      FFTM.prototype.stub = function stub(N3) {
-        var ph = new Array(N3);
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.stub = function stub(N10) {
+        var ph = new Array(N10);
+        for (var i = 0; i < N10; i++) {
           ph[i] = 0;
         }
         return ph;
       };
       FFTM.prototype.mulp = function mulp(x, y, out) {
-        var N3 = 2 * this.guessLen13b(x.length, y.length);
-        var rbt = this.makeRBT(N3);
-        var _ = this.stub(N3);
-        var rws = new Array(N3);
-        var rwst = new Array(N3);
-        var iwst = new Array(N3);
-        var nrws = new Array(N3);
-        var nrwst = new Array(N3);
-        var niwst = new Array(N3);
+        var N10 = 2 * this.guessLen13b(x.length, y.length);
+        var rbt = this.makeRBT(N10);
+        var _ = this.stub(N10);
+        var rws = new Array(N10);
+        var rwst = new Array(N10);
+        var iwst = new Array(N10);
+        var nrws = new Array(N10);
+        var nrwst = new Array(N10);
+        var niwst = new Array(N10);
         var rmws = out.words;
-        rmws.length = N3;
-        this.convert13b(x.words, x.length, rws, N3);
-        this.convert13b(y.words, y.length, nrws, N3);
-        this.transform(rws, _, rwst, iwst, N3, rbt);
-        this.transform(nrws, _, nrwst, niwst, N3, rbt);
-        for (var i = 0; i < N3; i++) {
+        rmws.length = N10;
+        this.convert13b(x.words, x.length, rws, N10);
+        this.convert13b(y.words, y.length, nrws, N10);
+        this.transform(rws, _, rwst, iwst, N10, rbt);
+        this.transform(nrws, _, nrwst, niwst, N10, rbt);
+        for (var i = 0; i < N10; i++) {
           var rx = rwst[i] * nrwst[i] - iwst[i] * niwst[i];
           iwst[i] = rwst[i] * niwst[i] + iwst[i] * nrwst[i];
           rwst[i] = rx;
         }
-        this.conjugate(rwst, iwst, N3);
-        this.transform(rwst, iwst, rmws, _, N3, rbt);
-        this.conjugate(rmws, _, N3);
-        this.normalize13b(rmws, N3);
+        this.conjugate(rwst, iwst, N10);
+        this.transform(rwst, iwst, rmws, _, N10, rbt);
+        this.conjugate(rmws, _, N10);
+        this.normalize13b(rmws, N10);
         out.negative = x.negative ^ y.negative;
         out.length = x.length + y.length;
         return out._strip();
@@ -30719,7 +30719,7 @@ var require_bn7 = __commonJS({
         ctor.prototype = new TempCtor();
         ctor.prototype.constructor = ctor;
       }
-      function BN12(number, base5, endian) {
+      function BN12(number, base6, endian) {
         if (BN12.isBN(number)) {
           return number;
         }
@@ -30728,11 +30728,11 @@ var require_bn7 = __commonJS({
         this.length = 0;
         this.red = null;
         if (number !== null) {
-          if (base5 === "le" || base5 === "be") {
-            endian = base5;
-            base5 = 10;
+          if (base6 === "le" || base6 === "be") {
+            endian = base6;
+            base6 = 10;
           }
-          this._init(number || 0, base5 || 10, endian || "be");
+          this._init(number || 0, base6 || 10, endian || "be");
         }
       }
       if (typeof module3 === "object") {
@@ -30765,17 +30765,17 @@ var require_bn7 = __commonJS({
         if (left.cmp(right) < 0) return left;
         return right;
       };
-      BN12.prototype._init = function init5(number, base5, endian) {
+      BN12.prototype._init = function init5(number, base6, endian) {
         if (typeof number === "number") {
-          return this._initNumber(number, base5, endian);
+          return this._initNumber(number, base6, endian);
         }
         if (typeof number === "object") {
-          return this._initArray(number, base5, endian);
+          return this._initArray(number, base6, endian);
         }
-        if (base5 === "hex") {
-          base5 = 16;
+        if (base6 === "hex") {
+          base6 = 16;
         }
-        assert5(base5 === (base5 | 0) && base5 >= 2 && base5 <= 36);
+        assert5(base6 === (base6 | 0) && base6 >= 2 && base6 <= 36);
         number = number.toString().replace(/\s+/g, "");
         var start = 0;
         if (number[0] === "-") {
@@ -30783,17 +30783,17 @@ var require_bn7 = __commonJS({
           this.negative = 1;
         }
         if (start < number.length) {
-          if (base5 === 16) {
+          if (base6 === 16) {
             this._parseHex(number, start, endian);
           } else {
-            this._parseBase(number, base5, start);
+            this._parseBase(number, base6, start);
             if (endian === "le") {
-              this._initArray(this.toArray(), base5, endian);
+              this._initArray(this.toArray(), base6, endian);
             }
           }
         }
       };
-      BN12.prototype._initNumber = function _initNumber(number, base5, endian) {
+      BN12.prototype._initNumber = function _initNumber(number, base6, endian) {
         if (number < 0) {
           this.negative = 1;
           number = -number;
@@ -30817,9 +30817,9 @@ var require_bn7 = __commonJS({
           this.length = 3;
         }
         if (endian !== "le") return;
-        this._initArray(this.toArray(), base5, endian);
+        this._initArray(this.toArray(), base6, endian);
       };
-      BN12.prototype._initArray = function _initArray(number, base5, endian) {
+      BN12.prototype._initArray = function _initArray(number, base6, endian) {
         assert5(typeof number.length === "number");
         if (number.length <= 0) {
           this.words = [0];
@@ -30933,20 +30933,20 @@ var require_bn7 = __commonJS({
         }
         return r2;
       }
-      BN12.prototype._parseBase = function _parseBase(number, base5, start) {
+      BN12.prototype._parseBase = function _parseBase(number, base6, start) {
         this.words = [0];
         this.length = 1;
-        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base5) {
+        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base6) {
           limbLen++;
         }
         limbLen--;
-        limbPow = limbPow / base5 | 0;
+        limbPow = limbPow / base6 | 0;
         var total = number.length - start;
         var mod = total % limbLen;
         var end = Math.min(total, total - mod) + start;
         var word = 0;
         for (var i = start; i < end; i += limbLen) {
-          word = parseBase(number, i, i + limbLen, base5);
+          word = parseBase(number, i, i + limbLen, base6);
           this.imuln(limbPow);
           if (this.words[0] + word < 67108864) {
             this.words[0] += word;
@@ -30956,9 +30956,9 @@ var require_bn7 = __commonJS({
         }
         if (mod !== 0) {
           var pow = 1;
-          word = parseBase(number, i, number.length, base5);
+          word = parseBase(number, i, number.length, base6);
           for (i = 0; i < mod; i++) {
-            pow *= base5;
+            pow *= base6;
           }
           this.imuln(pow);
           if (this.words[0] + word < 67108864) {
@@ -30978,11 +30978,11 @@ var require_bn7 = __commonJS({
         dest.negative = this.negative;
         dest.red = this.red;
       };
-      function move(dest, src) {
-        dest.words = src.words;
-        dest.length = src.length;
-        dest.negative = src.negative;
-        dest.red = src.red;
+      function move(dest, src2) {
+        dest.words = src2.words;
+        dest.length = src2.length;
+        dest.negative = src2.negative;
+        dest.red = src2.red;
       }
       BN12.prototype._move = function _move(dest) {
         move(dest, this);
@@ -31128,11 +31128,11 @@ var require_bn7 = __commonJS({
         52521875,
         60466176
       ];
-      BN12.prototype.toString = function toString(base5, padding3) {
-        base5 = base5 || 10;
+      BN12.prototype.toString = function toString(base6, padding3) {
+        base6 = base6 || 10;
         padding3 = padding3 | 0 || 1;
         var out;
-        if (base5 === 16 || base5 === "hex") {
+        if (base6 === 16 || base6 === "hex") {
           out = "";
           var off = 0;
           var carry = 0;
@@ -31162,14 +31162,14 @@ var require_bn7 = __commonJS({
           }
           return out;
         }
-        if (base5 === (base5 | 0) && base5 >= 2 && base5 <= 36) {
-          var groupSize = groupSizes[base5];
-          var groupBase = groupBases[base5];
+        if (base6 === (base6 | 0) && base6 >= 2 && base6 <= 36) {
+          var groupSize = groupSizes[base6];
+          var groupBase = groupBases[base6];
           out = "";
           var c = this.clone();
           c.negative = 0;
           while (!c.isZero()) {
-            var r2 = c.modrn(groupBase).toString(base5);
+            var r2 = c.modrn(groupBase).toString(base6);
             c = c.idivn(groupBase);
             if (!c.isZero()) {
               out = zeros3[groupSize - r2.length] + r2 + out;
@@ -31205,12 +31205,12 @@ var require_bn7 = __commonJS({
         return this.toString(16, 2);
       };
       if (Buffer2) {
-        BN12.prototype.toBuffer = function toBuffer(endian, length) {
-          return this.toArrayLike(Buffer2, endian, length);
+        BN12.prototype.toBuffer = function toBuffer(endian, length2) {
+          return this.toArrayLike(Buffer2, endian, length2);
         };
       }
-      BN12.prototype.toArray = function toArray(endian, length) {
-        return this.toArrayLike(Array, endian, length);
+      BN12.prototype.toArray = function toArray(endian, length2) {
+        return this.toArrayLike(Array, endian, length2);
       };
       var allocate = function allocate2(ArrayType, size) {
         if (ArrayType.allocUnsafe) {
@@ -31218,10 +31218,10 @@ var require_bn7 = __commonJS({
         }
         return new ArrayType(size);
       };
-      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length) {
+      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length2) {
         this._strip();
         var byteLength = this.byteLength();
-        var reqLength = length || Math.max(1, byteLength);
+        var reqLength = length2 || Math.max(1, byteLength);
         assert5(byteLength <= reqLength, "byte array longer than desired length");
         assert5(reqLength > 0, "Requested array length <= 0");
         var res = allocate(ArrayType, reqLength);
@@ -31405,7 +31405,7 @@ var require_bn7 = __commonJS({
         assert5((this.negative | num.negative) === 0);
         return this.iuor(num);
       };
-      BN12.prototype.or = function or(num) {
+      BN12.prototype.or = function or2(num) {
         if (this.length > num.length) return this.clone().ior(num);
         return num.clone().ior(this);
       };
@@ -32256,16 +32256,16 @@ var require_bn7 = __commonJS({
         this.x = x;
         this.y = y;
       }
-      FFTM.prototype.makeRBT = function makeRBT(N3) {
-        var t = new Array(N3);
-        var l = BN12.prototype._countBits(N3) - 1;
-        for (var i = 0; i < N3; i++) {
-          t[i] = this.revBin(i, l, N3);
+      FFTM.prototype.makeRBT = function makeRBT(N10) {
+        var t = new Array(N10);
+        var l = BN12.prototype._countBits(N10) - 1;
+        for (var i = 0; i < N10; i++) {
+          t[i] = this.revBin(i, l, N10);
         }
         return t;
       };
-      FFTM.prototype.revBin = function revBin(x, l, N3) {
-        if (x === 0 || x === N3 - 1) return x;
+      FFTM.prototype.revBin = function revBin(x, l, N10) {
+        if (x === 0 || x === N10 - 1) return x;
         var rb = 0;
         for (var i = 0; i < l; i++) {
           rb |= (x & 1) << l - i - 1;
@@ -32273,19 +32273,19 @@ var require_bn7 = __commonJS({
         }
         return rb;
       };
-      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N3) {
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N10) {
+        for (var i = 0; i < N10; i++) {
           rtws[i] = rws[rbt[i]];
           itws[i] = iws[rbt[i]];
         }
       };
-      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N3, rbt) {
-        this.permute(rbt, rws, iws, rtws, itws, N3);
-        for (var s = 1; s < N3; s <<= 1) {
+      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N10, rbt) {
+        this.permute(rbt, rws, iws, rtws, itws, N10);
+        for (var s = 1; s < N10; s <<= 1) {
           var l = s << 1;
           var rtwdf = Math.cos(2 * Math.PI / l);
           var itwdf = Math.sin(2 * Math.PI / l);
-          for (var p = 0; p < N3; p += l) {
+          for (var p = 0; p < N10; p += l) {
             var rtwdf_ = rtwdf;
             var itwdf_ = itwdf;
             for (var j = 0; j < s; j++) {
@@ -32310,29 +32310,29 @@ var require_bn7 = __commonJS({
         }
       };
       FFTM.prototype.guessLen13b = function guessLen13b(n, m) {
-        var N3 = Math.max(m, n) | 1;
-        var odd = N3 & 1;
+        var N10 = Math.max(m, n) | 1;
+        var odd = N10 & 1;
         var i = 0;
-        for (N3 = N3 / 2 | 0; N3; N3 = N3 >>> 1) {
+        for (N10 = N10 / 2 | 0; N10; N10 = N10 >>> 1) {
           i++;
         }
         return 1 << i + 1 + odd;
       };
-      FFTM.prototype.conjugate = function conjugate(rws, iws, N3) {
-        if (N3 <= 1) return;
-        for (var i = 0; i < N3 / 2; i++) {
+      FFTM.prototype.conjugate = function conjugate(rws, iws, N10) {
+        if (N10 <= 1) return;
+        for (var i = 0; i < N10 / 2; i++) {
           var t = rws[i];
-          rws[i] = rws[N3 - i - 1];
-          rws[N3 - i - 1] = t;
+          rws[i] = rws[N10 - i - 1];
+          rws[N10 - i - 1] = t;
           t = iws[i];
-          iws[i] = -iws[N3 - i - 1];
-          iws[N3 - i - 1] = -t;
+          iws[i] = -iws[N10 - i - 1];
+          iws[N10 - i - 1] = -t;
         }
       };
-      FFTM.prototype.normalize13b = function normalize13b(ws, N3) {
+      FFTM.prototype.normalize13b = function normalize13b(ws, N10) {
         var carry = 0;
-        for (var i = 0; i < N3 / 2; i++) {
-          var w = Math.round(ws[2 * i + 1] / N3) * 8192 + Math.round(ws[2 * i] / N3) + carry;
+        for (var i = 0; i < N10 / 2; i++) {
+          var w = Math.round(ws[2 * i + 1] / N10) * 8192 + Math.round(ws[2 * i] / N10) + carry;
           ws[i] = w & 67108863;
           if (w < 67108864) {
             carry = 0;
@@ -32342,7 +32342,7 @@ var require_bn7 = __commonJS({
         }
         return ws;
       };
-      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N3) {
+      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N10) {
         var carry = 0;
         for (var i = 0; i < len; i++) {
           carry = carry + (ws[i] | 0);
@@ -32351,44 +32351,44 @@ var require_bn7 = __commonJS({
           rws[2 * i + 1] = carry & 8191;
           carry = carry >>> 13;
         }
-        for (i = 2 * len; i < N3; ++i) {
+        for (i = 2 * len; i < N10; ++i) {
           rws[i] = 0;
         }
         assert5(carry === 0);
         assert5((carry & ~8191) === 0);
       };
-      FFTM.prototype.stub = function stub(N3) {
-        var ph = new Array(N3);
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.stub = function stub(N10) {
+        var ph = new Array(N10);
+        for (var i = 0; i < N10; i++) {
           ph[i] = 0;
         }
         return ph;
       };
       FFTM.prototype.mulp = function mulp(x, y, out) {
-        var N3 = 2 * this.guessLen13b(x.length, y.length);
-        var rbt = this.makeRBT(N3);
-        var _ = this.stub(N3);
-        var rws = new Array(N3);
-        var rwst = new Array(N3);
-        var iwst = new Array(N3);
-        var nrws = new Array(N3);
-        var nrwst = new Array(N3);
-        var niwst = new Array(N3);
+        var N10 = 2 * this.guessLen13b(x.length, y.length);
+        var rbt = this.makeRBT(N10);
+        var _ = this.stub(N10);
+        var rws = new Array(N10);
+        var rwst = new Array(N10);
+        var iwst = new Array(N10);
+        var nrws = new Array(N10);
+        var nrwst = new Array(N10);
+        var niwst = new Array(N10);
         var rmws = out.words;
-        rmws.length = N3;
-        this.convert13b(x.words, x.length, rws, N3);
-        this.convert13b(y.words, y.length, nrws, N3);
-        this.transform(rws, _, rwst, iwst, N3, rbt);
-        this.transform(nrws, _, nrwst, niwst, N3, rbt);
-        for (var i = 0; i < N3; i++) {
+        rmws.length = N10;
+        this.convert13b(x.words, x.length, rws, N10);
+        this.convert13b(y.words, y.length, nrws, N10);
+        this.transform(rws, _, rwst, iwst, N10, rbt);
+        this.transform(nrws, _, nrwst, niwst, N10, rbt);
+        for (var i = 0; i < N10; i++) {
           var rx = rwst[i] * nrwst[i] - iwst[i] * niwst[i];
           iwst[i] = rwst[i] * niwst[i] + iwst[i] * nrwst[i];
           rwst[i] = rx;
         }
-        this.conjugate(rwst, iwst, N3);
-        this.transform(rwst, iwst, rmws, _, N3, rbt);
-        this.conjugate(rmws, _, N3);
-        this.normalize13b(rmws, N3);
+        this.conjugate(rwst, iwst, N10);
+        this.transform(rwst, iwst, rmws, _, N10, rbt);
+        this.conjugate(rmws, _, N10);
+        this.normalize13b(rmws, N10);
         out.negative = x.negative ^ y.negative;
         out.length = x.length + y.length;
         return out._strip();
@@ -33607,7 +33607,7 @@ var require_bn8 = __commonJS({
         ctor.prototype = new TempCtor();
         ctor.prototype.constructor = ctor;
       }
-      function BN12(number, base5, endian) {
+      function BN12(number, base6, endian) {
         if (BN12.isBN(number)) {
           return number;
         }
@@ -33616,11 +33616,11 @@ var require_bn8 = __commonJS({
         this.length = 0;
         this.red = null;
         if (number !== null) {
-          if (base5 === "le" || base5 === "be") {
-            endian = base5;
-            base5 = 10;
+          if (base6 === "le" || base6 === "be") {
+            endian = base6;
+            base6 = 10;
           }
-          this._init(number || 0, base5 || 10, endian || "be");
+          this._init(number || 0, base6 || 10, endian || "be");
         }
       }
       if (typeof module3 === "object") {
@@ -33653,17 +33653,17 @@ var require_bn8 = __commonJS({
         if (left.cmp(right) < 0) return left;
         return right;
       };
-      BN12.prototype._init = function init5(number, base5, endian) {
+      BN12.prototype._init = function init5(number, base6, endian) {
         if (typeof number === "number") {
-          return this._initNumber(number, base5, endian);
+          return this._initNumber(number, base6, endian);
         }
         if (typeof number === "object") {
-          return this._initArray(number, base5, endian);
+          return this._initArray(number, base6, endian);
         }
-        if (base5 === "hex") {
-          base5 = 16;
+        if (base6 === "hex") {
+          base6 = 16;
         }
-        assert5(base5 === (base5 | 0) && base5 >= 2 && base5 <= 36);
+        assert5(base6 === (base6 | 0) && base6 >= 2 && base6 <= 36);
         number = number.toString().replace(/\s+/g, "");
         var start = 0;
         if (number[0] === "-") {
@@ -33671,17 +33671,17 @@ var require_bn8 = __commonJS({
           this.negative = 1;
         }
         if (start < number.length) {
-          if (base5 === 16) {
+          if (base6 === 16) {
             this._parseHex(number, start, endian);
           } else {
-            this._parseBase(number, base5, start);
+            this._parseBase(number, base6, start);
             if (endian === "le") {
-              this._initArray(this.toArray(), base5, endian);
+              this._initArray(this.toArray(), base6, endian);
             }
           }
         }
       };
-      BN12.prototype._initNumber = function _initNumber(number, base5, endian) {
+      BN12.prototype._initNumber = function _initNumber(number, base6, endian) {
         if (number < 0) {
           this.negative = 1;
           number = -number;
@@ -33705,9 +33705,9 @@ var require_bn8 = __commonJS({
           this.length = 3;
         }
         if (endian !== "le") return;
-        this._initArray(this.toArray(), base5, endian);
+        this._initArray(this.toArray(), base6, endian);
       };
-      BN12.prototype._initArray = function _initArray(number, base5, endian) {
+      BN12.prototype._initArray = function _initArray(number, base6, endian) {
         assert5(typeof number.length === "number");
         if (number.length <= 0) {
           this.words = [0];
@@ -33821,20 +33821,20 @@ var require_bn8 = __commonJS({
         }
         return r2;
       }
-      BN12.prototype._parseBase = function _parseBase(number, base5, start) {
+      BN12.prototype._parseBase = function _parseBase(number, base6, start) {
         this.words = [0];
         this.length = 1;
-        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base5) {
+        for (var limbLen = 0, limbPow = 1; limbPow <= 67108863; limbPow *= base6) {
           limbLen++;
         }
         limbLen--;
-        limbPow = limbPow / base5 | 0;
+        limbPow = limbPow / base6 | 0;
         var total = number.length - start;
         var mod = total % limbLen;
         var end = Math.min(total, total - mod) + start;
         var word = 0;
         for (var i = start; i < end; i += limbLen) {
-          word = parseBase(number, i, i + limbLen, base5);
+          word = parseBase(number, i, i + limbLen, base6);
           this.imuln(limbPow);
           if (this.words[0] + word < 67108864) {
             this.words[0] += word;
@@ -33844,9 +33844,9 @@ var require_bn8 = __commonJS({
         }
         if (mod !== 0) {
           var pow = 1;
-          word = parseBase(number, i, number.length, base5);
+          word = parseBase(number, i, number.length, base6);
           for (i = 0; i < mod; i++) {
-            pow *= base5;
+            pow *= base6;
           }
           this.imuln(pow);
           if (this.words[0] + word < 67108864) {
@@ -33866,11 +33866,11 @@ var require_bn8 = __commonJS({
         dest.negative = this.negative;
         dest.red = this.red;
       };
-      function move(dest, src) {
-        dest.words = src.words;
-        dest.length = src.length;
-        dest.negative = src.negative;
-        dest.red = src.red;
+      function move(dest, src2) {
+        dest.words = src2.words;
+        dest.length = src2.length;
+        dest.negative = src2.negative;
+        dest.red = src2.red;
       }
       BN12.prototype._move = function _move(dest) {
         move(dest, this);
@@ -34016,11 +34016,11 @@ var require_bn8 = __commonJS({
         52521875,
         60466176
       ];
-      BN12.prototype.toString = function toString(base5, padding3) {
-        base5 = base5 || 10;
+      BN12.prototype.toString = function toString(base6, padding3) {
+        base6 = base6 || 10;
         padding3 = padding3 | 0 || 1;
         var out;
-        if (base5 === 16 || base5 === "hex") {
+        if (base6 === 16 || base6 === "hex") {
           out = "";
           var off = 0;
           var carry = 0;
@@ -34050,14 +34050,14 @@ var require_bn8 = __commonJS({
           }
           return out;
         }
-        if (base5 === (base5 | 0) && base5 >= 2 && base5 <= 36) {
-          var groupSize = groupSizes[base5];
-          var groupBase = groupBases[base5];
+        if (base6 === (base6 | 0) && base6 >= 2 && base6 <= 36) {
+          var groupSize = groupSizes[base6];
+          var groupBase = groupBases[base6];
           out = "";
           var c = this.clone();
           c.negative = 0;
           while (!c.isZero()) {
-            var r2 = c.modrn(groupBase).toString(base5);
+            var r2 = c.modrn(groupBase).toString(base6);
             c = c.idivn(groupBase);
             if (!c.isZero()) {
               out = zeros3[groupSize - r2.length] + r2 + out;
@@ -34093,12 +34093,12 @@ var require_bn8 = __commonJS({
         return this.toString(16, 2);
       };
       if (Buffer2) {
-        BN12.prototype.toBuffer = function toBuffer(endian, length) {
-          return this.toArrayLike(Buffer2, endian, length);
+        BN12.prototype.toBuffer = function toBuffer(endian, length2) {
+          return this.toArrayLike(Buffer2, endian, length2);
         };
       }
-      BN12.prototype.toArray = function toArray(endian, length) {
-        return this.toArrayLike(Array, endian, length);
+      BN12.prototype.toArray = function toArray(endian, length2) {
+        return this.toArrayLike(Array, endian, length2);
       };
       var allocate = function allocate2(ArrayType, size) {
         if (ArrayType.allocUnsafe) {
@@ -34106,10 +34106,10 @@ var require_bn8 = __commonJS({
         }
         return new ArrayType(size);
       };
-      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length) {
+      BN12.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length2) {
         this._strip();
         var byteLength = this.byteLength();
-        var reqLength = length || Math.max(1, byteLength);
+        var reqLength = length2 || Math.max(1, byteLength);
         assert5(byteLength <= reqLength, "byte array longer than desired length");
         assert5(reqLength > 0, "Requested array length <= 0");
         var res = allocate(ArrayType, reqLength);
@@ -34293,7 +34293,7 @@ var require_bn8 = __commonJS({
         assert5((this.negative | num.negative) === 0);
         return this.iuor(num);
       };
-      BN12.prototype.or = function or(num) {
+      BN12.prototype.or = function or2(num) {
         if (this.length > num.length) return this.clone().ior(num);
         return num.clone().ior(this);
       };
@@ -35144,16 +35144,16 @@ var require_bn8 = __commonJS({
         this.x = x;
         this.y = y;
       }
-      FFTM.prototype.makeRBT = function makeRBT(N3) {
-        var t = new Array(N3);
-        var l = BN12.prototype._countBits(N3) - 1;
-        for (var i = 0; i < N3; i++) {
-          t[i] = this.revBin(i, l, N3);
+      FFTM.prototype.makeRBT = function makeRBT(N10) {
+        var t = new Array(N10);
+        var l = BN12.prototype._countBits(N10) - 1;
+        for (var i = 0; i < N10; i++) {
+          t[i] = this.revBin(i, l, N10);
         }
         return t;
       };
-      FFTM.prototype.revBin = function revBin(x, l, N3) {
-        if (x === 0 || x === N3 - 1) return x;
+      FFTM.prototype.revBin = function revBin(x, l, N10) {
+        if (x === 0 || x === N10 - 1) return x;
         var rb = 0;
         for (var i = 0; i < l; i++) {
           rb |= (x & 1) << l - i - 1;
@@ -35161,19 +35161,19 @@ var require_bn8 = __commonJS({
         }
         return rb;
       };
-      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N3) {
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N10) {
+        for (var i = 0; i < N10; i++) {
           rtws[i] = rws[rbt[i]];
           itws[i] = iws[rbt[i]];
         }
       };
-      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N3, rbt) {
-        this.permute(rbt, rws, iws, rtws, itws, N3);
-        for (var s = 1; s < N3; s <<= 1) {
+      FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N10, rbt) {
+        this.permute(rbt, rws, iws, rtws, itws, N10);
+        for (var s = 1; s < N10; s <<= 1) {
           var l = s << 1;
           var rtwdf = Math.cos(2 * Math.PI / l);
           var itwdf = Math.sin(2 * Math.PI / l);
-          for (var p = 0; p < N3; p += l) {
+          for (var p = 0; p < N10; p += l) {
             var rtwdf_ = rtwdf;
             var itwdf_ = itwdf;
             for (var j = 0; j < s; j++) {
@@ -35198,29 +35198,29 @@ var require_bn8 = __commonJS({
         }
       };
       FFTM.prototype.guessLen13b = function guessLen13b(n, m) {
-        var N3 = Math.max(m, n) | 1;
-        var odd = N3 & 1;
+        var N10 = Math.max(m, n) | 1;
+        var odd = N10 & 1;
         var i = 0;
-        for (N3 = N3 / 2 | 0; N3; N3 = N3 >>> 1) {
+        for (N10 = N10 / 2 | 0; N10; N10 = N10 >>> 1) {
           i++;
         }
         return 1 << i + 1 + odd;
       };
-      FFTM.prototype.conjugate = function conjugate(rws, iws, N3) {
-        if (N3 <= 1) return;
-        for (var i = 0; i < N3 / 2; i++) {
+      FFTM.prototype.conjugate = function conjugate(rws, iws, N10) {
+        if (N10 <= 1) return;
+        for (var i = 0; i < N10 / 2; i++) {
           var t = rws[i];
-          rws[i] = rws[N3 - i - 1];
-          rws[N3 - i - 1] = t;
+          rws[i] = rws[N10 - i - 1];
+          rws[N10 - i - 1] = t;
           t = iws[i];
-          iws[i] = -iws[N3 - i - 1];
-          iws[N3 - i - 1] = -t;
+          iws[i] = -iws[N10 - i - 1];
+          iws[N10 - i - 1] = -t;
         }
       };
-      FFTM.prototype.normalize13b = function normalize13b(ws, N3) {
+      FFTM.prototype.normalize13b = function normalize13b(ws, N10) {
         var carry = 0;
-        for (var i = 0; i < N3 / 2; i++) {
-          var w = Math.round(ws[2 * i + 1] / N3) * 8192 + Math.round(ws[2 * i] / N3) + carry;
+        for (var i = 0; i < N10 / 2; i++) {
+          var w = Math.round(ws[2 * i + 1] / N10) * 8192 + Math.round(ws[2 * i] / N10) + carry;
           ws[i] = w & 67108863;
           if (w < 67108864) {
             carry = 0;
@@ -35230,7 +35230,7 @@ var require_bn8 = __commonJS({
         }
         return ws;
       };
-      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N3) {
+      FFTM.prototype.convert13b = function convert13b(ws, len, rws, N10) {
         var carry = 0;
         for (var i = 0; i < len; i++) {
           carry = carry + (ws[i] | 0);
@@ -35239,44 +35239,44 @@ var require_bn8 = __commonJS({
           rws[2 * i + 1] = carry & 8191;
           carry = carry >>> 13;
         }
-        for (i = 2 * len; i < N3; ++i) {
+        for (i = 2 * len; i < N10; ++i) {
           rws[i] = 0;
         }
         assert5(carry === 0);
         assert5((carry & ~8191) === 0);
       };
-      FFTM.prototype.stub = function stub(N3) {
-        var ph = new Array(N3);
-        for (var i = 0; i < N3; i++) {
+      FFTM.prototype.stub = function stub(N10) {
+        var ph = new Array(N10);
+        for (var i = 0; i < N10; i++) {
           ph[i] = 0;
         }
         return ph;
       };
       FFTM.prototype.mulp = function mulp(x, y, out) {
-        var N3 = 2 * this.guessLen13b(x.length, y.length);
-        var rbt = this.makeRBT(N3);
-        var _ = this.stub(N3);
-        var rws = new Array(N3);
-        var rwst = new Array(N3);
-        var iwst = new Array(N3);
-        var nrws = new Array(N3);
-        var nrwst = new Array(N3);
-        var niwst = new Array(N3);
+        var N10 = 2 * this.guessLen13b(x.length, y.length);
+        var rbt = this.makeRBT(N10);
+        var _ = this.stub(N10);
+        var rws = new Array(N10);
+        var rwst = new Array(N10);
+        var iwst = new Array(N10);
+        var nrws = new Array(N10);
+        var nrwst = new Array(N10);
+        var niwst = new Array(N10);
         var rmws = out.words;
-        rmws.length = N3;
-        this.convert13b(x.words, x.length, rws, N3);
-        this.convert13b(y.words, y.length, nrws, N3);
-        this.transform(rws, _, rwst, iwst, N3, rbt);
-        this.transform(nrws, _, nrwst, niwst, N3, rbt);
-        for (var i = 0; i < N3; i++) {
+        rmws.length = N10;
+        this.convert13b(x.words, x.length, rws, N10);
+        this.convert13b(y.words, y.length, nrws, N10);
+        this.transform(rws, _, rwst, iwst, N10, rbt);
+        this.transform(nrws, _, nrwst, niwst, N10, rbt);
+        for (var i = 0; i < N10; i++) {
           var rx = rwst[i] * nrwst[i] - iwst[i] * niwst[i];
           iwst[i] = rwst[i] * niwst[i] + iwst[i] * nrwst[i];
           rwst[i] = rx;
         }
-        this.conjugate(rwst, iwst, N3);
-        this.transform(rwst, iwst, rmws, _, N3, rbt);
-        this.conjugate(rmws, _, N3);
-        this.normalize13b(rmws, N3);
+        this.conjugate(rwst, iwst, N10);
+        this.transform(rwst, iwst, rmws, _, N10, rbt);
+        this.conjugate(rmws, _, N10);
+        this.normalize13b(rmws, N10);
         out.negative = x.negative ^ y.negative;
         out.length = x.length + y.length;
         return out._strip();
@@ -36684,10 +36684,10 @@ var ErrorCode;
 })(ErrorCode || (ErrorCode = {}));
 var HEX = "0123456789abcdef";
 var Logger = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -36902,8 +36902,8 @@ var Logger = class _Logger {
     }
     _logLevel = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger.errors = ErrorCode;
@@ -37000,8 +37000,8 @@ function arrayify(value, options) {
 }
 function concat(items) {
   const objects = items.map((item) => arrayify(item));
-  const length = objects.reduce((accum, item) => accum + item.length, 0);
-  const result = new Uint8Array(length);
+  const length2 = objects.reduce((accum, item) => accum + item.length, 0);
+  const result = new Uint8Array(length2);
   objects.reduce((offset, object) => {
     result.set(object, offset);
     return offset + object.length;
@@ -37022,20 +37022,20 @@ function stripZeros(value) {
   }
   return result;
 }
-function zeroPad(value, length) {
+function zeroPad(value, length2) {
   value = arrayify(value);
-  if (value.length > length) {
+  if (value.length > length2) {
     logger.throwArgumentError("value out of range", "value", arguments[0]);
   }
-  const result = new Uint8Array(length);
-  result.set(value, length - value.length);
+  const result = new Uint8Array(length2);
+  result.set(value, length2 - value.length);
   return addSlice(result);
 }
-function isHexString(value, length) {
+function isHexString(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -37143,16 +37143,16 @@ function hexStripZeros(value) {
   }
   return "0x" + value.substring(offset);
 }
-function hexZeroPad(value, length) {
+function hexZeroPad(value, length2) {
   if (typeof value !== "string") {
     value = hexlify(value);
   } else if (!isHexString(value)) {
     logger.throwArgumentError("invalid hex string", "value", value);
   }
-  if (value.length > 2 * length + 2) {
+  if (value.length > 2 * length2 + 2) {
     logger.throwArgumentError("value out of range", "value", arguments[1]);
   }
-  while (value.length < 2 * length + 2) {
+  while (value.length < 2 * length2 + 2) {
     value = "0x0" + value.substring(2);
   }
   return value;
@@ -38949,11 +38949,11 @@ var Reader = class _Reader {
     }
     return _Reader.coerce(name2, value);
   }
-  _peekBytes(offset, length, loose) {
-    let alignedLength = Math.ceil(length / this.wordSize) * this.wordSize;
+  _peekBytes(offset, length2, loose) {
+    let alignedLength = Math.ceil(length2 / this.wordSize) * this.wordSize;
     if (this._offset + alignedLength > this._data.length) {
-      if (this.allowLoose && loose && this._offset + length <= this._data.length) {
-        alignedLength = length;
+      if (this.allowLoose && loose && this._offset + length2 <= this._data.length) {
+        alignedLength = length2;
       } else {
         logger6.throwError("data out-of-bounds", Logger.errors.BUFFER_OVERRUN, {
           length: this._data.length,
@@ -38966,10 +38966,10 @@ var Reader = class _Reader {
   subReader(offset) {
     return new _Reader(this._data.slice(this._offset + offset), this.wordSize, this._coerceFunc, this.allowLoose);
   }
-  readBytes(length, loose) {
-    let bytes = this._peekBytes(0, length, !!loose);
+  readBytes(length2, loose) {
+    let bytes = this._peekBytes(0, length2, !!loose);
     this._offset += bytes.length;
-    return bytes.slice(0, length);
+    return bytes.slice(0, length2);
   }
   readValue() {
     return BigNumber.from(this.readBytes(this.wordSize));
@@ -38995,9 +38995,9 @@ function arrayifyInteger(value) {
   }
   return result;
 }
-function unarrayifyInteger(data, offset, length) {
+function unarrayifyInteger(data, offset, length2) {
   let result = 0;
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length2; i++) {
     result = result * 256 + data[offset + i];
   }
   return result;
@@ -39012,9 +39012,9 @@ function _encode(object) {
       payload.unshift(192 + payload.length);
       return payload;
     }
-    const length2 = arrayifyInteger(payload.length);
-    length2.unshift(247 + length2.length);
-    return length2.concat(payload);
+    const length3 = arrayifyInteger(payload.length);
+    length3.unshift(247 + length3.length);
+    return length3.concat(payload);
   }
   if (!isBytesLike(object)) {
     logger7.throwArgumentError("RLP object must be BytesLike", "object", object);
@@ -39026,24 +39026,24 @@ function _encode(object) {
     data.unshift(128 + data.length);
     return data;
   }
-  const length = arrayifyInteger(data.length);
-  length.unshift(183 + length.length);
-  return length.concat(data);
+  const length2 = arrayifyInteger(data.length);
+  length2.unshift(183 + length2.length);
+  return length2.concat(data);
 }
 function encode(object) {
   return hexlify(_encode(object));
 }
-function _decodeChildren(data, offset, childOffset, length) {
+function _decodeChildren(data, offset, childOffset, length2) {
   const result = [];
-  while (childOffset < offset + 1 + length) {
+  while (childOffset < offset + 1 + length2) {
     const decoded = _decode(data, childOffset);
     result.push(decoded.result);
     childOffset += decoded.consumed;
-    if (childOffset > offset + 1 + length) {
+    if (childOffset > offset + 1 + length2) {
       logger7.throwError("child data too short", Logger.errors.BUFFER_OVERRUN, {});
     }
   }
-  return { consumed: 1 + length, result };
+  return { consumed: 1 + length2, result };
 }
 function _decode(data, offset) {
   if (data.length === 0) {
@@ -39054,35 +39054,35 @@ function _decode(data, offset) {
     if (offset + 1 + lengthLength > data.length) {
       logger7.throwError("data short segment too short", Logger.errors.BUFFER_OVERRUN, {});
     }
-    const length = unarrayifyInteger(data, offset + 1, lengthLength);
-    if (offset + 1 + lengthLength + length > data.length) {
+    const length2 = unarrayifyInteger(data, offset + 1, lengthLength);
+    if (offset + 1 + lengthLength + length2 > data.length) {
       logger7.throwError("data long segment too short", Logger.errors.BUFFER_OVERRUN, {});
     }
-    return _decodeChildren(data, offset, offset + 1 + lengthLength, lengthLength + length);
+    return _decodeChildren(data, offset, offset + 1 + lengthLength, lengthLength + length2);
   } else if (data[offset] >= 192) {
-    const length = data[offset] - 192;
-    if (offset + 1 + length > data.length) {
+    const length2 = data[offset] - 192;
+    if (offset + 1 + length2 > data.length) {
       logger7.throwError("data array too short", Logger.errors.BUFFER_OVERRUN, {});
     }
-    return _decodeChildren(data, offset, offset + 1, length);
+    return _decodeChildren(data, offset, offset + 1, length2);
   } else if (data[offset] >= 184) {
     const lengthLength = data[offset] - 183;
     if (offset + 1 + lengthLength > data.length) {
       logger7.throwError("data array too short", Logger.errors.BUFFER_OVERRUN, {});
     }
-    const length = unarrayifyInteger(data, offset + 1, lengthLength);
-    if (offset + 1 + lengthLength + length > data.length) {
+    const length2 = unarrayifyInteger(data, offset + 1, lengthLength);
+    if (offset + 1 + lengthLength + length2 > data.length) {
       logger7.throwError("data array too short", Logger.errors.BUFFER_OVERRUN, {});
     }
-    const result = hexlify(data.slice(offset + 1 + lengthLength, offset + 1 + lengthLength + length));
-    return { consumed: 1 + lengthLength + length, result };
+    const result = hexlify(data.slice(offset + 1 + lengthLength, offset + 1 + lengthLength + length2));
+    return { consumed: 1 + lengthLength + length2, result };
   } else if (data[offset] >= 128) {
-    const length = data[offset] - 128;
-    if (offset + 1 + length > data.length) {
+    const length2 = data[offset] - 128;
+    if (offset + 1 + length2 > data.length) {
       logger7.throwError("data too short", Logger.errors.BUFFER_OVERRUN, {});
     }
-    const result = hexlify(data.slice(offset + 1, offset + 1 + length));
-    return { consumed: 1 + length, result };
+    const result = hexlify(data.slice(offset + 1, offset + 1 + length2));
+    return { consumed: 1 + length2, result };
   }
   return { consumed: 1, result: hexlify(data[offset]) };
 }
@@ -39180,14 +39180,14 @@ function getAddress(address) {
   return result;
 }
 function getContractAddress(transaction) {
-  let from = null;
+  let from2 = null;
   try {
-    from = getAddress(transaction.from);
+    from2 = getAddress(transaction.from);
   } catch (error) {
     logger8.throwArgumentError("missing from address", "transaction", transaction);
   }
   const nonce = stripZeros(arrayify(BigNumber.from(transaction.nonce).toHexString()));
-  return getAddress(hexDataSlice(keccak256(encode([from, nonce])), 12));
+  return getAddress(hexDataSlice(keccak256(encode([from2, nonce])), 12));
 }
 
 // node_modules/@ethersproject/contracts/node_modules/@ethersproject/abi/lib.esm/coders/address.js
@@ -39280,9 +39280,9 @@ function pack(writer, coders, values) {
   updateFuncs.forEach((func) => {
     func(staticWriter.length);
   });
-  let length = writer.appendWriter(staticWriter);
-  length += writer.appendWriter(dynamicWriter);
-  return length;
+  let length2 = writer.appendWriter(staticWriter);
+  length2 += writer.appendWriter(dynamicWriter);
+  return length2;
 }
 function unpack(reader, coders) {
   let values = [];
@@ -39367,12 +39367,12 @@ function unpack(reader, coders) {
   return Object.freeze(values);
 }
 var ArrayCoder = class extends Coder {
-  constructor(coder, length, localName) {
-    const type = coder.type + "[" + (length >= 0 ? length : "") + "]";
-    const dynamic = length === -1 || coder.dynamic;
+  constructor(coder, length2, localName) {
+    const type = coder.type + "[" + (length2 >= 0 ? length2 : "") + "]";
+    const dynamic = length2 === -1 || coder.dynamic;
     super("array", type, localName, dynamic);
     this.coder = coder;
-    this.length = length;
+    this.length = length2;
   }
   defaultValue() {
     const defaultChild = this.coder.defaultValue();
@@ -39443,9 +39443,9 @@ var DynamicBytesCoder = class extends Coder {
   }
   encode(writer, value) {
     value = arrayify(value);
-    let length = writer.writeValue(value.length);
-    length += writer.writeBytes(value);
-    return length;
+    let length2 = writer.writeValue(value.length);
+    length2 += writer.writeBytes(value);
+    return length2;
   }
   decode(reader) {
     return reader.readBytes(reader.readValue().toNumber(), true);
@@ -39946,13 +39946,13 @@ function decode_arithmetic(bytes) {
     }
     return read_buffer >> --read_width & 1;
   }
-  const N3 = 31;
-  const FULL = Math.pow(2, N3);
+  const N10 = 31;
+  const FULL = Math.pow(2, N10);
   const HALF = FULL >>> 1;
   const QRTR = HALF >> 1;
   const MASK = FULL - 1;
   let register = 0;
-  for (let i = 0; i < N3; i++)
+  for (let i = 0; i < N10; i++)
     register = register << 1 | read_bit();
   let symbols = [];
   let low = 0;
@@ -40094,14 +40094,14 @@ function read_replacement_table(w, next) {
 }
 function read_emoji_trie(next) {
   let sorted = read_member_array(next).sort((a, b) => a - b);
-  return read();
-  function read() {
+  return read2();
+  function read2() {
     let branches = [];
     while (true) {
       let keys = read_member_array(next, sorted);
       if (keys.length == 0)
         break;
-      branches.push({ set: new Set(keys), node: read() });
+      branches.push({ set: new Set(keys), node: read2() });
     }
     branches.sort((a, b) => b.set.size - a.set.size);
     let temp = next();
@@ -40515,9 +40515,9 @@ var TypedDataEncoder = class _TypedDataEncoder {
     if (match) {
       const subtype = match[1];
       const subEncoder = this.getEncoder(subtype);
-      const length = parseInt(match[3]);
+      const length2 = parseInt(match[3]);
       return (value) => {
-        if (length >= 0 && value.length !== length) {
+        if (length2 >= 0 && value.length !== length2) {
           logger13.throwArgumentError("array length mismatch; expected length ${ arrayLength }", "value", value);
         }
         let result = value.map(subEncoder);
@@ -40573,8 +40573,8 @@ var TypedDataEncoder = class _TypedDataEncoder {
     const match = type.match(/^(.*)(\x5b(\d*)\x5d)$/);
     if (match) {
       const subtype = match[1];
-      const length = parseInt(match[3]);
-      if (length >= 0 && value.length !== length) {
+      const length2 = parseInt(match[3]);
+      if (length2 >= 0 && value.length !== length2) {
         logger13.throwArgumentError("array length mismatch; expected length ${ arrayLength }", "value", value);
       }
       return value.map((v) => this._visit(subtype, v, callback));
@@ -41641,8 +41641,8 @@ function createCommonjsModule(fn, basedir, module2) {
   return module2 = {
     path: basedir,
     exports: {},
-    require: function(path, base5) {
-      return commonjsRequire(path, base5 === void 0 || base5 === null ? module2.path : base5);
+    require: function(path, base6) {
+      return commonjsRequire(path, base6 === void 0 || base6 === null ? module2.path : base6);
     }
   }, fn(module2, module2.exports), module2.exports;
 }
@@ -41706,7 +41706,7 @@ var utils_1 = createCommonjsModule(function(module2, exports2) {
     return res;
   }
   utils.toHex = toHex8;
-  utils.encode = function encode12(arr, enc) {
+  utils.encode = function encode14(arr, enc) {
     if (enc === "hex")
       return toHex8(arr);
     else
@@ -44984,10 +44984,10 @@ var ErrorCode2;
 })(ErrorCode2 || (ErrorCode2 = {}));
 var HEX2 = "0123456789abcdef";
 var Logger2 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -45202,8 +45202,8 @@ var Logger2 = class _Logger {
     }
     _logLevel2 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger2.errors = ErrorCode2;
@@ -45295,11 +45295,11 @@ function arrayify2(value, options) {
   }
   return logger20.throwArgumentError("invalid arrayify value", "value", value);
 }
-function isHexString2(value, length) {
+function isHexString2(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -45359,16 +45359,16 @@ function hexlify2(value, options) {
   }
   return logger20.throwArgumentError("invalid hexlify value", "value", value);
 }
-function hexZeroPad2(value, length) {
+function hexZeroPad2(value, length2) {
   if (typeof value !== "string") {
     value = hexlify2(value);
   } else if (!isHexString2(value)) {
     logger20.throwArgumentError("invalid hex string", "value", value);
   }
-  if (value.length > 2 * length + 2) {
+  if (value.length > 2 * length2 + 2) {
     logger20.throwArgumentError("value out of range", "value", arguments[1]);
   }
-  while (value.length < 2 * length + 2) {
+  while (value.length < 2 * length2 + 2) {
     value = "0x0" + value.substring(2);
   }
   return value;
@@ -46046,10 +46046,10 @@ var ErrorCode3;
 })(ErrorCode3 || (ErrorCode3 = {}));
 var HEX3 = "0123456789abcdef";
 var Logger3 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -46264,8 +46264,8 @@ var Logger3 = class _Logger {
     }
     _logLevel3 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger3.errors = ErrorCode3;
@@ -47157,11 +47157,11 @@ if (!crypto || !crypto.getRandomValues) {
     }
   };
 }
-function randomBytes(length) {
-  if (length <= 0 || length > 1024 || length % 1 || length != length) {
-    logger28.throwArgumentError("invalid length", "length", length);
+function randomBytes(length2) {
+  if (length2 <= 0 || length2 > 1024 || length2 % 1 || length2 != length2) {
+    logger28.throwArgumentError("invalid length", "length", length2);
   }
-  const result = new Uint8Array(length);
+  const result = new Uint8Array(length2);
   crypto.getRandomValues(result);
   return arrayify(result);
 }
@@ -47191,9 +47191,9 @@ function looseArrayify(hexString) {
   }
   return arrayify(hexString);
 }
-function zpad(value, length) {
+function zpad(value, length2) {
   value = String(value);
-  while (value.length < length) {
+  while (value.length < length2) {
     value = "0" + value;
   }
   return value;
@@ -47407,20 +47407,20 @@ function _computeKdfKey(data, password, pbkdf2Func, scryptFunc, progressCallback
     };
     if (kdf.toLowerCase() === "scrypt") {
       const salt = looseArrayify(searchPath(data, "crypto/kdfparams/salt"));
-      const N3 = parseInt(searchPath(data, "crypto/kdfparams/n"));
+      const N10 = parseInt(searchPath(data, "crypto/kdfparams/n"));
       const r2 = parseInt(searchPath(data, "crypto/kdfparams/r"));
       const p = parseInt(searchPath(data, "crypto/kdfparams/p"));
-      if (!N3 || !r2 || !p) {
+      if (!N10 || !r2 || !p) {
         throwError("kdf", kdf);
       }
-      if ((N3 & N3 - 1) !== 0) {
-        throwError("N", N3);
+      if ((N10 & N10 - 1) !== 0) {
+        throwError("N", N10);
       }
       const dkLen = parseInt(searchPath(data, "crypto/kdfparams/dklen"));
       if (dkLen !== 32) {
         throwError("dklen", dkLen);
       }
-      return scryptFunc(passwordBytes, salt, N3, r2, p, 64, progressCallback);
+      return scryptFunc(passwordBytes, salt, N10, r2, p, 64, progressCallback);
     } else if (kdf.toLowerCase() === "pbkdf2") {
       const salt = looseArrayify(searchPath(data, "crypto/kdfparams/salt"));
       let prfFunc = null;
@@ -47516,10 +47516,10 @@ function encrypt(account, password, options, progressCallback) {
   } else {
     uuidRandom = randomBytes(16);
   }
-  let N3 = 1 << 17, r2 = 8, p = 1;
+  let N10 = 1 << 17, r2 = 8, p = 1;
   if (options.scrypt) {
     if (options.scrypt.N) {
-      N3 = options.scrypt.N;
+      N10 = options.scrypt.N;
     }
     if (options.scrypt.r) {
       r2 = options.scrypt.r;
@@ -47528,7 +47528,7 @@ function encrypt(account, password, options, progressCallback) {
       p = options.scrypt.p;
     }
   }
-  return import_scrypt_js.default.scrypt(passwordBytes, salt, N3, r2, p, 64, progressCallback).then((key5) => {
+  return import_scrypt_js.default.scrypt(passwordBytes, salt, N10, r2, p, 64, progressCallback).then((key5) => {
     key5 = arrayify(key5);
     const derivedKey = key5.slice(0, 16);
     const macPrefix = key5.slice(16, 32);
@@ -47550,7 +47550,7 @@ function encrypt(account, password, options, progressCallback) {
         kdf: "scrypt",
         kdfparams: {
           salt: hexlify(salt).substring(2),
-          n: N3,
+          n: N10,
           dklen: 32,
           p,
           r: r2
@@ -47877,10 +47877,10 @@ var ErrorCode4;
 })(ErrorCode4 || (ErrorCode4 = {}));
 var HEX4 = "0123456789abcdef";
 var Logger4 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -48095,8 +48095,8 @@ var Logger4 = class _Logger {
     }
     _logLevel4 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger4.errors = ErrorCode4;
@@ -48134,11 +48134,11 @@ function isBytes3(value) {
   }
   return true;
 }
-function isHexString3(value, length) {
+function isHexString3(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -49824,8 +49824,8 @@ function _parseBytes(result) {
     return null;
   }
   const offset = BigNumber.from(hexDataSlice(result, 0, 32)).toNumber();
-  const length = BigNumber.from(hexDataSlice(result, offset, offset + 32)).toNumber();
-  return hexDataSlice(result, offset + 32, offset + 32 + length);
+  const length2 = BigNumber.from(hexDataSlice(result, offset, offset + 32)).toNumber();
+  return hexDataSlice(result, offset + 32, offset + 32 + length2);
 }
 function getIpfsLink(link) {
   if (link.match(/^ipfs:\/\/ipfs\//i)) {
@@ -49875,8 +49875,8 @@ var Resolver = class {
     if (coinInfo.p2pkh != null) {
       const p2pkh = hexBytes.match(/^0x76a9([0-9a-f][0-9a-f])([0-9a-f]*)88ac$/);
       if (p2pkh) {
-        const length = parseInt(p2pkh[1], 16);
-        if (p2pkh[2].length === length * 2 && length >= 1 && length <= 75) {
+        const length2 = parseInt(p2pkh[1], 16);
+        if (p2pkh[2].length === length2 * 2 && length2 >= 1 && length2 <= 75) {
           return base58Encode(concat([[coinInfo.p2pkh], "0x" + p2pkh[2]]));
         }
       }
@@ -49884,25 +49884,25 @@ var Resolver = class {
     if (coinInfo.p2sh != null) {
       const p2sh = hexBytes.match(/^0xa9([0-9a-f][0-9a-f])([0-9a-f]*)87$/);
       if (p2sh) {
-        const length = parseInt(p2sh[1], 16);
-        if (p2sh[2].length === length * 2 && length >= 1 && length <= 75) {
+        const length2 = parseInt(p2sh[1], 16);
+        if (p2sh[2].length === length2 * 2 && length2 >= 1 && length2 <= 75) {
           return base58Encode(concat([[coinInfo.p2sh], "0x" + p2sh[2]]));
         }
       }
     }
     if (coinInfo.prefix != null) {
-      const length = bytes[1];
-      let version106 = bytes[0];
-      if (version106 === 0) {
-        if (length !== 20 && length !== 32) {
-          version106 = -1;
+      const length2 = bytes[1];
+      let version107 = bytes[0];
+      if (version107 === 0) {
+        if (length2 !== 20 && length2 !== 32) {
+          version107 = -1;
         }
       } else {
-        version106 = -1;
+        version107 = -1;
       }
-      if (version106 >= 0 && bytes.length === 2 + length && length >= 1 && length <= 75) {
+      if (version107 >= 0 && bytes.length === 2 + length2 && length2 >= 1 && length2 <= 75) {
         const words4 = import_bech32.default.toWords(bytes.slice(2));
-        words4.unshift(version106);
+        words4.unshift(version107);
         return import_bech32.default.encode(coinInfo.prefix, words4);
       }
     }
@@ -50053,8 +50053,8 @@ var Resolver = class {
       }
       const ipfs = hexBytes.match(/^0xe3010170(([0-9a-f][0-9a-f])([0-9a-f][0-9a-f])([0-9a-f]*))$/);
       if (ipfs) {
-        const length = parseInt(ipfs[3], 16);
-        if (ipfs[4].length === length * 2) {
+        const length2 = parseInt(ipfs[3], 16);
+        if (ipfs[4].length === length2 * 2) {
           return "ipfs://" + Base58.encode("0x" + ipfs[1]);
         }
       }
@@ -51093,12 +51093,12 @@ var BaseProvider = class extends Provider {
       if (bytes.length < 32) {
         return null;
       }
-      const length = BigNumber.from(bytes.slice(0, 32)).toNumber();
+      const length2 = BigNumber.from(bytes.slice(0, 32)).toNumber();
       bytes = bytes.slice(32);
-      if (length > bytes.length) {
+      if (length2 > bytes.length) {
         return null;
       }
-      const name2 = toUtf8String(bytes.slice(0, length));
+      const name2 = toUtf8String(bytes.slice(0, length2));
       const addr = yield this.resolveName(name2);
       if (addr != address) {
         return null;
@@ -53812,10 +53812,10 @@ var ErrorCode5;
 })(ErrorCode5 || (ErrorCode5 = {}));
 var HEX5 = "0123456789abcdef";
 var Logger5 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -54030,8 +54030,8 @@ var Logger5 = class _Logger {
     }
     _logLevel5 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger5.errors = ErrorCode5;
@@ -54123,11 +54123,11 @@ function arrayify3(value, options) {
   }
   return logger50.throwArgumentError("invalid arrayify value", "value", value);
 }
-function isHexString4(value, length) {
+function isHexString4(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -55357,11 +55357,11 @@ var Reader2 = class _Reader {
     }
     return _Reader.coerce(name2, value);
   }
-  _peekBytes(offset, length, loose) {
-    let alignedLength = Math.ceil(length / this.wordSize) * this.wordSize;
+  _peekBytes(offset, length2, loose) {
+    let alignedLength = Math.ceil(length2 / this.wordSize) * this.wordSize;
     if (this._offset + alignedLength > this._data.length) {
-      if (this.allowLoose && loose && this._offset + length <= this._data.length) {
-        alignedLength = length;
+      if (this.allowLoose && loose && this._offset + length2 <= this._data.length) {
+        alignedLength = length2;
       } else {
         logger55.throwError("data out-of-bounds", Logger.errors.BUFFER_OVERRUN, {
           length: this._data.length,
@@ -55374,10 +55374,10 @@ var Reader2 = class _Reader {
   subReader(offset) {
     return new _Reader(this._data.slice(this._offset + offset), this.wordSize, this._coerceFunc, this.allowLoose);
   }
-  readBytes(length, loose) {
-    let bytes = this._peekBytes(0, length, !!loose);
+  readBytes(length2, loose) {
+    let bytes = this._peekBytes(0, length2, !!loose);
     this._offset += bytes.length;
-    return bytes.slice(0, length);
+    return bytes.slice(0, length2);
   }
   readValue() {
     return BigNumber.from(this.readBytes(this.wordSize));
@@ -55474,9 +55474,9 @@ function pack2(writer, coders, values) {
   updateFuncs.forEach((func) => {
     func(staticWriter.length);
   });
-  let length = writer.appendWriter(staticWriter);
-  length += writer.appendWriter(dynamicWriter);
-  return length;
+  let length2 = writer.appendWriter(staticWriter);
+  length2 += writer.appendWriter(dynamicWriter);
+  return length2;
 }
 function unpack2(reader, coders) {
   let values = [];
@@ -55561,12 +55561,12 @@ function unpack2(reader, coders) {
   return Object.freeze(values);
 }
 var ArrayCoder2 = class extends Coder2 {
-  constructor(coder, length, localName) {
-    const type = coder.type + "[" + (length >= 0 ? length : "") + "]";
-    const dynamic = length === -1 || coder.dynamic;
+  constructor(coder, length2, localName) {
+    const type = coder.type + "[" + (length2 >= 0 ? length2 : "") + "]";
+    const dynamic = length2 === -1 || coder.dynamic;
     super("array", type, localName, dynamic);
     this.coder = coder;
-    this.length = length;
+    this.length = length2;
   }
   defaultValue() {
     const defaultChild = this.coder.defaultValue();
@@ -55637,9 +55637,9 @@ var DynamicBytesCoder2 = class extends Coder2 {
   }
   encode(writer, value) {
     value = arrayify(value);
-    let length = writer.writeValue(value.length);
-    length += writer.writeBytes(value);
-    return length;
+    let length2 = writer.writeValue(value.length);
+    length2 += writer.writeBytes(value);
+    return length2;
   }
   decode(reader) {
     return reader.readBytes(reader.readValue().toNumber(), true);
@@ -56494,10 +56494,10 @@ var ErrorCode6;
 })(ErrorCode6 || (ErrorCode6 = {}));
 var HEX6 = "0123456789abcdef";
 var Logger6 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -56712,8 +56712,8 @@ var Logger6 = class _Logger {
     }
     _logLevel6 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger6.errors = ErrorCode6;
@@ -56810,8 +56810,8 @@ function arrayify4(value, options) {
 }
 function concat2(items) {
   const objects = items.map((item) => arrayify4(item));
-  const length = objects.reduce((accum, item) => accum + item.length, 0);
-  const result = new Uint8Array(length);
+  const length2 = objects.reduce((accum, item) => accum + item.length, 0);
+  const result = new Uint8Array(length2);
   objects.reduce((offset, object) => {
     result.set(object, offset);
     return offset + object.length;
@@ -56832,11 +56832,11 @@ function stripZeros2(value) {
   }
   return result;
 }
-function isHexString5(value, length) {
+function isHexString5(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -57215,9 +57215,9 @@ function _encode3(object) {
       payload.unshift(192 + payload.length);
       return payload;
     }
-    const length2 = arrayifyInteger2(payload.length);
-    length2.unshift(247 + length2.length);
-    return length2.concat(payload);
+    const length3 = arrayifyInteger2(payload.length);
+    length3.unshift(247 + length3.length);
+    return length3.concat(payload);
   }
   if (!isBytesLike2(object)) {
     logger61.throwArgumentError("RLP object must be BytesLike", "object", object);
@@ -57229,9 +57229,9 @@ function _encode3(object) {
     data.unshift(128 + data.length);
     return data;
   }
-  const length = arrayifyInteger2(data.length);
-  length.unshift(183 + length.length);
-  return length.concat(data);
+  const length2 = arrayifyInteger2(data.length);
+  length2.unshift(183 + length2.length);
+  return length2.concat(data);
 }
 function encode4(object) {
   return hexlify4(_encode3(object));
@@ -57337,23 +57337,23 @@ function getIcapAddress(address) {
   return "XE" + ibanChecksum2("XE00" + base36) + base36;
 }
 function getContractAddress2(transaction) {
-  let from = null;
+  let from2 = null;
   try {
-    from = getAddress2(transaction.from);
+    from2 = getAddress2(transaction.from);
   } catch (error) {
     logger62.throwArgumentError("missing from address", "transaction", transaction);
   }
   const nonce = stripZeros2(arrayify4(BigNumber4.from(transaction.nonce).toHexString()));
-  return getAddress2(hexDataSlice2(keccak2563(encode4([from, nonce])), 12));
+  return getAddress2(hexDataSlice2(keccak2563(encode4([from2, nonce])), 12));
 }
-function getCreate2Address(from, salt, initCodeHash) {
+function getCreate2Address(from2, salt, initCodeHash) {
   if (hexDataLength2(salt) !== 32) {
     logger62.throwArgumentError("salt must be 32 bytes", "salt", salt);
   }
   if (hexDataLength2(initCodeHash) !== 32) {
     logger62.throwArgumentError("initCodeHash must be 32 bytes", "initCodeHash", initCodeHash);
   }
-  return getAddress2(hexDataSlice2(keccak2563(concat2(["0xff", getAddress2(from), salt, initCodeHash])), 12));
+  return getAddress2(hexDataSlice2(keccak2563(concat2(["0xff", getAddress2(from2), salt, initCodeHash])), 12));
 }
 
 // node_modules/ethers/node_modules/@ethersproject/base64/lib.esm/index.js
@@ -57429,10 +57429,10 @@ var ErrorCode7;
 })(ErrorCode7 || (ErrorCode7 = {}));
 var HEX7 = "0123456789abcdef";
 var Logger7 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -57647,8 +57647,8 @@ var Logger7 = class _Logger {
     }
     _logLevel7 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger7.errors = ErrorCode7;
@@ -57740,11 +57740,11 @@ function arrayify5(value, options) {
   }
   return logger63.throwArgumentError("invalid arrayify value", "value", value);
 }
-function isHexString6(value, length) {
+function isHexString6(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -57834,10 +57834,10 @@ var ErrorCode8;
 })(ErrorCode8 || (ErrorCode8 = {}));
 var HEX8 = "0123456789abcdef";
 var Logger8 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -58052,8 +58052,8 @@ var Logger8 = class _Logger {
     }
     _logLevel8 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger8.errors = ErrorCode8;
@@ -58145,11 +58145,11 @@ function arrayify6(value, options) {
   }
   return logger64.throwArgumentError("invalid arrayify value", "value", value);
 }
-function isHexString7(value, length) {
+function isHexString7(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -58306,10 +58306,10 @@ var ErrorCode9;
 })(ErrorCode9 || (ErrorCode9 = {}));
 var HEX9 = "0123456789abcdef";
 var Logger9 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -58524,8 +58524,8 @@ var Logger9 = class _Logger {
     }
     _logLevel9 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger9.errors = ErrorCode9;
@@ -58622,8 +58622,8 @@ function arrayify7(value, options) {
 }
 function concat3(items) {
   const objects = items.map((item) => arrayify7(item));
-  const length = objects.reduce((accum, item) => accum + item.length, 0);
-  const result = new Uint8Array(length);
+  const length2 = objects.reduce((accum, item) => accum + item.length, 0);
+  const result = new Uint8Array(length2);
   objects.reduce((offset, object) => {
     result.set(object, offset);
     return offset + object.length;
@@ -58644,20 +58644,20 @@ function stripZeros3(value) {
   }
   return result;
 }
-function zeroPad2(value, length) {
+function zeroPad2(value, length2) {
   value = arrayify7(value);
-  if (value.length > length) {
+  if (value.length > length2) {
     logger66.throwArgumentError("value out of range", "value", arguments[0]);
   }
-  const result = new Uint8Array(length);
-  result.set(value, length - value.length);
+  const result = new Uint8Array(length2);
+  result.set(value, length2 - value.length);
   return addSlice7(result);
 }
-function isHexString8(value, length) {
+function isHexString8(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -58765,16 +58765,16 @@ function hexStripZeros2(value) {
   }
   return "0x" + value.substring(offset);
 }
-function hexZeroPad3(value, length) {
+function hexZeroPad3(value, length2) {
   if (typeof value !== "string") {
     value = hexlify5(value);
   } else if (!isHexString8(value)) {
     logger66.throwArgumentError("invalid hex string", "value", value);
   }
-  if (value.length > 2 * length + 2) {
+  if (value.length > 2 * length2 + 2) {
     logger66.throwArgumentError("value out of range", "value", arguments[1]);
   }
-  while (value.length < 2 * length + 2) {
+  while (value.length < 2 * length2 + 2) {
     value = "0x0" + value.substring(2);
   }
   return value;
@@ -58958,10 +58958,10 @@ var ErrorCode10;
 })(ErrorCode10 || (ErrorCode10 = {}));
 var HEX10 = "0123456789abcdef";
 var Logger10 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -59176,8 +59176,8 @@ var Logger10 = class _Logger {
     }
     _logLevel10 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger10.errors = ErrorCode10;
@@ -59271,19 +59271,19 @@ function arrayify8(value, options) {
 }
 function concat4(items) {
   const objects = items.map((item) => arrayify8(item));
-  const length = objects.reduce((accum, item) => accum + item.length, 0);
-  const result = new Uint8Array(length);
+  const length2 = objects.reduce((accum, item) => accum + item.length, 0);
+  const result = new Uint8Array(length2);
   objects.reduce((offset, object) => {
     result.set(object, offset);
     return offset + object.length;
   }, 0);
   return addSlice8(result);
 }
-function isHexString9(value, length) {
+function isHexString9(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -59350,16 +59350,16 @@ function hexConcat3(items) {
   });
   return result;
 }
-function hexZeroPad4(value, length) {
+function hexZeroPad4(value, length2) {
   if (typeof value !== "string") {
     value = hexlify6(value);
   } else if (!isHexString9(value)) {
     logger67.throwArgumentError("invalid hex string", "value", value);
   }
-  if (value.length > 2 * length + 2) {
+  if (value.length > 2 * length2 + 2) {
     logger67.throwArgumentError("value out of range", "value", arguments[1]);
   }
-  while (value.length < 2 * length + 2) {
+  while (value.length < 2 * length2 + 2) {
     value = "0x0" + value.substring(2);
   }
   return value;
@@ -60424,9 +60424,9 @@ var TypedDataEncoder2 = class _TypedDataEncoder {
     if (match) {
       const subtype = match[1];
       const subEncoder = this.getEncoder(subtype);
-      const length = parseInt(match[3]);
+      const length2 = parseInt(match[3]);
       return (value) => {
-        if (length >= 0 && value.length !== length) {
+        if (length2 >= 0 && value.length !== length2) {
           logger73.throwArgumentError("array length mismatch; expected length ${ arrayLength }", "value", value);
         }
         let result = value.map(subEncoder);
@@ -60482,8 +60482,8 @@ var TypedDataEncoder2 = class _TypedDataEncoder {
     const match = type.match(/^(.*)(\x5b(\d*)\x5d)$/);
     if (match) {
       const subtype = match[1];
-      const length = parseInt(match[3]);
-      if (length >= 0 && value.length !== length) {
+      const length2 = parseInt(match[3]);
+      if (length2 >= 0 && value.length !== length2) {
         logger73.throwArgumentError("array length mismatch; expected length ${ arrayLength }", "value", value);
       }
       return value.map((v) => this._visit(subtype, v, callback));
@@ -60677,10 +60677,10 @@ var ErrorCode11;
 })(ErrorCode11 || (ErrorCode11 = {}));
 var HEX11 = "0123456789abcdef";
 var Logger11 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -60895,8 +60895,8 @@ var Logger11 = class _Logger {
     }
     _logLevel11 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger11.errors = ErrorCode11;
@@ -60993,28 +60993,28 @@ function arrayify9(value, options) {
 }
 function concat5(items) {
   const objects = items.map((item) => arrayify9(item));
-  const length = objects.reduce((accum, item) => accum + item.length, 0);
-  const result = new Uint8Array(length);
+  const length2 = objects.reduce((accum, item) => accum + item.length, 0);
+  const result = new Uint8Array(length2);
   objects.reduce((offset, object) => {
     result.set(object, offset);
     return offset + object.length;
   }, 0);
   return addSlice9(result);
 }
-function zeroPad3(value, length) {
+function zeroPad3(value, length2) {
   value = arrayify9(value);
-  if (value.length > length) {
+  if (value.length > length2) {
     logger74.throwArgumentError("value out of range", "value", arguments[0]);
   }
-  const result = new Uint8Array(length);
-  result.set(value, length - value.length);
+  const result = new Uint8Array(length2);
+  result.set(value, length2 - value.length);
   return addSlice9(result);
 }
-function isHexString10(value, length) {
+function isHexString10(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -61094,16 +61094,16 @@ function hexDataSlice5(data, offset, endOffset) {
   }
   return "0x" + data.substring(offset);
 }
-function hexZeroPad5(value, length) {
+function hexZeroPad5(value, length2) {
   if (typeof value !== "string") {
     value = hexlify7(value);
   } else if (!isHexString10(value)) {
     logger74.throwArgumentError("invalid hex string", "value", value);
   }
-  if (value.length > 2 * length + 2) {
+  if (value.length > 2 * length2 + 2) {
     logger74.throwArgumentError("value out of range", "value", arguments[1]);
   }
-  while (value.length < 2 * length + 2) {
+  while (value.length < 2 * length2 + 2) {
     value = "0x0" + value.substring(2);
   }
   return value;
@@ -61733,8 +61733,8 @@ function createCommonjsModule2(fn, basedir, module2) {
   return module2 = {
     path: basedir,
     exports: {},
-    require: function(path, base5) {
-      return commonjsRequire2(path, base5 === void 0 || base5 === null ? module2.path : base5);
+    require: function(path, base6) {
+      return commonjsRequire2(path, base6 === void 0 || base6 === null ? module2.path : base6);
     }
   }, fn(module2, module2.exports), module2.exports;
 }
@@ -61798,7 +61798,7 @@ var utils_12 = createCommonjsModule2(function(module2, exports2) {
     return res;
   }
   utils.toHex = toHex8;
-  utils.encode = function encode12(arr, enc) {
+  utils.encode = function encode14(arr, enc) {
     if (enc === "hex")
       return toHex8(arr);
     else
@@ -64307,10 +64307,10 @@ var ErrorCode12;
 })(ErrorCode12 || (ErrorCode12 = {}));
 var HEX12 = "0123456789abcdef";
 var Logger12 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -64525,8 +64525,8 @@ var Logger12 = class _Logger {
     }
     _logLevel12 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger12.errors = ErrorCode12;
@@ -64618,11 +64618,11 @@ function arrayify10(value, options) {
   }
   return logger84.throwArgumentError("invalid arrayify value", "value", value);
 }
-function isHexString11(value, length) {
+function isHexString11(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -64698,10 +64698,10 @@ var ErrorCode13;
 })(ErrorCode13 || (ErrorCode13 = {}));
 var HEX13 = "0123456789abcdef";
 var Logger13 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -64882,8 +64882,8 @@ var Logger13 = class _Logger {
     }
     _logLevel13 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger13.errors = ErrorCode13;
@@ -64958,10 +64958,10 @@ var ErrorCode14;
 })(ErrorCode14 || (ErrorCode14 = {}));
 var HEX14 = "0123456789abcdef";
 var Logger14 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -65176,8 +65176,8 @@ var Logger14 = class _Logger {
     }
     _logLevel14 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger14.errors = ErrorCode14;
@@ -65269,11 +65269,11 @@ function arrayify11(value, options) {
   }
   return logger85.throwArgumentError("invalid arrayify value", "value", value);
 }
-function isHexString12(value, length) {
+function isHexString12(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -65461,10 +65461,10 @@ var ErrorCode15;
 })(ErrorCode15 || (ErrorCode15 = {}));
 var HEX15 = "0123456789abcdef";
 var Logger15 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -65679,8 +65679,8 @@ var Logger15 = class _Logger {
     }
     _logLevel15 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger15.errors = ErrorCode15;
@@ -65772,11 +65772,11 @@ function arrayify12(value, options) {
   }
   return logger88.throwArgumentError("invalid arrayify value", "value", value);
 }
-function isHexString13(value, length) {
+function isHexString13(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -65811,11 +65811,11 @@ if (!crypto2 || !crypto2.getRandomValues) {
     }
   };
 }
-function randomBytes2(length) {
-  if (length <= 0 || length > 1024 || length % 1 || length != length) {
-    logger89.throwArgumentError("invalid length", "length", length);
+function randomBytes2(length2) {
+  if (length2 <= 0 || length2 > 1024 || length2 % 1 || length2 != length2) {
+    logger89.throwArgumentError("invalid length", "length", length2);
   }
-  const result = new Uint8Array(length);
+  const result = new Uint8Array(length2);
   crypto2.getRandomValues(result);
   return arrayify12(result);
 }
@@ -65898,10 +65898,10 @@ var ErrorCode16;
 })(ErrorCode16 || (ErrorCode16 = {}));
 var HEX16 = "0123456789abcdef";
 var Logger16 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -66116,8 +66116,8 @@ var Logger16 = class _Logger {
     }
     _logLevel16 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger16.errors = ErrorCode16;
@@ -66326,10 +66326,10 @@ var ErrorCode17;
 })(ErrorCode17 || (ErrorCode17 = {}));
 var HEX17 = "0123456789abcdef";
 var Logger17 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -66544,8 +66544,8 @@ var Logger17 = class _Logger {
     }
     _logLevel17 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger17.errors = ErrorCode17;
@@ -66640,11 +66640,11 @@ function arrayify13(value, options) {
   }
   return logger91.throwArgumentError("invalid arrayify value", "value", value);
 }
-function isHexString14(value, length) {
+function isHexString14(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -66718,9 +66718,9 @@ function arrayifyInteger3(value) {
   }
   return result;
 }
-function unarrayifyInteger2(data, offset, length) {
+function unarrayifyInteger2(data, offset, length2) {
   let result = 0;
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length2; i++) {
     result = result * 256 + data[offset + i];
   }
   return result;
@@ -66735,9 +66735,9 @@ function _encode5(object) {
       payload.unshift(192 + payload.length);
       return payload;
     }
-    const length2 = arrayifyInteger3(payload.length);
-    length2.unshift(247 + length2.length);
-    return length2.concat(payload);
+    const length3 = arrayifyInteger3(payload.length);
+    length3.unshift(247 + length3.length);
+    return length3.concat(payload);
   }
   if (!isBytesLike5(object)) {
     logger92.throwArgumentError("RLP object must be BytesLike", "object", object);
@@ -66749,24 +66749,24 @@ function _encode5(object) {
     data.unshift(128 + data.length);
     return data;
   }
-  const length = arrayifyInteger3(data.length);
-  length.unshift(183 + length.length);
-  return length.concat(data);
+  const length2 = arrayifyInteger3(data.length);
+  length2.unshift(183 + length2.length);
+  return length2.concat(data);
 }
 function encode7(object) {
   return hexlify8(_encode5(object));
 }
-function _decodeChildren2(data, offset, childOffset, length) {
+function _decodeChildren2(data, offset, childOffset, length2) {
   const result = [];
-  while (childOffset < offset + 1 + length) {
+  while (childOffset < offset + 1 + length2) {
     const decoded = _decode2(data, childOffset);
     result.push(decoded.result);
     childOffset += decoded.consumed;
-    if (childOffset > offset + 1 + length) {
+    if (childOffset > offset + 1 + length2) {
       logger92.throwError("child data too short", Logger17.errors.BUFFER_OVERRUN, {});
     }
   }
-  return { consumed: 1 + length, result };
+  return { consumed: 1 + length2, result };
 }
 function _decode2(data, offset) {
   if (data.length === 0) {
@@ -66777,35 +66777,35 @@ function _decode2(data, offset) {
     if (offset + 1 + lengthLength > data.length) {
       logger92.throwError("data short segment too short", Logger17.errors.BUFFER_OVERRUN, {});
     }
-    const length = unarrayifyInteger2(data, offset + 1, lengthLength);
-    if (offset + 1 + lengthLength + length > data.length) {
+    const length2 = unarrayifyInteger2(data, offset + 1, lengthLength);
+    if (offset + 1 + lengthLength + length2 > data.length) {
       logger92.throwError("data long segment too short", Logger17.errors.BUFFER_OVERRUN, {});
     }
-    return _decodeChildren2(data, offset, offset + 1 + lengthLength, lengthLength + length);
+    return _decodeChildren2(data, offset, offset + 1 + lengthLength, lengthLength + length2);
   } else if (data[offset] >= 192) {
-    const length = data[offset] - 192;
-    if (offset + 1 + length > data.length) {
+    const length2 = data[offset] - 192;
+    if (offset + 1 + length2 > data.length) {
       logger92.throwError("data array too short", Logger17.errors.BUFFER_OVERRUN, {});
     }
-    return _decodeChildren2(data, offset, offset + 1, length);
+    return _decodeChildren2(data, offset, offset + 1, length2);
   } else if (data[offset] >= 184) {
     const lengthLength = data[offset] - 183;
     if (offset + 1 + lengthLength > data.length) {
       logger92.throwError("data array too short", Logger17.errors.BUFFER_OVERRUN, {});
     }
-    const length = unarrayifyInteger2(data, offset + 1, lengthLength);
-    if (offset + 1 + lengthLength + length > data.length) {
+    const length2 = unarrayifyInteger2(data, offset + 1, lengthLength);
+    if (offset + 1 + lengthLength + length2 > data.length) {
       logger92.throwError("data array too short", Logger17.errors.BUFFER_OVERRUN, {});
     }
-    const result = hexlify8(data.slice(offset + 1 + lengthLength, offset + 1 + lengthLength + length));
-    return { consumed: 1 + lengthLength + length, result };
+    const result = hexlify8(data.slice(offset + 1 + lengthLength, offset + 1 + lengthLength + length2));
+    return { consumed: 1 + lengthLength + length2, result };
   } else if (data[offset] >= 128) {
-    const length = data[offset] - 128;
-    if (offset + 1 + length > data.length) {
+    const length2 = data[offset] - 128;
+    if (offset + 1 + length2 > data.length) {
       logger92.throwError("data too short", Logger17.errors.BUFFER_OVERRUN, {});
     }
-    const result = hexlify8(data.slice(offset + 1, offset + 1 + length));
-    return { consumed: 1 + length, result };
+    const result = hexlify8(data.slice(offset + 1, offset + 1 + length2));
+    return { consumed: 1 + length2, result };
   }
   return { consumed: 1, result: hexlify8(data[offset]) };
 }
@@ -66825,8 +66825,8 @@ function createCommonjsModule3(fn, basedir, module2) {
   return module2 = {
     path: basedir,
     exports: {},
-    require: function(path, base5) {
-      return commonjsRequire3(path, base5 === void 0 || base5 === null ? module2.path : base5);
+    require: function(path, base6) {
+      return commonjsRequire3(path, base6 === void 0 || base6 === null ? module2.path : base6);
     }
   }, fn(module2, module2.exports), module2.exports;
 }
@@ -66890,7 +66890,7 @@ var utils_13 = createCommonjsModule3(function(module2, exports2) {
     return res;
   }
   utils.toHex = toHex8;
-  utils.encode = function encode12(arr, enc) {
+  utils.encode = function encode14(arr, enc) {
     if (enc === "hex")
       return toHex8(arr);
     else
@@ -68763,10 +68763,10 @@ var ErrorCode18;
 })(ErrorCode18 || (ErrorCode18 = {}));
 var HEX18 = "0123456789abcdef";
 var Logger18 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -68981,8 +68981,8 @@ var Logger18 = class _Logger {
     }
     _logLevel18 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger18.errors = ErrorCode18;
@@ -69077,20 +69077,20 @@ function arrayify14(value, options) {
   }
   return logger93.throwArgumentError("invalid arrayify value", "value", value);
 }
-function zeroPad4(value, length) {
+function zeroPad4(value, length2) {
   value = arrayify14(value);
-  if (value.length > length) {
+  if (value.length > length2) {
     logger93.throwArgumentError("value out of range", "value", arguments[0]);
   }
-  const result = new Uint8Array(length);
-  result.set(value, length - value.length);
+  const result = new Uint8Array(length2);
+  result.set(value, length2 - value.length);
   return addSlice14(result);
 }
-function isHexString15(value, length) {
+function isHexString15(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -69150,16 +69150,16 @@ function hexlify9(value, options) {
   }
   return logger93.throwArgumentError("invalid hexlify value", "value", value);
 }
-function hexZeroPad6(value, length) {
+function hexZeroPad6(value, length2) {
   if (typeof value !== "string") {
     value = hexlify9(value);
   } else if (!isHexString15(value)) {
     logger93.throwArgumentError("invalid hex string", "value", value);
   }
-  if (value.length > 2 * length + 2) {
+  if (value.length > 2 * length2 + 2) {
     logger93.throwArgumentError("value out of range", "value", arguments[1]);
   }
-  while (value.length < 2 * length + 2) {
+  while (value.length < 2 * length2 + 2) {
     value = "0x0" + value.substring(2);
   }
   return value;
@@ -69430,10 +69430,10 @@ var ErrorCode19;
 })(ErrorCode19 || (ErrorCode19 = {}));
 var HEX19 = "0123456789abcdef";
 var Logger19 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -69648,8 +69648,8 @@ var Logger19 = class _Logger {
     }
     _logLevel19 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger19.errors = ErrorCode19;
@@ -69743,19 +69743,19 @@ function arrayify15(value, options) {
 }
 function concat6(items) {
   const objects = items.map((item) => arrayify15(item));
-  const length = objects.reduce((accum, item) => accum + item.length, 0);
-  const result = new Uint8Array(length);
+  const length2 = objects.reduce((accum, item) => accum + item.length, 0);
+  const result = new Uint8Array(length2);
   objects.reduce((offset, object) => {
     result.set(object, offset);
     return offset + object.length;
   }, 0);
   return addSlice15(result);
 }
-function isHexString16(value, length) {
+function isHexString16(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -70037,11 +70037,11 @@ function parseBytes32String(bytes) {
   if (data[31] !== 0) {
     throw new Error("invalid bytes32 string - no null terminator");
   }
-  let length = 31;
-  while (data[length - 1] === 0) {
-    length--;
+  let length2 = 31;
+  while (data[length2 - 1] === 0) {
+    length2--;
   }
-  return toUtf8String5(data.slice(0, length));
+  return toUtf8String5(data.slice(0, length2));
 }
 
 // node_modules/ethers/node_modules/@ethersproject/strings/lib.esm/idna.js
@@ -70286,10 +70286,10 @@ var ErrorCode20;
 })(ErrorCode20 || (ErrorCode20 = {}));
 var HEX20 = "0123456789abcdef";
 var Logger20 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -70504,8 +70504,8 @@ var Logger20 = class _Logger {
     }
     _logLevel20 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger20.errors = ErrorCode20;
@@ -70614,20 +70614,20 @@ function stripZeros6(value) {
   }
   return result;
 }
-function zeroPad5(value, length) {
+function zeroPad5(value, length2) {
   value = arrayify16(value);
-  if (value.length > length) {
+  if (value.length > length2) {
     logger98.throwArgumentError("value out of range", "value", arguments[0]);
   }
-  const result = new Uint8Array(length);
-  result.set(value, length - value.length);
+  const result = new Uint8Array(length2);
+  result.set(value, length2 - value.length);
   return addSlice16(result);
 }
-function isHexString17(value, length) {
+function isHexString17(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -70714,16 +70714,16 @@ function hexConcat5(items) {
   });
   return result;
 }
-function hexZeroPad7(value, length) {
+function hexZeroPad7(value, length2) {
   if (typeof value !== "string") {
     value = hexlify11(value);
   } else if (!isHexString17(value)) {
     logger98.throwArgumentError("invalid hex string", "value", value);
   }
-  if (value.length > 2 * length + 2) {
+  if (value.length > 2 * length2 + 2) {
     logger98.throwArgumentError("value out of range", "value", arguments[1]);
   }
-  while (value.length < 2 * length + 2) {
+  while (value.length < 2 * length2 + 2) {
     value = "0x0" + value.substring(2);
   }
   return value;
@@ -71125,9 +71125,9 @@ function arrayifyInteger4(value) {
   }
   return result;
 }
-function unarrayifyInteger3(data, offset, length) {
+function unarrayifyInteger3(data, offset, length2) {
   let result = 0;
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length2; i++) {
     result = result * 256 + data[offset + i];
   }
   return result;
@@ -71142,9 +71142,9 @@ function _encode7(object) {
       payload.unshift(192 + payload.length);
       return payload;
     }
-    const length2 = arrayifyInteger4(payload.length);
-    length2.unshift(247 + length2.length);
-    return length2.concat(payload);
+    const length3 = arrayifyInteger4(payload.length);
+    length3.unshift(247 + length3.length);
+    return length3.concat(payload);
   }
   if (!isBytesLike7(object)) {
     logger100.throwArgumentError("RLP object must be BytesLike", "object", object);
@@ -71156,24 +71156,24 @@ function _encode7(object) {
     data.unshift(128 + data.length);
     return data;
   }
-  const length = arrayifyInteger4(data.length);
-  length.unshift(183 + length.length);
-  return length.concat(data);
+  const length2 = arrayifyInteger4(data.length);
+  length2.unshift(183 + length2.length);
+  return length2.concat(data);
 }
 function encode9(object) {
   return hexlify11(_encode7(object));
 }
-function _decodeChildren3(data, offset, childOffset, length) {
+function _decodeChildren3(data, offset, childOffset, length2) {
   const result = [];
-  while (childOffset < offset + 1 + length) {
+  while (childOffset < offset + 1 + length2) {
     const decoded = _decode3(data, childOffset);
     result.push(decoded.result);
     childOffset += decoded.consumed;
-    if (childOffset > offset + 1 + length) {
+    if (childOffset > offset + 1 + length2) {
       logger100.throwError("child data too short", Logger20.errors.BUFFER_OVERRUN, {});
     }
   }
-  return { consumed: 1 + length, result };
+  return { consumed: 1 + length2, result };
 }
 function _decode3(data, offset) {
   if (data.length === 0) {
@@ -71184,35 +71184,35 @@ function _decode3(data, offset) {
     if (offset + 1 + lengthLength > data.length) {
       logger100.throwError("data short segment too short", Logger20.errors.BUFFER_OVERRUN, {});
     }
-    const length = unarrayifyInteger3(data, offset + 1, lengthLength);
-    if (offset + 1 + lengthLength + length > data.length) {
+    const length2 = unarrayifyInteger3(data, offset + 1, lengthLength);
+    if (offset + 1 + lengthLength + length2 > data.length) {
       logger100.throwError("data long segment too short", Logger20.errors.BUFFER_OVERRUN, {});
     }
-    return _decodeChildren3(data, offset, offset + 1 + lengthLength, lengthLength + length);
+    return _decodeChildren3(data, offset, offset + 1 + lengthLength, lengthLength + length2);
   } else if (data[offset] >= 192) {
-    const length = data[offset] - 192;
-    if (offset + 1 + length > data.length) {
+    const length2 = data[offset] - 192;
+    if (offset + 1 + length2 > data.length) {
       logger100.throwError("data array too short", Logger20.errors.BUFFER_OVERRUN, {});
     }
-    return _decodeChildren3(data, offset, offset + 1, length);
+    return _decodeChildren3(data, offset, offset + 1, length2);
   } else if (data[offset] >= 184) {
     const lengthLength = data[offset] - 183;
     if (offset + 1 + lengthLength > data.length) {
       logger100.throwError("data array too short", Logger20.errors.BUFFER_OVERRUN, {});
     }
-    const length = unarrayifyInteger3(data, offset + 1, lengthLength);
-    if (offset + 1 + lengthLength + length > data.length) {
+    const length2 = unarrayifyInteger3(data, offset + 1, lengthLength);
+    if (offset + 1 + lengthLength + length2 > data.length) {
       logger100.throwError("data array too short", Logger20.errors.BUFFER_OVERRUN, {});
     }
-    const result = hexlify11(data.slice(offset + 1 + lengthLength, offset + 1 + lengthLength + length));
-    return { consumed: 1 + lengthLength + length, result };
+    const result = hexlify11(data.slice(offset + 1 + lengthLength, offset + 1 + lengthLength + length2));
+    return { consumed: 1 + lengthLength + length2, result };
   } else if (data[offset] >= 128) {
-    const length = data[offset] - 128;
-    if (offset + 1 + length > data.length) {
+    const length2 = data[offset] - 128;
+    if (offset + 1 + length2 > data.length) {
       logger100.throwError("data too short", Logger20.errors.BUFFER_OVERRUN, {});
     }
-    const result = hexlify11(data.slice(offset + 1, offset + 1 + length));
-    return { consumed: 1 + length, result };
+    const result = hexlify11(data.slice(offset + 1, offset + 1 + length2));
+    return { consumed: 1 + length2, result };
   }
   return { consumed: 1, result: hexlify11(data[offset]) };
 }
@@ -71343,8 +71343,8 @@ function createCommonjsModule4(fn, basedir, module2) {
   return module2 = {
     path: basedir,
     exports: {},
-    require: function(path, base5) {
-      return commonjsRequire4(path, base5 === void 0 || base5 === null ? module2.path : base5);
+    require: function(path, base6) {
+      return commonjsRequire4(path, base6 === void 0 || base6 === null ? module2.path : base6);
     }
   }, fn(module2, module2.exports), module2.exports;
 }
@@ -71408,7 +71408,7 @@ var utils_14 = createCommonjsModule4(function(module2, exports2) {
     return res;
   }
   utils.toHex = toHex8;
-  utils.encode = function encode12(arr, enc) {
+  utils.encode = function encode14(arr, enc) {
     if (enc === "hex")
       return toHex8(arr);
     else
@@ -73833,10 +73833,10 @@ var ErrorCode21;
 })(ErrorCode21 || (ErrorCode21 = {}));
 var HEX21 = "0123456789abcdef";
 var Logger21 = class _Logger {
-  constructor(version106) {
+  constructor(version107) {
     Object.defineProperty(this, "version", {
       enumerable: true,
-      value: version106,
+      value: version107,
       writable: false
     });
   }
@@ -74051,8 +74051,8 @@ var Logger21 = class _Logger {
     }
     _logLevel21 = level;
   }
-  static from(version106) {
-    return new _Logger(version106);
+  static from(version107) {
+    return new _Logger(version107);
   }
 };
 Logger21.errors = ErrorCode21;
@@ -74147,11 +74147,11 @@ function arrayify17(value, options) {
   }
   return logger106.throwArgumentError("invalid arrayify value", "value", value);
 }
-function isHexString18(value, length) {
+function isHexString18(value, length2) {
   if (typeof value !== "string" || !value.match(/^0x[0-9A-Fa-f]*$/)) {
     return false;
   }
-  if (length && value.length !== 2 + 2 * length) {
+  if (length2 && value.length !== 2 + 2 * length2) {
     return false;
   }
   return true;
@@ -75020,10 +75020,10 @@ var Fallback = class {
     return Uint8Array.from(this.#encoder.encode(value));
   }
 };
-var TextEncoder = /* @__PURE__ */ extractGlobal("TextEncoder", Fallback);
+var TextEncoder2 = /* @__PURE__ */ extractGlobal("TextEncoder", Fallback);
 
 // node_modules/@polkadot/util/string/toU8a.js
-var encoder = new TextEncoder();
+var encoder = new TextEncoder2();
 function stringToU8a(value) {
   return value ? encoder.encode(value.toString()) : new Uint8Array();
 }
@@ -75042,26 +75042,26 @@ for (let i = 0; i < 256; i++) {
 }
 function hex(value, result) {
   const mod = value.length % 2 | 0;
-  const length = value.length - mod | 0;
-  for (let i = 0; i < length; i += 2) {
+  const length2 = value.length - mod | 0;
+  for (let i = 0; i < length2; i += 2) {
     result += U16[value[i] << 8 | value[i + 1]];
   }
   if (mod) {
-    result += U8[value[length] | 0];
+    result += U8[value[length2] | 0];
   }
   return result;
 }
 function u8aToHex(value, bitLength = -1, isPrefixed = true) {
-  const empty = isPrefixed ? "0x" : "";
+  const empty2 = isPrefixed ? "0x" : "";
   if (!value?.length) {
-    return empty;
+    return empty2;
   } else if (bitLength > 0) {
-    const length = Math.ceil(bitLength / 8);
-    if (value.length > length) {
-      return `${hex(value.subarray(0, length / 2), empty)}\u2026${hex(value.subarray(value.length - length / 2), "")}`;
+    const length2 = Math.ceil(bitLength / 8);
+    if (value.length > length2) {
+      return `${hex(value.subarray(0, length2 / 2), empty2)}\u2026${hex(value.subarray(value.length - length2 / 2), "")}`;
     }
   }
-  return hex(value, empty);
+  return hex(value, empty2);
 }
 
 // node_modules/@polkadot/util/string/toHex.js
@@ -75123,7 +75123,8 @@ __export(read_exports, {
   STATS_ORDER: () => STATS_ORDER,
   fetchCollectionInfo: () => fetchCollectionInfo,
   fetchCollectionsByStats: () => fetchCollectionsByStats,
-  fetchOwnerCollections: () => fetchOwnerCollections
+  fetchUserItems: () => fetchUserItems,
+  getUserCollections: () => getUserCollections
 });
 
 // src/sqwid/read/fetchCollectionInfo.ts
@@ -75165,28 +75166,857 @@ var fetchCollectionsByStats = async (order) => {
   }
 };
 
-// src/sqwid/read/fetchOwnerCollections.ts
+// src/sqwid/read/fetchUserCollections.ts
 var import_axios4 = __toESM(require("axios"));
-var fetchOwnerCollections = async (evmAddress) => {
-  try {
-    const res = await import_axios4.default.get(`${SQWID_BACKEND_URL}/get/collections/owner/${evmAddress}`);
-    const collections = res.data.collections;
-    localStorage.setItem("collections", JSON.stringify(collections));
-    return collections;
-  } catch (err) {
-    if (err.toString().includes("404")) {
-      return [];
-    } else {
-      console.error("Error fetching collections:", err);
-      return err.toString();
+
+// node_modules/multiformats/esm/vendor/varint.js
+var encode_1 = encode12;
+var MSB = 128;
+var REST = 127;
+var MSBALL = ~REST;
+var INT = Math.pow(2, 31);
+function encode12(num, out, offset) {
+  out = out || [];
+  offset = offset || 0;
+  var oldOffset = offset;
+  while (num >= INT) {
+    out[offset++] = num & 255 | MSB;
+    num /= 128;
+  }
+  while (num & MSBALL) {
+    out[offset++] = num & 255 | MSB;
+    num >>>= 7;
+  }
+  out[offset] = num | 0;
+  encode12.bytes = offset - oldOffset + 1;
+  return out;
+}
+var decode7 = read;
+var MSB$1 = 128;
+var REST$1 = 127;
+function read(buf, offset) {
+  var res = 0, offset = offset || 0, shift = 0, counter = offset, b, l = buf.length;
+  do {
+    if (counter >= l) {
+      read.bytes = 0;
+      throw new RangeError("Could not decode varint");
+    }
+    b = buf[counter++];
+    res += shift < 28 ? (b & REST$1) << shift : (b & REST$1) * Math.pow(2, shift);
+    shift += 7;
+  } while (b >= MSB$1);
+  read.bytes = counter - offset;
+  return res;
+}
+var N1 = Math.pow(2, 7);
+var N22 = Math.pow(2, 14);
+var N3 = Math.pow(2, 21);
+var N4 = Math.pow(2, 28);
+var N5 = Math.pow(2, 35);
+var N6 = Math.pow(2, 42);
+var N7 = Math.pow(2, 49);
+var N8 = Math.pow(2, 56);
+var N9 = Math.pow(2, 63);
+var length = function(value) {
+  return value < N1 ? 1 : value < N22 ? 2 : value < N3 ? 3 : value < N4 ? 4 : value < N5 ? 5 : value < N6 ? 6 : value < N7 ? 7 : value < N8 ? 8 : value < N9 ? 9 : 10;
+};
+var varint = {
+  encode: encode_1,
+  decode: decode7,
+  encodingLength: length
+};
+var _brrp_varint = varint;
+var varint_default = _brrp_varint;
+
+// node_modules/multiformats/esm/src/varint.js
+var decode8 = (data, offset = 0) => {
+  const code = varint_default.decode(data, offset);
+  return [
+    code,
+    varint_default.decode.bytes
+  ];
+};
+var encodeTo = (int, target, offset = 0) => {
+  varint_default.encode(int, target, offset);
+  return target;
+};
+var encodingLength = (int) => {
+  return varint_default.encodingLength(int);
+};
+
+// node_modules/multiformats/esm/src/bytes.js
+var empty = new Uint8Array(0);
+var equals = (aa, bb) => {
+  if (aa === bb)
+    return true;
+  if (aa.byteLength !== bb.byteLength) {
+    return false;
+  }
+  for (let ii = 0; ii < aa.byteLength; ii++) {
+    if (aa[ii] !== bb[ii]) {
+      return false;
     }
   }
+  return true;
+};
+var coerce = (o) => {
+  if (o instanceof Uint8Array && o.constructor.name === "Uint8Array")
+    return o;
+  if (o instanceof ArrayBuffer)
+    return new Uint8Array(o);
+  if (ArrayBuffer.isView(o)) {
+    return new Uint8Array(o.buffer, o.byteOffset, o.byteLength);
+  }
+  throw new Error("Unknown type, must be binary type");
+};
+
+// node_modules/multiformats/esm/src/hashes/digest.js
+var create = (code, digest) => {
+  const size = digest.byteLength;
+  const sizeOffset = encodingLength(code);
+  const digestOffset = sizeOffset + encodingLength(size);
+  const bytes = new Uint8Array(digestOffset + size);
+  encodeTo(code, bytes, 0);
+  encodeTo(size, bytes, sizeOffset);
+  bytes.set(digest, digestOffset);
+  return new Digest(code, size, digest, bytes);
+};
+var decode9 = (multihash) => {
+  const bytes = coerce(multihash);
+  const [code, sizeOffset] = decode8(bytes);
+  const [size, digestOffset] = decode8(bytes.subarray(sizeOffset));
+  const digest = bytes.subarray(sizeOffset + digestOffset);
+  if (digest.byteLength !== size) {
+    throw new Error("Incorrect length");
+  }
+  return new Digest(code, size, digest, bytes);
+};
+var equals2 = (a, b) => {
+  if (a === b) {
+    return true;
+  } else {
+    return a.code === b.code && a.size === b.size && equals(a.bytes, b.bytes);
+  }
+};
+var Digest = class {
+  constructor(code, size, digest, bytes) {
+    this.code = code;
+    this.size = size;
+    this.digest = digest;
+    this.bytes = bytes;
+  }
+};
+
+// node_modules/multiformats/esm/vendor/base-x.js
+function base5(ALPHABET, name2) {
+  if (ALPHABET.length >= 255) {
+    throw new TypeError("Alphabet too long");
+  }
+  var BASE_MAP = new Uint8Array(256);
+  for (var j = 0; j < BASE_MAP.length; j++) {
+    BASE_MAP[j] = 255;
+  }
+  for (var i = 0; i < ALPHABET.length; i++) {
+    var x = ALPHABET.charAt(i);
+    var xc = x.charCodeAt(0);
+    if (BASE_MAP[xc] !== 255) {
+      throw new TypeError(x + " is ambiguous");
+    }
+    BASE_MAP[xc] = i;
+  }
+  var BASE = ALPHABET.length;
+  var LEADER = ALPHABET.charAt(0);
+  var FACTOR = Math.log(BASE) / Math.log(256);
+  var iFACTOR = Math.log(256) / Math.log(BASE);
+  function encode14(source) {
+    if (source instanceof Uint8Array) ;
+    else if (ArrayBuffer.isView(source)) {
+      source = new Uint8Array(source.buffer, source.byteOffset, source.byteLength);
+    } else if (Array.isArray(source)) {
+      source = Uint8Array.from(source);
+    }
+    if (!(source instanceof Uint8Array)) {
+      throw new TypeError("Expected Uint8Array");
+    }
+    if (source.length === 0) {
+      return "";
+    }
+    var zeroes = 0;
+    var length2 = 0;
+    var pbegin = 0;
+    var pend = source.length;
+    while (pbegin !== pend && source[pbegin] === 0) {
+      pbegin++;
+      zeroes++;
+    }
+    var size = (pend - pbegin) * iFACTOR + 1 >>> 0;
+    var b58 = new Uint8Array(size);
+    while (pbegin !== pend) {
+      var carry = source[pbegin];
+      var i2 = 0;
+      for (var it1 = size - 1; (carry !== 0 || i2 < length2) && it1 !== -1; it1--, i2++) {
+        carry += 256 * b58[it1] >>> 0;
+        b58[it1] = carry % BASE >>> 0;
+        carry = carry / BASE >>> 0;
+      }
+      if (carry !== 0) {
+        throw new Error("Non-zero carry");
+      }
+      length2 = i2;
+      pbegin++;
+    }
+    var it2 = size - length2;
+    while (it2 !== size && b58[it2] === 0) {
+      it2++;
+    }
+    var str = LEADER.repeat(zeroes);
+    for (; it2 < size; ++it2) {
+      str += ALPHABET.charAt(b58[it2]);
+    }
+    return str;
+  }
+  function decodeUnsafe(source) {
+    if (typeof source !== "string") {
+      throw new TypeError("Expected String");
+    }
+    if (source.length === 0) {
+      return new Uint8Array();
+    }
+    var psz = 0;
+    if (source[psz] === " ") {
+      return;
+    }
+    var zeroes = 0;
+    var length2 = 0;
+    while (source[psz] === LEADER) {
+      zeroes++;
+      psz++;
+    }
+    var size = (source.length - psz) * FACTOR + 1 >>> 0;
+    var b256 = new Uint8Array(size);
+    while (source[psz]) {
+      var carry = BASE_MAP[source.charCodeAt(psz)];
+      if (carry === 255) {
+        return;
+      }
+      var i2 = 0;
+      for (var it3 = size - 1; (carry !== 0 || i2 < length2) && it3 !== -1; it3--, i2++) {
+        carry += BASE * b256[it3] >>> 0;
+        b256[it3] = carry % 256 >>> 0;
+        carry = carry / 256 >>> 0;
+      }
+      if (carry !== 0) {
+        throw new Error("Non-zero carry");
+      }
+      length2 = i2;
+      psz++;
+    }
+    if (source[psz] === " ") {
+      return;
+    }
+    var it4 = size - length2;
+    while (it4 !== size && b256[it4] === 0) {
+      it4++;
+    }
+    var vch = new Uint8Array(zeroes + (size - it4));
+    var j2 = zeroes;
+    while (it4 !== size) {
+      vch[j2++] = b256[it4++];
+    }
+    return vch;
+  }
+  function decode11(string) {
+    var buffer = decodeUnsafe(string);
+    if (buffer) {
+      return buffer;
+    }
+    throw new Error(`Non-${name2} character`);
+  }
+  return {
+    encode: encode14,
+    decodeUnsafe,
+    decode: decode11
+  };
+}
+var src = base5;
+var _brrp__multiformats_scope_baseX = src;
+var base_x_default = _brrp__multiformats_scope_baseX;
+
+// node_modules/multiformats/esm/src/bases/base.js
+var Encoder = class {
+  constructor(name2, prefix, baseEncode) {
+    this.name = name2;
+    this.prefix = prefix;
+    this.baseEncode = baseEncode;
+  }
+  encode(bytes) {
+    if (bytes instanceof Uint8Array) {
+      return `${this.prefix}${this.baseEncode(bytes)}`;
+    } else {
+      throw Error("Unknown type, must be binary type");
+    }
+  }
+};
+var Decoder = class {
+  constructor(name2, prefix, baseDecode) {
+    this.name = name2;
+    this.prefix = prefix;
+    if (prefix.codePointAt(0) === void 0) {
+      throw new Error("Invalid prefix character");
+    }
+    this.prefixCodePoint = prefix.codePointAt(0);
+    this.baseDecode = baseDecode;
+  }
+  decode(text) {
+    if (typeof text === "string") {
+      if (text.codePointAt(0) !== this.prefixCodePoint) {
+        throw Error(`Unable to decode multibase string ${JSON.stringify(text)}, ${this.name} decoder only supports inputs prefixed with ${this.prefix}`);
+      }
+      return this.baseDecode(text.slice(this.prefix.length));
+    } else {
+      throw Error("Can only multibase decode strings");
+    }
+  }
+  or(decoder) {
+    return or(this, decoder);
+  }
+};
+var ComposedDecoder = class {
+  constructor(decoders) {
+    this.decoders = decoders;
+  }
+  or(decoder) {
+    return or(this, decoder);
+  }
+  decode(input) {
+    const prefix = input[0];
+    const decoder = this.decoders[prefix];
+    if (decoder) {
+      return decoder.decode(input);
+    } else {
+      throw RangeError(`Unable to decode multibase string ${JSON.stringify(input)}, only inputs prefixed with ${Object.keys(this.decoders)} are supported`);
+    }
+  }
+};
+var or = (left, right) => new ComposedDecoder({
+  ...left.decoders || { [left.prefix]: left },
+  ...right.decoders || { [right.prefix]: right }
+});
+var Codec = class {
+  constructor(name2, prefix, baseEncode, baseDecode) {
+    this.name = name2;
+    this.prefix = prefix;
+    this.baseEncode = baseEncode;
+    this.baseDecode = baseDecode;
+    this.encoder = new Encoder(name2, prefix, baseEncode);
+    this.decoder = new Decoder(name2, prefix, baseDecode);
+  }
+  encode(input) {
+    return this.encoder.encode(input);
+  }
+  decode(input) {
+    return this.decoder.decode(input);
+  }
+};
+var from = ({ name: name2, prefix, encode: encode14, decode: decode11 }) => new Codec(name2, prefix, encode14, decode11);
+var baseX = ({ prefix, name: name2, alphabet }) => {
+  const { encode: encode14, decode: decode11 } = base_x_default(alphabet, name2);
+  return from({
+    prefix,
+    name: name2,
+    encode: encode14,
+    decode: (text) => coerce(decode11(text))
+  });
+};
+var decode10 = (string, alphabet, bitsPerChar, name2) => {
+  const codes = {};
+  for (let i = 0; i < alphabet.length; ++i) {
+    codes[alphabet[i]] = i;
+  }
+  let end = string.length;
+  while (string[end - 1] === "=") {
+    --end;
+  }
+  const out = new Uint8Array(end * bitsPerChar / 8 | 0);
+  let bits = 0;
+  let buffer = 0;
+  let written = 0;
+  for (let i = 0; i < end; ++i) {
+    const value = codes[string[i]];
+    if (value === void 0) {
+      throw new SyntaxError(`Non-${name2} character`);
+    }
+    buffer = buffer << bitsPerChar | value;
+    bits += bitsPerChar;
+    if (bits >= 8) {
+      bits -= 8;
+      out[written++] = 255 & buffer >> bits;
+    }
+  }
+  if (bits >= bitsPerChar || 255 & buffer << 8 - bits) {
+    throw new SyntaxError("Unexpected end of data");
+  }
+  return out;
+};
+var encode13 = (data, alphabet, bitsPerChar) => {
+  const pad = alphabet[alphabet.length - 1] === "=";
+  const mask = (1 << bitsPerChar) - 1;
+  let out = "";
+  let bits = 0;
+  let buffer = 0;
+  for (let i = 0; i < data.length; ++i) {
+    buffer = buffer << 8 | data[i];
+    bits += 8;
+    while (bits > bitsPerChar) {
+      bits -= bitsPerChar;
+      out += alphabet[mask & buffer >> bits];
+    }
+  }
+  if (bits) {
+    out += alphabet[mask & buffer << bitsPerChar - bits];
+  }
+  if (pad) {
+    while (out.length * bitsPerChar & 7) {
+      out += "=";
+    }
+  }
+  return out;
+};
+var rfc4648 = ({ name: name2, prefix, bitsPerChar, alphabet }) => {
+  return from({
+    prefix,
+    name: name2,
+    encode(input) {
+      return encode13(input, alphabet, bitsPerChar);
+    },
+    decode(input) {
+      return decode10(input, alphabet, bitsPerChar, name2);
+    }
+  });
+};
+
+// node_modules/multiformats/esm/src/bases/base58.js
+var base58btc = baseX({
+  name: "base58btc",
+  prefix: "z",
+  alphabet: "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+});
+var base58flickr = baseX({
+  name: "base58flickr",
+  prefix: "Z",
+  alphabet: "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ"
+});
+
+// node_modules/multiformats/esm/src/bases/base32.js
+var base32 = rfc4648({
+  prefix: "b",
+  name: "base32",
+  alphabet: "abcdefghijklmnopqrstuvwxyz234567",
+  bitsPerChar: 5
+});
+var base32upper = rfc4648({
+  prefix: "B",
+  name: "base32upper",
+  alphabet: "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567",
+  bitsPerChar: 5
+});
+var base32pad = rfc4648({
+  prefix: "c",
+  name: "base32pad",
+  alphabet: "abcdefghijklmnopqrstuvwxyz234567=",
+  bitsPerChar: 5
+});
+var base32padupper = rfc4648({
+  prefix: "C",
+  name: "base32padupper",
+  alphabet: "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567=",
+  bitsPerChar: 5
+});
+var base32hex = rfc4648({
+  prefix: "v",
+  name: "base32hex",
+  alphabet: "0123456789abcdefghijklmnopqrstuv",
+  bitsPerChar: 5
+});
+var base32hexupper = rfc4648({
+  prefix: "V",
+  name: "base32hexupper",
+  alphabet: "0123456789ABCDEFGHIJKLMNOPQRSTUV",
+  bitsPerChar: 5
+});
+var base32hexpad = rfc4648({
+  prefix: "t",
+  name: "base32hexpad",
+  alphabet: "0123456789abcdefghijklmnopqrstuv=",
+  bitsPerChar: 5
+});
+var base32hexpadupper = rfc4648({
+  prefix: "T",
+  name: "base32hexpadupper",
+  alphabet: "0123456789ABCDEFGHIJKLMNOPQRSTUV=",
+  bitsPerChar: 5
+});
+var base32z = rfc4648({
+  prefix: "h",
+  name: "base32z",
+  alphabet: "ybndrfg8ejkmcpqxot1uwisza345h769",
+  bitsPerChar: 5
+});
+
+// node_modules/multiformats/esm/src/cid.js
+var CID = class _CID {
+  constructor(version107, code, multihash, bytes) {
+    this.code = code;
+    this.version = version107;
+    this.multihash = multihash;
+    this.bytes = bytes;
+    this.byteOffset = bytes.byteOffset;
+    this.byteLength = bytes.byteLength;
+    this.asCID = this;
+    this._baseCache = /* @__PURE__ */ new Map();
+    Object.defineProperties(this, {
+      byteOffset: hidden,
+      byteLength: hidden,
+      code: readonly,
+      version: readonly,
+      multihash: readonly,
+      bytes: readonly,
+      _baseCache: hidden,
+      asCID: hidden
+    });
+  }
+  toV0() {
+    switch (this.version) {
+      case 0: {
+        return this;
+      }
+      default: {
+        const { code, multihash } = this;
+        if (code !== DAG_PB_CODE) {
+          throw new Error("Cannot convert a non dag-pb CID to CIDv0");
+        }
+        if (multihash.code !== SHA_256_CODE) {
+          throw new Error("Cannot convert non sha2-256 multihash CID to CIDv0");
+        }
+        return _CID.createV0(multihash);
+      }
+    }
+  }
+  toV1() {
+    switch (this.version) {
+      case 0: {
+        const { code, digest } = this.multihash;
+        const multihash = create(code, digest);
+        return _CID.createV1(this.code, multihash);
+      }
+      case 1: {
+        return this;
+      }
+      default: {
+        throw Error(`Can not convert CID version ${this.version} to version 0. This is a bug please report`);
+      }
+    }
+  }
+  equals(other) {
+    return other && this.code === other.code && this.version === other.version && equals2(this.multihash, other.multihash);
+  }
+  toString(base6) {
+    const { bytes, version: version107, _baseCache } = this;
+    switch (version107) {
+      case 0:
+        return toStringV0(bytes, _baseCache, base6 || base58btc.encoder);
+      default:
+        return toStringV1(bytes, _baseCache, base6 || base32.encoder);
+    }
+  }
+  toJSON() {
+    return {
+      code: this.code,
+      version: this.version,
+      hash: this.multihash.bytes
+    };
+  }
+  get [Symbol.toStringTag]() {
+    return "CID";
+  }
+  [Symbol.for("nodejs.util.inspect.custom")]() {
+    return "CID(" + this.toString() + ")";
+  }
+  static isCID(value) {
+    deprecate(/^0\.0/, IS_CID_DEPRECATION);
+    return !!(value && (value[cidSymbol] || value.asCID === value));
+  }
+  get toBaseEncodedString() {
+    throw new Error("Deprecated, use .toString()");
+  }
+  get codec() {
+    throw new Error('"codec" property is deprecated, use integer "code" property instead');
+  }
+  get buffer() {
+    throw new Error("Deprecated .buffer property, use .bytes to get Uint8Array instead");
+  }
+  get multibaseName() {
+    throw new Error('"multibaseName" property is deprecated');
+  }
+  get prefix() {
+    throw new Error('"prefix" property is deprecated');
+  }
+  static asCID(value) {
+    if (value instanceof _CID) {
+      return value;
+    } else if (value != null && value.asCID === value) {
+      const { version: version107, code, multihash, bytes } = value;
+      return new _CID(version107, code, multihash, bytes || encodeCID(version107, code, multihash.bytes));
+    } else if (value != null && value[cidSymbol] === true) {
+      const { version: version107, multihash, code } = value;
+      const digest = decode9(multihash);
+      return _CID.create(version107, code, digest);
+    } else {
+      return null;
+    }
+  }
+  static create(version107, code, digest) {
+    if (typeof code !== "number") {
+      throw new Error("String codecs are no longer supported");
+    }
+    switch (version107) {
+      case 0: {
+        if (code !== DAG_PB_CODE) {
+          throw new Error(`Version 0 CID must use dag-pb (code: ${DAG_PB_CODE}) block encoding`);
+        } else {
+          return new _CID(version107, code, digest, digest.bytes);
+        }
+      }
+      case 1: {
+        const bytes = encodeCID(version107, code, digest.bytes);
+        return new _CID(version107, code, digest, bytes);
+      }
+      default: {
+        throw new Error("Invalid version");
+      }
+    }
+  }
+  static createV0(digest) {
+    return _CID.create(0, DAG_PB_CODE, digest);
+  }
+  static createV1(code, digest) {
+    return _CID.create(1, code, digest);
+  }
+  static decode(bytes) {
+    const [cid, remainder] = _CID.decodeFirst(bytes);
+    if (remainder.length) {
+      throw new Error("Incorrect length");
+    }
+    return cid;
+  }
+  static decodeFirst(bytes) {
+    const specs = _CID.inspectBytes(bytes);
+    const prefixSize = specs.size - specs.multihashSize;
+    const multihashBytes = coerce(bytes.subarray(prefixSize, prefixSize + specs.multihashSize));
+    if (multihashBytes.byteLength !== specs.multihashSize) {
+      throw new Error("Incorrect length");
+    }
+    const digestBytes = multihashBytes.subarray(specs.multihashSize - specs.digestSize);
+    const digest = new Digest(specs.multihashCode, specs.digestSize, digestBytes, multihashBytes);
+    const cid = specs.version === 0 ? _CID.createV0(digest) : _CID.createV1(specs.codec, digest);
+    return [
+      cid,
+      bytes.subarray(specs.size)
+    ];
+  }
+  static inspectBytes(initialBytes) {
+    let offset = 0;
+    const next = () => {
+      const [i, length2] = decode8(initialBytes.subarray(offset));
+      offset += length2;
+      return i;
+    };
+    let version107 = next();
+    let codec = DAG_PB_CODE;
+    if (version107 === 18) {
+      version107 = 0;
+      offset = 0;
+    } else if (version107 === 1) {
+      codec = next();
+    }
+    if (version107 !== 0 && version107 !== 1) {
+      throw new RangeError(`Invalid CID version ${version107}`);
+    }
+    const prefixSize = offset;
+    const multihashCode = next();
+    const digestSize = next();
+    const size = offset + digestSize;
+    const multihashSize = size - prefixSize;
+    return {
+      version: version107,
+      codec,
+      multihashCode,
+      digestSize,
+      multihashSize,
+      size
+    };
+  }
+  static parse(source, base6) {
+    const [prefix, bytes] = parseCIDtoBytes(source, base6);
+    const cid = _CID.decode(bytes);
+    cid._baseCache.set(prefix, source);
+    return cid;
+  }
+};
+var parseCIDtoBytes = (source, base6) => {
+  switch (source[0]) {
+    case "Q": {
+      const decoder = base6 || base58btc;
+      return [
+        base58btc.prefix,
+        decoder.decode(`${base58btc.prefix}${source}`)
+      ];
+    }
+    case base58btc.prefix: {
+      const decoder = base6 || base58btc;
+      return [
+        base58btc.prefix,
+        decoder.decode(source)
+      ];
+    }
+    case base32.prefix: {
+      const decoder = base6 || base32;
+      return [
+        base32.prefix,
+        decoder.decode(source)
+      ];
+    }
+    default: {
+      if (base6 == null) {
+        throw Error("To parse non base32 or base58btc encoded CID multibase decoder must be provided");
+      }
+      return [
+        source[0],
+        base6.decode(source)
+      ];
+    }
+  }
+};
+var toStringV0 = (bytes, cache, base6) => {
+  const { prefix } = base6;
+  if (prefix !== base58btc.prefix) {
+    throw Error(`Cannot string encode V0 in ${base6.name} encoding`);
+  }
+  const cid = cache.get(prefix);
+  if (cid == null) {
+    const cid2 = base6.encode(bytes).slice(1);
+    cache.set(prefix, cid2);
+    return cid2;
+  } else {
+    return cid;
+  }
+};
+var toStringV1 = (bytes, cache, base6) => {
+  const { prefix } = base6;
+  const cid = cache.get(prefix);
+  if (cid == null) {
+    const cid2 = base6.encode(bytes);
+    cache.set(prefix, cid2);
+    return cid2;
+  } else {
+    return cid;
+  }
+};
+var DAG_PB_CODE = 112;
+var SHA_256_CODE = 18;
+var encodeCID = (version107, code, multihash) => {
+  const codeOffset = encodingLength(version107);
+  const hashOffset = codeOffset + encodingLength(code);
+  const bytes = new Uint8Array(hashOffset + multihash.byteLength);
+  encodeTo(version107, bytes, 0);
+  encodeTo(code, bytes, codeOffset);
+  bytes.set(multihash, hashOffset);
+  return bytes;
+};
+var cidSymbol = Symbol.for("@ipld/js-cid/CID");
+var readonly = {
+  writable: false,
+  configurable: false,
+  enumerable: true
+};
+var hidden = {
+  writable: false,
+  enumerable: false,
+  configurable: false
+};
+var version106 = "0.0.0-dev";
+var deprecate = (range, message) => {
+  if (range.test(version106)) {
+    console.warn(message);
+  } else {
+    throw new Error(message);
+  }
+};
+var IS_CID_DEPRECATION = `CID.isCID(v) is deprecated and will be removed in the next major release.
+Following code pattern:
+
+if (CID.isCID(value)) {
+  doSomethingWithCID(value)
+}
+
+Is replaced with:
+
+const cid = CID.asCID(value)
+if (cid) {
+  // Make sure to use cid instead of value
+  doSomethingWithCID(cid)
+}
+`;
+
+// src/utils/infura.ts
+var getCIDv1 = (url) => CID.parse(url.replace("ipfs://", "")).toV1().toString();
+var getInfuraURL = (url) => {
+  let base6 = url?.split("/")[2] || url;
+  let cid;
+  try {
+    cid = getCIDv1(base6);
+  } catch (e) {
+    cid = base6;
+  }
+  return `https://sqwid.infura-ipfs.io/ipfs/${cid}/${url?.split("/")[3] || ""}`;
+};
+
+// src/sqwid/read/fetchUserCollections.ts
+async function getUserCollections(evmAddress) {
+  if (!evmAddress) throw new Error("evmAddress is required");
+  try {
+    const response = await import_axios4.default.get(`${SQWID_BACKEND_URL}/get/collections/owner/${evmAddress}`);
+    const collections = response.data.collections;
+    localStorage.setItem("collections", JSON.stringify(collections));
+    return collections.map((item) => ({
+      src: getInfuraURL(item?.data?.thumbnail || item?.data?.image),
+      title: item?.data?.name,
+      link: `/collections/${item.id}`
+    }));
+  } catch (err) {
+    if (err.response?.status === 404) {
+      return [];
+    }
+    throw err;
+  }
+}
+var fetchUserItems = async (address, state = -1, startFrom = 0) => {
+  let limit = 10;
+  const res = await (0, import_axios4.default)(
+    `${SQWID_BACKEND_URL}/get/marketplace/by-owner/${address}${state >= 0 ? `/${state}` : ""}?limit=${limit}&startFrom=${startFrom}`
+  );
+  const { data } = res;
+  if (data.error) {
+    return [];
+  }
+  return data;
 };
 
 // src/sqwid/write/index.ts
 var write_exports = {};
 __export(write_exports, {
-  createCollectible: () => createCollectible
+  createCollectible: () => createCollectible,
+  unlistPositionOnSale: () => unlistPositionOnSale
 });
 
 // src/sqwid/write/createCollectible.ts
@@ -77465,6 +78295,77 @@ var createCollectible = async (files, provider, signer) => {
       return { error: err };
     }
   } else return null;
+};
+
+// src/sqwid/write/unlistPositionOnSale.ts
+var approveMarketplace2 = async (signer) => {
+  console.log("inisde approveMarketplace component");
+  let contract = new ethers_exports.Contract(
+    SQWID_ERC1155_ADDRESS,
+    SqwidERC1155_default,
+    signer
+  );
+  const tx = await contract.setApprovalForAll(
+    SQWID_MARKETPLACE_ADDRESS,
+    true
+  );
+  return await tx.wait();
+};
+var isMarketplaceApproved2 = async (provider, signer) => {
+  console.log("Inside isMarketplaceApproved component");
+  try {
+    console.log("Provider:", provider);
+    console.log("Signer:", signer);
+    const address = await signer.getAddress();
+    console.log("Address from signer:", address);
+    const marketplaceAddress = SQWID_MARKETPLACE_ADDRESS;
+    if (!ethers_exports.utils.isAddress(address) || !ethers_exports.utils.isAddress(marketplaceAddress)) {
+      throw new Error(`Invalid addresses: Signer: ${address}, Marketplace: ${marketplaceAddress}`);
+    }
+    const contract = new ethers_exports.Contract(SQWID_ERC1155_ADDRESS, SqwidERC1155_default, provider);
+    console.log("Contract instance created:", contract);
+    console.log("Checking contract approval with:", address, marketplaceAddress);
+    const isApproved = await contract.isApprovedForAll(address, marketplaceAddress);
+    console.log("Is Approved:", isApproved);
+    return isApproved;
+  } catch (error) {
+    console.error("Contract call failed:", error);
+    if (error.data && error.data.message) {
+      console.error("Detailed revert reason:", error.data.message);
+    } else {
+      console.error("No detailed revert reason provided.");
+    }
+    throw new Error("Contract interaction failed. Check the contract logs for details.");
+  }
+};
+var checkAndApproveMarketplace = async (provider, signer) => {
+  const approved = await isMarketplaceApproved2(provider, signer);
+  if (!approved) {
+    await approveMarketplace2(signer);
+  }
+};
+var unlistPositionOnSale = async (positionId, signer, provider) => {
+  await checkAndApproveMarketplace(provider, signer);
+  try {
+    const marketplaceContractInstance = new ethers_exports.Contract(
+      SQWID_MARKETPLACE_ADDRESS,
+      SqwidMarketplace_default,
+      signer
+    );
+    ;
+    const tx = await marketplaceContractInstance.unlistPositionOnSale(
+      positionId,
+      {
+        customData: {
+          storageLimit: 2e3
+        }
+      }
+    );
+    const receipt = await tx.wait();
+    return receipt;
+  } catch (error) {
+    return null;
+  }
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
