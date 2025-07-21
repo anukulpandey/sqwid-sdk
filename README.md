@@ -59,3 +59,8 @@ await connectToSqwid(selectedReefSigner); //here selectedReefSigner is reefExten
 ```
 
 This function will sets the required cookies in Header to make calls to Sqwid.
+
+3. `sqwidRead`
+
+This comes with various methods.
+
