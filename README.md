@@ -66,8 +66,14 @@ This comes with various methods.
 
 <img width="809" height="148" alt="Screenshot 2025-07-23 at 12 50 14 PM" src="https://github.com/user-attachments/assets/0d38adef-f2a7-4ea5-b506-9ac3e6dd2b96" />
 
-`sqwidRead.STATS_ORDER` : is passed to `sqwidRead.fetchCollectionsByStats` , this param sorts the fetched collections on the basis of stats passed, the stats are :
+A. `sqwidRead.STATS_ORDER` : is passed to `sqwidRead.fetchCollectionsByStats` , this param sorts the fetched collections on the basis of stats passed, the stats are :
 
 <img width="872" height="129" alt="Screenshot 2025-07-23 at 12 53 11 PM" src="https://github.com/user-attachments/assets/ceb6dfc3-4b6a-4ec9-a085-9ba31c6b16c9" />
 
+B. `sqwidRead.fetchCollectionsByStats` : fetches all collections on basis of stats.
+    
+    example usage: `await sqwidRead.fetchCollectionsByStats(sqwidRead.STATS_ORDER.ITEMS)`
 
+C. `sqwidRead.fetchCollectionInfo`: fetches info of a specific collection.
+
+    example usage: `await sqwidRead.fetchCollectionInfo("aLbM95hd62nkFe7Du07k")`
