@@ -92,9 +92,8 @@ Allows to make WRITE/UPDATE calls Sqwid Backend & Sqwid contracts.
 
 A. `sqwidWrite.createCollectible` : creates a collectible
 
-    example usage:
+example usage:
 
-    ```ts
         await sqwidWrite.createCollectible(
             {
                 name: '',
@@ -110,7 +109,6 @@ A. `sqwidWrite.createCollectible` : creates a collectible
             provider,
             selectedReefSigner.signer
         )
-    ```
 
 B. `sqwidWrite.unlistPositionOnSale`: De-list collectible from Sale
 
