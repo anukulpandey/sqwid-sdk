@@ -77,3 +77,41 @@ B. `sqwidRead.fetchCollectionsByStats` : fetches all collections on basis of sta
 C. `sqwidRead.fetchCollectionInfo`: fetches info of a specific collection.
 
     example usage: `await sqwidRead.fetchCollectionInfo("aLbM95hd62nkFe7Du07k")`
+
+D. `sqwidRead.getUserCollections` : fetches collections of the user.
+
+    params: `address //native address of the user`
+
+    example usage: sqwidRead.getUserCollections(selectedAddress)
+
+E. `sqwidRead.fetchUserItems` : returns user collectibles
+
+4. `sqwidWrite`
+
+Allows to make WRITE/UPDATE calls Sqwid Backend & Sqwid contracts.
+
+A. `sqwidWrite.createCollectible` : creates a collectible
+
+    example usage:
+
+    ```ts
+        await sqwidWrite.createCollectible(
+            {
+                name: '',
+                description: '',
+                collection: '',
+                royalty: '',
+                copies: 1,
+                royaltyRecipient: '',
+                properties: [],
+                file: null,
+                coverFile: null,
+            },
+            provider,
+            selectedReefSigner.signer
+        )
+    ```
+
+B. `sqwidWrite.unlistPositionOnSale`: De-list collectible from Sale
+
+    example usage: `sqwidWrite.unlistPositionOnSale(positionId,signer,provider)`
